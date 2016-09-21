@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Oct 19 13:50:50 2011
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : key_scan
+Top-level Entity Name : key_scan
+Family : Cyclone II
+Total logic elements : 184
+    Total combinational functions : 180
+    Dedicated logic registers : 82
+Total registers : 82
+Total pins : 85
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

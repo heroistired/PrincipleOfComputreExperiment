@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Oct 21 08:50:19 2011
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : systemC
+Top-level Entity Name : systemC
+Family : Cyclone II
+Total logic elements : 1,399
+    Total combinational functions : 1,365
+    Dedicated logic registers : 192
+Total registers : 192
+Total pins : 88
+Total virtual pins : 0
+Total memory bits : 6,144
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,1043 @@
+Classic Timing Analyzer report for key_fsm
+Sat Sep 03 10:48:05 2011
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'key'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                          ;
++------------------------------+-------+---------------+----------------------------------+----------------+----------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From           ; To             ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+----------------+----------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 10.502 ns                        ; symbol[2]      ; num_A1[3]~reg0 ; --         ; key      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 14.761 ns                        ; num_B1[2]~reg0 ; DST[11]        ; key        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -4.154 ns                        ; symbol[2]      ; ALU_OP[4]~reg0 ; --         ; key      ; 0            ;
+; Clock Setup: 'key'           ; N/A   ; None          ; 161.79 MHz ( period = 6.181 ns ) ; num_B1[2]~reg0 ; DSTH[3]~reg0   ; key        ; key      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                ;                ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+----------------+----------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C5Q208C8        ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; key             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'key'                                                                                                                                                                                                                           ;
++-----------------------------------------+-----------------------------------------------------+-----------------+----------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From            ; To             ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+-----------------+----------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 161.79 MHz ( period = 6.181 ns )                    ; num_B1[2]~reg0  ; DSTH[3]~reg0   ; key        ; key      ; None                        ; None                      ; 5.918 ns                ;
+; N/A                                     ; 165.10 MHz ( period = 6.057 ns )                    ; num_B1[3]~reg0  ; DSTH[3]~reg0   ; key        ; key      ; None                        ; None                      ; 5.806 ns                ;
+; N/A                                     ; 166.20 MHz ( period = 6.017 ns )                    ; num_B1[2]~reg0  ; DSTH[2]~reg0   ; key        ; key      ; None                        ; None                      ; 5.754 ns                ;
+; N/A                                     ; 166.39 MHz ( period = 6.010 ns )                    ; num_A1[0]~reg0  ; SRCH[3]~reg0   ; key        ; key      ; None                        ; None                      ; 5.745 ns                ;
+; N/A                                     ; 166.67 MHz ( period = 6.000 ns )                    ; num_B1[0]~reg0  ; DSTH[3]~reg0   ; key        ; key      ; None                        ; None                      ; 5.737 ns                ;
+; N/A                                     ; 168.61 MHz ( period = 5.931 ns )                    ; num_B1[2]~reg0  ; DSTH[1]~reg0   ; key        ; key      ; None                        ; None                      ; 5.668 ns                ;
+; N/A                                     ; 168.80 MHz ( period = 5.924 ns )                    ; num_A1[0]~reg0  ; SRCH[2]~reg0   ; key        ; key      ; None                        ; None                      ; 5.659 ns                ;
+; N/A                                     ; 169.69 MHz ( period = 5.893 ns )                    ; num_B1[3]~reg0  ; DSTH[2]~reg0   ; key        ; key      ; None                        ; None                      ; 5.642 ns                ;
+; N/A                                     ; 170.01 MHz ( period = 5.882 ns )                    ; num_A1[1]~reg0  ; SRCH[3]~reg0   ; key        ; key      ; None                        ; None                      ; 5.618 ns                ;
+; N/A                                     ; 171.35 MHz ( period = 5.836 ns )                    ; num_B1[0]~reg0  ; DSTH[2]~reg0   ; key        ; key      ; None                        ; None                      ; 5.573 ns                ;
+; N/A                                     ; 172.21 MHz ( period = 5.807 ns )                    ; num_B1[3]~reg0  ; DSTH[1]~reg0   ; key        ; key      ; None                        ; None                      ; 5.556 ns                ;
+; N/A                                     ; 172.53 MHz ( period = 5.796 ns )                    ; num_A1[1]~reg0  ; SRCH[2]~reg0   ; key        ; key      ; None                        ; None                      ; 5.532 ns                ;
+; N/A                                     ; 173.91 MHz ( period = 5.750 ns )                    ; num_B1[0]~reg0  ; DSTH[1]~reg0   ; key        ; key      ; None                        ; None                      ; 5.487 ns                ;
+; N/A                                     ; 175.10 MHz ( period = 5.711 ns )                    ; num_B1[1]~reg0  ; DSTH[3]~reg0   ; key        ; key      ; None                        ; None                      ; 5.460 ns                ;
+; N/A                                     ; 175.38 MHz ( period = 5.702 ns )                    ; num_A1[3]~reg0  ; SRCH[3]~reg0   ; key        ; key      ; None                        ; None                      ; 5.438 ns                ;
+; N/A                                     ; 175.59 MHz ( period = 5.695 ns )                    ; num_A1[0]~reg0  ; SRCH[1]~reg0   ; key        ; key      ; None                        ; None                      ; 5.430 ns                ;
+; N/A                                     ; 176.99 MHz ( period = 5.650 ns )                    ; num_A1[2]~reg0  ; SRCH[3]~reg0   ; key        ; key      ; None                        ; None                      ; 5.385 ns                ;
+; N/A                                     ; 178.06 MHz ( period = 5.616 ns )                    ; num_A1[3]~reg0  ; SRCH[2]~reg0   ; key        ; key      ; None                        ; None                      ; 5.352 ns                ;
+; N/A                                     ; 178.28 MHz ( period = 5.609 ns )                    ; num_A1[0]~reg0  ; SRCH[0]~reg0   ; key        ; key      ; None                        ; None                      ; 5.344 ns                ;
+; N/A                                     ; 179.34 MHz ( period = 5.576 ns )                    ; num_A2[0]~reg0  ; SRCH[3]~reg0   ; key        ; key      ; None                        ; None                      ; 5.310 ns                ;
+; N/A                                     ; 179.63 MHz ( period = 5.567 ns )                    ; num_A1[1]~reg0  ; SRCH[1]~reg0   ; key        ; key      ; None                        ; None                      ; 5.303 ns                ;
+; N/A                                     ; 179.73 MHz ( period = 5.564 ns )                    ; num_A1[2]~reg0  ; SRCH[2]~reg0   ; key        ; key      ; None                        ; None                      ; 5.299 ns                ;
+; N/A                                     ; 180.02 MHz ( period = 5.555 ns )                    ; num_B1[1]~reg0  ; DSTH[2]~reg0   ; key        ; key      ; None                        ; None                      ; 5.304 ns                ;
+; N/A                                     ; 181.06 MHz ( period = 5.523 ns )                    ; num_A1[0]~reg0  ; SRCL[7]~reg0   ; key        ; key      ; None                        ; None                      ; 5.258 ns                ;
+; N/A                                     ; 181.32 MHz ( period = 5.515 ns )                    ; num_A2[3]~reg0  ; SRCH[3]~reg0   ; key        ; key      ; None                        ; None                      ; 5.249 ns                ;
+; N/A                                     ; 182.15 MHz ( period = 5.490 ns )                    ; num_A2[0]~reg0  ; SRCH[2]~reg0   ; key        ; key      ; None                        ; None                      ; 5.224 ns                ;
+; N/A                                     ; 182.45 MHz ( period = 5.481 ns )                    ; num_A1[1]~reg0  ; SRCH[0]~reg0   ; key        ; key      ; None                        ; None                      ; 5.217 ns                ;
+; N/A                                     ; 182.72 MHz ( period = 5.473 ns )                    ; num_B2[1]~reg0  ; DSTH[3]~reg0   ; key        ; key      ; None                        ; None                      ; 5.212 ns                ;
+; N/A                                     ; 182.85 MHz ( period = 5.469 ns )                    ; num_B1[1]~reg0  ; DSTH[1]~reg0   ; key        ; key      ; None                        ; None                      ; 5.218 ns                ;
+; N/A                                     ; 182.98 MHz ( period = 5.465 ns )                    ; num_B1[3]~reg0  ; DSTH[0]~reg0   ; key        ; key      ; None                        ; None                      ; 5.214 ns                ;
+; N/A                                     ; 183.42 MHz ( period = 5.452 ns )                    ; num_B1[2]~reg0  ; DSTH[0]~reg0   ; key        ; key      ; None                        ; None                      ; 5.189 ns                ;
+; N/A                                     ; 183.92 MHz ( period = 5.437 ns )                    ; num_A1[0]~reg0  ; SRCL[6]~reg0   ; key        ; key      ; None                        ; None                      ; 5.172 ns                ;
+; N/A                                     ; 184.20 MHz ( period = 5.429 ns )                    ; num_A2[3]~reg0  ; SRCH[2]~reg0   ; key        ; key      ; None                        ; None                      ; 5.163 ns                ;
+; N/A                                     ; 184.47 MHz ( period = 5.421 ns )                    ; num_B2[3]~reg0  ; DSTH[3]~reg0   ; key        ; key      ; None                        ; None                      ; 5.160 ns                ;
+; N/A                                     ; 185.01 MHz ( period = 5.405 ns )                    ; num_A2[2]~reg0  ; SRCH[3]~reg0   ; key        ; key      ; None                        ; None                      ; 5.139 ns                ;
+; N/A                                     ; 185.36 MHz ( period = 5.395 ns )                    ; num_A1[1]~reg0  ; SRCL[7]~reg0   ; key        ; key      ; None                        ; None                      ; 5.131 ns                ;
+; N/A                                     ; 185.63 MHz ( period = 5.387 ns )                    ; num_A1[3]~reg0  ; SRCH[1]~reg0   ; key        ; key      ; None                        ; None                      ; 5.123 ns                ;
+; N/A                                     ; 185.77 MHz ( period = 5.383 ns )                    ; num_B1[1]~reg0  ; DSTH[0]~reg0   ; key        ; key      ; None                        ; None                      ; 5.132 ns                ;
+; N/A                                     ; 186.64 MHz ( period = 5.358 ns )                    ; num_B2[2]~reg0  ; DSTH[3]~reg0   ; key        ; key      ; None                        ; None                      ; 5.097 ns                ;
+; N/A                                     ; 187.06 MHz ( period = 5.346 ns )                    ; num_A2[1]~reg0  ; SRCH[3]~reg0   ; key        ; key      ; None                        ; None                      ; 5.080 ns                ;
+; N/A                                     ; 187.44 MHz ( period = 5.335 ns )                    ; num_A1[2]~reg0  ; SRCH[1]~reg0   ; key        ; key      ; None                        ; None                      ; 5.070 ns                ;
+; N/A                                     ; 188.01 MHz ( period = 5.319 ns )                    ; num_A2[2]~reg0  ; SRCH[2]~reg0   ; key        ; key      ; None                        ; None                      ; 5.053 ns                ;
+; N/A                                     ; 188.08 MHz ( period = 5.317 ns )                    ; num_B2[1]~reg0  ; DSTH[2]~reg0   ; key        ; key      ; None                        ; None                      ; 5.056 ns                ;
+; N/A                                     ; 188.36 MHz ( period = 5.309 ns )                    ; num_A1[1]~reg0  ; SRCL[6]~reg0   ; key        ; key      ; None                        ; None                      ; 5.045 ns                ;
+; N/A                                     ; 188.47 MHz ( period = 5.306 ns )                    ; num_B2[0]~reg0  ; DSTH[3]~reg0   ; key        ; key      ; None                        ; None                      ; 5.045 ns                ;
+; N/A                                     ; 188.64 MHz ( period = 5.301 ns )                    ; num_A1[3]~reg0  ; SRCH[0]~reg0   ; key        ; key      ; None                        ; None                      ; 5.037 ns                ;
+; N/A                                     ; 188.79 MHz ( period = 5.297 ns )                    ; num_B1[1]~reg0  ; DSTL[7]~reg0   ; key        ; key      ; None                        ; None                      ; 5.046 ns                ;
+; N/A                                     ; 189.72 MHz ( period = 5.271 ns )                    ; num_B1[0]~reg0  ; DSTH[0]~reg0   ; key        ; key      ; None                        ; None                      ; 5.008 ns                ;
+; N/A                                     ; 190.11 MHz ( period = 5.260 ns )                    ; num_A2[0]~reg0  ; SRCH[1]~reg0   ; key        ; key      ; None                        ; None                      ; 4.994 ns                ;
+; N/A                                     ; 190.11 MHz ( period = 5.260 ns )                    ; num_A2[1]~reg0  ; SRCH[2]~reg0   ; key        ; key      ; None                        ; None                      ; 4.994 ns                ;
+; N/A                                     ; 190.22 MHz ( period = 5.257 ns )                    ; num_B2[3]~reg0  ; DSTH[2]~reg0   ; key        ; key      ; None                        ; None                      ; 4.996 ns                ;
+; N/A                                     ; 190.51 MHz ( period = 5.249 ns )                    ; num_A1[2]~reg0  ; SRCH[0]~reg0   ; key        ; key      ; None                        ; None                      ; 4.984 ns                ;
+; N/A                                     ; 190.91 MHz ( period = 5.238 ns )                    ; cnt[0]          ; num_B1[3]~reg0 ; key        ; key      ; None                        ; None                      ; 4.976 ns                ;
+; N/A                                     ; 191.17 MHz ( period = 5.231 ns )                    ; num_B2[1]~reg0  ; DSTH[1]~reg0   ; key        ; key      ; None                        ; None                      ; 4.970 ns                ;
+; N/A                                     ; 191.75 MHz ( period = 5.215 ns )                    ; num_A1[3]~reg0  ; SRCL[7]~reg0   ; key        ; key      ; None                        ; None                      ; 4.951 ns                ;
+; N/A                                     ; 192.53 MHz ( period = 5.194 ns )                    ; num_B2[2]~reg0  ; DSTH[2]~reg0   ; key        ; key      ; None                        ; None                      ; 4.933 ns                ;
+; N/A                                     ; 192.68 MHz ( period = 5.190 ns )                    ; num_A2[3]~reg0  ; SRCH[1]~reg0   ; key        ; key      ; None                        ; None                      ; 4.924 ns                ;
+; N/A                                     ; 193.27 MHz ( period = 5.174 ns )                    ; num_A2[0]~reg0  ; SRCH[0]~reg0   ; key        ; key      ; None                        ; None                      ; 4.908 ns                ;
+; N/A                                     ; 193.39 MHz ( period = 5.171 ns )                    ; num_B2[3]~reg0  ; DSTH[1]~reg0   ; key        ; key      ; None                        ; None                      ; 4.910 ns                ;
+; N/A                                     ; 193.69 MHz ( period = 5.163 ns )                    ; num_A1[2]~reg0  ; SRCL[7]~reg0   ; key        ; key      ; None                        ; None                      ; 4.898 ns                ;
+; N/A                                     ; 194.10 MHz ( period = 5.152 ns )                    ; num_B1[1]~reg0  ; DSTL[6]~reg0   ; key        ; key      ; None                        ; None                      ; 4.901 ns                ;
+; N/A                                     ; 194.17 MHz ( period = 5.150 ns )                    ; num_B2[0]~reg0  ; DSTH[2]~reg0   ; key        ; key      ; None                        ; None                      ; 4.889 ns                ;
+; N/A                                     ; 194.36 MHz ( period = 5.145 ns )                    ; num_B2[1]~reg0  ; DSTH[0]~reg0   ; key        ; key      ; None                        ; None                      ; 4.884 ns                ;
+; N/A                                     ; 194.97 MHz ( period = 5.129 ns )                    ; num_A1[3]~reg0  ; SRCL[6]~reg0   ; key        ; key      ; None                        ; None                      ; 4.865 ns                ;
+; N/A                                     ; 195.05 MHz ( period = 5.127 ns )                    ; num_B1[3]~reg0  ; DSTL[7]~reg0   ; key        ; key      ; None                        ; None                      ; 4.876 ns                ;
+; N/A                                     ; 195.27 MHz ( period = 5.121 ns )                    ; num_A1[0]~reg0  ; SRCL[5]~reg0   ; key        ; key      ; None                        ; None                      ; 4.856 ns                ;
+; N/A                                     ; 195.77 MHz ( period = 5.108 ns )                    ; num_B2[2]~reg0  ; DSTH[1]~reg0   ; key        ; key      ; None                        ; None                      ; 4.847 ns                ;
+; N/A                                     ; 195.92 MHz ( period = 5.104 ns )                    ; num_A2[3]~reg0  ; SRCH[0]~reg0   ; key        ; key      ; None                        ; None                      ; 4.838 ns                ;
+; N/A                                     ; 196.54 MHz ( period = 5.088 ns )                    ; num_A2[0]~reg0  ; SRCL[7]~reg0   ; key        ; key      ; None                        ; None                      ; 4.822 ns                ;
+; N/A                                     ; 196.97 MHz ( period = 5.077 ns )                    ; num_A1[2]~reg0  ; SRCL[6]~reg0   ; key        ; key      ; None                        ; None                      ; 4.812 ns                ;
+; N/A                                     ; 197.47 MHz ( period = 5.064 ns )                    ; num_B2[0]~reg0  ; DSTH[1]~reg0   ; key        ; key      ; None                        ; None                      ; 4.803 ns                ;
+; N/A                                     ; 199.88 MHz ( period = 5.003 ns )                    ; state.firstnum  ; cnt[0]         ; key        ; key      ; None                        ; None                      ; 4.706 ns                ;
+; N/A                                     ; 199.88 MHz ( period = 5.003 ns )                    ; state.firstnum  ; cnt[1]         ; key        ; key      ; None                        ; None                      ; 4.706 ns                ;
+; N/A                                     ; 200.00 MHz ( period = 5.000 ns )                    ; num_A2[2]~reg0  ; SRCH[1]~reg0   ; key        ; key      ; None                        ; None                      ; 4.734 ns                ;
+; N/A                                     ; 200.28 MHz ( period = 4.993 ns )                    ; num_A1[1]~reg0  ; SRCL[5]~reg0   ; key        ; key      ; None                        ; None                      ; 4.729 ns                ;
+; N/A                                     ; 200.72 MHz ( period = 4.982 ns )                    ; num_B1[3]~reg0  ; DSTL[6]~reg0   ; key        ; key      ; None                        ; None                      ; 4.731 ns                ;
+; N/A                                     ; 200.84 MHz ( period = 4.979 ns )                    ; state.secondnum ; num_B2[1]~reg0 ; key        ; key      ; None                        ; None                      ; 4.725 ns                ;
+; N/A                                     ; 200.88 MHz ( period = 4.978 ns )                    ; num_B2[0]~reg0  ; DSTH[0]~reg0   ; key        ; key      ; None                        ; None                      ; 4.717 ns                ;
+; N/A                                     ; 201.13 MHz ( period = 4.972 ns )                    ; num_B1[2]~reg0  ; DSTL[7]~reg0   ; key        ; key      ; None                        ; None                      ; 4.709 ns                ;
+; N/A                                     ; 202.39 MHz ( period = 4.941 ns )                    ; num_A2[1]~reg0  ; SRCH[1]~reg0   ; key        ; key      ; None                        ; None                      ; 4.675 ns                ;
+; N/A                                     ; 202.43 MHz ( period = 4.940 ns )                    ; num_B2[1]~reg0  ; DSTL[7]~reg0   ; key        ; key      ; None                        ; None                      ; 4.679 ns                ;
+; N/A                                     ; 203.46 MHz ( period = 4.915 ns )                    ; num_B1[0]~reg0  ; DSTL[7]~reg0   ; key        ; key      ; None                        ; None                      ; 4.652 ns                ;
+; N/A                                     ; 204.42 MHz ( period = 4.892 ns )                    ; num_B2[0]~reg0  ; DSTL[7]~reg0   ; key        ; key      ; None                        ; None                      ; 4.631 ns                ;
+; N/A                                     ; 204.58 MHz ( period = 4.888 ns )                    ; cnt[0]          ; num_B1[2]~reg0 ; key        ; key      ; None                        ; None                      ; 4.638 ns                ;
+; N/A                                     ; 207.77 MHz ( period = 4.813 ns )                    ; num_A1[3]~reg0  ; SRCL[5]~reg0   ; key        ; key      ; None                        ; None                      ; 4.549 ns                ;
+; N/A                                     ; 208.03 MHz ( period = 4.807 ns )                    ; num_B2[1]~reg0  ; DSTL[6]~reg0   ; key        ; key      ; None                        ; None                      ; 4.546 ns                ;
+; N/A                                     ; 208.46 MHz ( period = 4.797 ns )                    ; num_B2[3]~reg0  ; DSTH[0]~reg0   ; key        ; key      ; None                        ; None                      ; 4.536 ns                ;
+; N/A                                     ; 208.94 MHz ( period = 4.786 ns )                    ; cnt[0]          ; num_A0[1]~reg0 ; key        ; key      ; None                        ; None                      ; 4.553 ns                ;
+; N/A                                     ; 208.94 MHz ( period = 4.786 ns )                    ; cnt[0]          ; num_A1[1]~reg0 ; key        ; key      ; None                        ; None                      ; 4.553 ns                ;
+; N/A                                     ; 208.94 MHz ( period = 4.786 ns )                    ; cnt[0]          ; num_A0[3]~reg0 ; key        ; key      ; None                        ; None                      ; 4.553 ns                ;
+; N/A                                     ; 208.94 MHz ( period = 4.786 ns )                    ; cnt[0]          ; num_A1[3]~reg0 ; key        ; key      ; None                        ; None                      ; 4.553 ns                ;
+; N/A                                     ; 209.29 MHz ( period = 4.778 ns )                    ; cnt[1]          ; num_B1[1]~reg0 ; key        ; key      ; None                        ; None                      ; 4.516 ns                ;
+; N/A                                     ; 209.64 MHz ( period = 4.770 ns )                    ; num_B1[0]~reg0  ; DSTL[6]~reg0   ; key        ; key      ; None                        ; None                      ; 4.507 ns                ;
+; N/A                                     ; 209.91 MHz ( period = 4.764 ns )                    ; num_B1[3]~reg0  ; num_B1[3]~reg0 ; key        ; key      ; None                        ; None                      ; 4.500 ns                ;
+; N/A                                     ; 210.00 MHz ( period = 4.762 ns )                    ; num_B2[0]~reg0  ; DSTL[6]~reg0   ; key        ; key      ; None                        ; None                      ; 4.501 ns                ;
+; N/A                                     ; 210.04 MHz ( period = 4.761 ns )                    ; num_A1[2]~reg0  ; SRCL[5]~reg0   ; key        ; key      ; None                        ; None                      ; 4.496 ns                ;
+; N/A                                     ; 211.82 MHz ( period = 4.721 ns )                    ; num_B2[1]~reg0  ; DSTL[5]~reg0   ; key        ; key      ; None                        ; None                      ; 4.460 ns                ;
+; N/A                                     ; 211.91 MHz ( period = 4.719 ns )                    ; cnt[1]          ; num_B1[3]~reg0 ; key        ; key      ; None                        ; None                      ; 4.457 ns                ;
+; N/A                                     ; 212.27 MHz ( period = 4.711 ns )                    ; num_B2[3]~reg0  ; DSTL[7]~reg0   ; key        ; key      ; None                        ; None                      ; 4.450 ns                ;
+; N/A                                     ; 212.81 MHz ( period = 4.699 ns )                    ; state.oper      ; ALU_OP[0]~reg0 ; key        ; key      ; None                        ; None                      ; 4.468 ns                ;
+; N/A                                     ; 212.81 MHz ( period = 4.699 ns )                    ; state.oper      ; ALU_OP[1]~reg0 ; key        ; key      ; None                        ; None                      ; 4.468 ns                ;
+; N/A                                     ; 212.81 MHz ( period = 4.699 ns )                    ; state.oper      ; ALU_OP[2]~reg0 ; key        ; key      ; None                        ; None                      ; 4.468 ns                ;
+; N/A                                     ; 212.81 MHz ( period = 4.699 ns )                    ; state.oper      ; ALU_OP[3]~reg0 ; key        ; key      ; None                        ; None                      ; 4.468 ns                ;
+; N/A                                     ; 212.81 MHz ( period = 4.699 ns )                    ; state.oper      ; ALU_OP[4]~reg0 ; key        ; key      ; None                        ; None                      ; 4.468 ns                ;
+; N/A                                     ; 212.99 MHz ( period = 4.695 ns )                    ; num_B1[2]~reg0  ; DSTL[6]~reg0   ; key        ; key      ; None                        ; None                      ; 4.432 ns                ;
+; N/A                                     ; 213.08 MHz ( period = 4.693 ns )                    ; num_A2[3]~reg0  ; SRCL[7]~reg0   ; key        ; key      ; None                        ; None                      ; 4.427 ns                ;
+; N/A                                     ; 213.31 MHz ( period = 4.688 ns )                    ; state.oper      ; num_A0[1]~reg0 ; key        ; key      ; None                        ; None                      ; 4.452 ns                ;
+; N/A                                     ; 213.31 MHz ( period = 4.688 ns )                    ; state.oper      ; num_A1[1]~reg0 ; key        ; key      ; None                        ; None                      ; 4.452 ns                ;
+; N/A                                     ; 213.31 MHz ( period = 4.688 ns )                    ; state.oper      ; num_A0[3]~reg0 ; key        ; key      ; None                        ; None                      ; 4.452 ns                ;
+; N/A                                     ; 213.31 MHz ( period = 4.688 ns )                    ; state.oper      ; num_A1[3]~reg0 ; key        ; key      ; None                        ; None                      ; 4.452 ns                ;
+; N/A                                     ; 213.40 MHz ( period = 4.686 ns )                    ; num_B1[1]~reg0  ; DSTL[5]~reg0   ; key        ; key      ; None                        ; None                      ; 4.435 ns                ;
+; N/A                                     ; 213.86 MHz ( period = 4.676 ns )                    ; num_B2[0]~reg0  ; DSTL[5]~reg0   ; key        ; key      ; None                        ; None                      ; 4.415 ns                ;
+; N/A                                     ; 213.95 MHz ( period = 4.674 ns )                    ; cnt[1]          ; num_B1[2]~reg0 ; key        ; key      ; None                        ; None                      ; 4.424 ns                ;
+; N/A                                     ; 214.41 MHz ( period = 4.664 ns )                    ; num_A2[1]~reg0  ; SRCH[0]~reg0   ; key        ; key      ; None                        ; None                      ; 4.398 ns                ;
+; N/A                                     ; 215.05 MHz ( period = 4.650 ns )                    ; cnt[1]          ; num_A0[1]~reg0 ; key        ; key      ; None                        ; None                      ; 4.417 ns                ;
+; N/A                                     ; 215.05 MHz ( period = 4.650 ns )                    ; cnt[1]          ; num_A1[1]~reg0 ; key        ; key      ; None                        ; None                      ; 4.417 ns                ;
+; N/A                                     ; 215.05 MHz ( period = 4.650 ns )                    ; cnt[1]          ; num_A0[3]~reg0 ; key        ; key      ; None                        ; None                      ; 4.417 ns                ;
+; N/A                                     ; 215.05 MHz ( period = 4.650 ns )                    ; cnt[1]          ; num_A1[3]~reg0 ; key        ; key      ; None                        ; None                      ; 4.417 ns                ;
+; N/A                                     ; 215.24 MHz ( period = 4.646 ns )                    ; num_B2[2]~reg0  ; DSTH[0]~reg0   ; key        ; key      ; None                        ; None                      ; 4.385 ns                ;
+; N/A                                     ; 216.97 MHz ( period = 4.609 ns )                    ; num_A2[0]~reg0  ; SRCL[6]~reg0   ; key        ; key      ; None                        ; None                      ; 4.343 ns                ;
+; N/A                                     ; 217.72 MHz ( period = 4.593 ns )                    ; num_A2[2]~reg0  ; SRCH[0]~reg0   ; key        ; key      ; None                        ; None                      ; 4.327 ns                ;
+; N/A                                     ; 217.86 MHz ( period = 4.590 ns )                    ; num_B2[0]~reg0  ; DSTL[4]~reg0   ; key        ; key      ; None                        ; None                      ; 4.329 ns                ;
+; N/A                                     ; 218.39 MHz ( period = 4.579 ns )                    ; num_B1[2]~reg0  ; num_B2[2]~reg0 ; key        ; key      ; None                        ; None                      ; 4.313 ns                ;
+; N/A                                     ; 218.96 MHz ( period = 4.567 ns )                    ; cnt[0]          ; num_B1[1]~reg0 ; key        ; key      ; None                        ; None                      ; 4.305 ns                ;
+; N/A                                     ; 218.96 MHz ( period = 4.567 ns )                    ; num_B2[1]~reg0  ; num_B2[1]~reg0 ; key        ; key      ; None                        ; None                      ; 4.303 ns                ;
+; N/A                                     ; 219.15 MHz ( period = 4.563 ns )                    ; state.secondnum ; num_B1[2]~reg0 ; key        ; key      ; None                        ; None                      ; 4.311 ns                ;
+; N/A                                     ; 219.30 MHz ( period = 4.560 ns )                    ; num_B2[2]~reg0  ; DSTL[7]~reg0   ; key        ; key      ; None                        ; None                      ; 4.299 ns                ;
+; N/A                                     ; 220.31 MHz ( period = 4.539 ns )                    ; state.secondnum ; num_B2[3]~reg0 ; key        ; key      ; None                        ; None                      ; 4.285 ns                ;
+; N/A                                     ; 220.41 MHz ( period = 4.537 ns )                    ; num_B1[0]~reg0  ; DSTL[5]~reg0   ; key        ; key      ; None                        ; None                      ; 4.274 ns                ;
+; N/A                                     ; 220.90 MHz ( period = 4.527 ns )                    ; num_A1[0]~reg0  ; SRCL[4]~reg0   ; key        ; key      ; None                        ; None                      ; 4.262 ns                ;
+; N/A                                     ; 221.04 MHz ( period = 4.524 ns )                    ; num_B1[1]~reg0  ; DSTL[4]~reg0   ; key        ; key      ; None                        ; None                      ; 4.273 ns                ;
+; N/A                                     ; 221.24 MHz ( period = 4.520 ns )                    ; state.secondnum ; num_B1[0]~reg0 ; key        ; key      ; None                        ; None                      ; 4.268 ns                ;
+; N/A                                     ; 221.39 MHz ( period = 4.517 ns )                    ; state.secondnum ; num_B2[2]~reg0 ; key        ; key      ; None                        ; None                      ; 4.263 ns                ;
+; N/A                                     ; 221.43 MHz ( period = 4.516 ns )                    ; num_B1[3]~reg0  ; DSTL[5]~reg0   ; key        ; key      ; None                        ; None                      ; 4.265 ns                ;
+; N/A                                     ; 221.53 MHz ( period = 4.514 ns )                    ; state.secondnum ; num_B2[0]~reg0 ; key        ; key      ; None                        ; None                      ; 4.260 ns                ;
+; N/A                                     ; 223.16 MHz ( period = 4.481 ns )                    ; num_A1[1]~reg0  ; SRCL[4]~reg0   ; key        ; key      ; None                        ; None                      ; 4.217 ns                ;
+; N/A                                     ; 223.76 MHz ( period = 4.469 ns )                    ; num_B2[2]~reg0  ; num_B2[2]~reg0 ; key        ; key      ; None                        ; None                      ; 4.205 ns                ;
+; N/A                                     ; 223.81 MHz ( period = 4.468 ns )                    ; state.secondnum ; SRCH[0]~reg0   ; key        ; key      ; None                        ; None                      ; 4.233 ns                ;
+; N/A                                     ; 223.81 MHz ( period = 4.468 ns )                    ; state.secondnum ; SRCH[1]~reg0   ; key        ; key      ; None                        ; None                      ; 4.233 ns                ;
+; N/A                                     ; 223.81 MHz ( period = 4.468 ns )                    ; state.secondnum ; SRCH[2]~reg0   ; key        ; key      ; None                        ; None                      ; 4.233 ns                ;
+; N/A                                     ; 223.81 MHz ( period = 4.468 ns )                    ; state.secondnum ; SRCH[3]~reg0   ; key        ; key      ; None                        ; None                      ; 4.233 ns                ;
+; N/A                                     ; 223.81 MHz ( period = 4.468 ns )                    ; state.secondnum ; SRCL[1]~reg0   ; key        ; key      ; None                        ; None                      ; 4.233 ns                ;
+; N/A                                     ; 223.81 MHz ( period = 4.468 ns )                    ; state.secondnum ; SRCL[2]~reg0   ; key        ; key      ; None                        ; None                      ; 4.233 ns                ;
+; N/A                                     ; 223.81 MHz ( period = 4.468 ns )                    ; state.secondnum ; SRCL[3]~reg0   ; key        ; key      ; None                        ; None                      ; 4.233 ns                ;
+; N/A                                     ; 223.81 MHz ( period = 4.468 ns )                    ; state.secondnum ; SRCL[4]~reg0   ; key        ; key      ; None                        ; None                      ; 4.233 ns                ;
+; N/A                                     ; 223.81 MHz ( period = 4.468 ns )                    ; state.secondnum ; SRCL[5]~reg0   ; key        ; key      ; None                        ; None                      ; 4.233 ns                ;
+; N/A                                     ; 223.81 MHz ( period = 4.468 ns )                    ; state.secondnum ; SRCL[6]~reg0   ; key        ; key      ; None                        ; None                      ; 4.233 ns                ;
+; N/A                                     ; 223.81 MHz ( period = 4.468 ns )                    ; state.secondnum ; SRCL[7]~reg0   ; key        ; key      ; None                        ; None                      ; 4.233 ns                ;
+; N/A                                     ; 224.22 MHz ( period = 4.460 ns )                    ; cnt[0]          ; num_A1[0]~reg0 ; key        ; key      ; None                        ; None                      ; 4.228 ns                ;
+; N/A                                     ; 224.22 MHz ( period = 4.460 ns )                    ; cnt[0]          ; num_A1[2]~reg0 ; key        ; key      ; None                        ; None                      ; 4.228 ns                ;
+; N/A                                     ; 224.52 MHz ( period = 4.454 ns )                    ; state.secondnum ; ALU_OP[0]~reg0 ; key        ; key      ; None                        ; None                      ; 4.224 ns                ;
+; N/A                                     ; 224.52 MHz ( period = 4.454 ns )                    ; state.secondnum ; ALU_OP[1]~reg0 ; key        ; key      ; None                        ; None                      ; 4.224 ns                ;
+; N/A                                     ; 224.52 MHz ( period = 4.454 ns )                    ; state.secondnum ; ALU_OP[2]~reg0 ; key        ; key      ; None                        ; None                      ; 4.224 ns                ;
+; N/A                                     ; 224.52 MHz ( period = 4.454 ns )                    ; state.secondnum ; ALU_OP[3]~reg0 ; key        ; key      ; None                        ; None                      ; 4.224 ns                ;
+; N/A                                     ; 224.52 MHz ( period = 4.454 ns )                    ; state.secondnum ; ALU_OP[4]~reg0 ; key        ; key      ; None                        ; None                      ; 4.224 ns                ;
+; N/A                                     ; 224.77 MHz ( period = 4.449 ns )                    ; num_B1[0]~reg0  ; num_B2[0]~reg0 ; key        ; key      ; None                        ; None                      ; 4.183 ns                ;
+; N/A                                     ; 225.07 MHz ( period = 4.443 ns )                    ; num_B0[3]~reg0  ; num_B1[3]~reg0 ; key        ; key      ; None                        ; None                      ; 4.178 ns                ;
+; N/A                                     ; 225.07 MHz ( period = 4.443 ns )                    ; state.secondnum ; num_A0[1]~reg0 ; key        ; key      ; None                        ; None                      ; 4.208 ns                ;
+; N/A                                     ; 225.07 MHz ( period = 4.443 ns )                    ; state.secondnum ; num_A1[1]~reg0 ; key        ; key      ; None                        ; None                      ; 4.208 ns                ;
+; N/A                                     ; 225.07 MHz ( period = 4.443 ns )                    ; state.secondnum ; num_A0[3]~reg0 ; key        ; key      ; None                        ; None                      ; 4.208 ns                ;
+; N/A                                     ; 225.07 MHz ( period = 4.443 ns )                    ; state.secondnum ; num_A1[3]~reg0 ; key        ; key      ; None                        ; None                      ; 4.208 ns                ;
+; N/A                                     ; 225.28 MHz ( period = 4.439 ns )                    ; cnt[0]          ; num_A0[0]~reg0 ; key        ; key      ; None                        ; None                      ; 4.209 ns                ;
+; N/A                                     ; 225.28 MHz ( period = 4.439 ns )                    ; cnt[0]          ; num_A0[2]~reg0 ; key        ; key      ; None                        ; None                      ; 4.209 ns                ;
+; N/A                                     ; 226.50 MHz ( period = 4.415 ns )                    ; num_B2[2]~reg0  ; DSTL[6]~reg0   ; key        ; key      ; None                        ; None                      ; 4.154 ns                ;
+; N/A                                     ; 227.63 MHz ( period = 4.393 ns )                    ; num_B2[1]~reg0  ; DSTL[4]~reg0   ; key        ; key      ; None                        ; None                      ; 4.132 ns                ;
+; N/A                                     ; 227.79 MHz ( period = 4.390 ns )                    ; num_B0[2]~reg0  ; num_B1[2]~reg0 ; key        ; key      ; None                        ; None                      ; 4.137 ns                ;
+; N/A                                     ; 227.84 MHz ( period = 4.389 ns )                    ; num_B1[1]~reg0  ; num_B1[1]~reg0 ; key        ; key      ; None                        ; None                      ; 4.125 ns                ;
+; N/A                                     ; 229.25 MHz ( period = 4.362 ns )                    ; state.oper      ; num_A1[0]~reg0 ; key        ; key      ; None                        ; None                      ; 4.127 ns                ;
+; N/A                                     ; 229.25 MHz ( period = 4.362 ns )                    ; state.oper      ; num_A1[2]~reg0 ; key        ; key      ; None                        ; None                      ; 4.127 ns                ;
+; N/A                                     ; 229.57 MHz ( period = 4.356 ns )                    ; num_A2[1]~reg0  ; SRCL[7]~reg0   ; key        ; key      ; None                        ; None                      ; 4.090 ns                ;
+; N/A                                     ; 230.36 MHz ( period = 4.341 ns )                    ; state.oper      ; num_A0[0]~reg0 ; key        ; key      ; None                        ; None                      ; 4.108 ns                ;
+; N/A                                     ; 230.36 MHz ( period = 4.341 ns )                    ; state.oper      ; num_A0[2]~reg0 ; key        ; key      ; None                        ; None                      ; 4.108 ns                ;
+; N/A                                     ; 230.36 MHz ( period = 4.341 ns )                    ; num_B1[2]~reg0  ; DSTL[5]~reg0   ; key        ; key      ; None                        ; None                      ; 4.078 ns                ;
+; N/A                                     ; 230.52 MHz ( period = 4.338 ns )                    ; num_B1[2]~reg0  ; num_B1[2]~reg0 ; key        ; key      ; None                        ; None                      ; 4.074 ns                ;
+; N/A                                     ; 231.27 MHz ( period = 4.324 ns )                    ; cnt[1]          ; num_A1[0]~reg0 ; key        ; key      ; None                        ; None                      ; 4.092 ns                ;
+; N/A                                     ; 231.27 MHz ( period = 4.324 ns )                    ; cnt[1]          ; num_A1[2]~reg0 ; key        ; key      ; None                        ; None                      ; 4.092 ns                ;
+; N/A                                     ; 232.40 MHz ( period = 4.303 ns )                    ; cnt[1]          ; num_A0[0]~reg0 ; key        ; key      ; None                        ; None                      ; 4.073 ns                ;
+; N/A                                     ; 232.40 MHz ( period = 4.303 ns )                    ; cnt[1]          ; num_A0[2]~reg0 ; key        ; key      ; None                        ; None                      ; 4.073 ns                ;
+; N/A                                     ; 232.61 MHz ( period = 4.299 ns )                    ; num_B2[0]~reg0  ; DSTL[3]~reg0   ; key        ; key      ; None                        ; None                      ; 4.038 ns                ;
+; N/A                                     ; 234.19 MHz ( period = 4.270 ns )                    ; num_A2[1]~reg0  ; SRCL[6]~reg0   ; key        ; key      ; None                        ; None                      ; 4.004 ns                ;
+; N/A                                     ; 234.36 MHz ( period = 4.267 ns )                    ; num_A2[0]~reg0  ; SRCL[5]~reg0   ; key        ; key      ; None                        ; None                      ; 4.001 ns                ;
+; N/A                                     ; 236.29 MHz ( period = 4.232 ns )                    ; num_B1[1]~reg0  ; DSTL[3]~reg0   ; key        ; key      ; None                        ; None                      ; 3.981 ns                ;
+; N/A                                     ; 236.35 MHz ( period = 4.231 ns )                    ; num_B2[3]~reg0  ; DSTL[6]~reg0   ; key        ; key      ; None                        ; None                      ; 3.970 ns                ;
+; N/A                                     ; 236.69 MHz ( period = 4.225 ns )                    ; cnt[0]          ; num_B1[0]~reg0 ; key        ; key      ; None                        ; None                      ; 3.975 ns                ;
+; N/A                                     ; 236.91 MHz ( period = 4.221 ns )                    ; state.secondnum ; num_B0[1]~reg0 ; key        ; key      ; None                        ; None                      ; 3.958 ns                ;
+; N/A                                     ; 236.91 MHz ( period = 4.221 ns )                    ; state.secondnum ; num_B0[0]~reg0 ; key        ; key      ; None                        ; None                      ; 3.958 ns                ;
+; N/A                                     ; 236.91 MHz ( period = 4.221 ns )                    ; state.secondnum ; num_B0[2]~reg0 ; key        ; key      ; None                        ; None                      ; 3.958 ns                ;
+; N/A                                     ; 236.91 MHz ( period = 4.221 ns )                    ; state.secondnum ; num_B0[3]~reg0 ; key        ; key      ; None                        ; None                      ; 3.958 ns                ;
+; N/A                                     ; 237.02 MHz ( period = 4.219 ns )                    ; num_A1[3]~reg0  ; SRCL[4]~reg0   ; key        ; key      ; None                        ; None                      ; 3.955 ns                ;
+; N/A                                     ; 237.19 MHz ( period = 4.216 ns )                    ; num_B1[0]~reg0  ; DSTL[4]~reg0   ; key        ; key      ; None                        ; None                      ; 3.953 ns                ;
+; N/A                                     ; 237.30 MHz ( period = 4.214 ns )                    ; num_A2[3]~reg0  ; SRCL[6]~reg0   ; key        ; key      ; None                        ; None                      ; 3.948 ns                ;
+; N/A                                     ; 239.01 MHz ( period = 4.184 ns )                    ; num_A2[1]~reg0  ; SRCL[5]~reg0   ; key        ; key      ; None                        ; None                      ; 3.918 ns                ;
+; N/A                                     ; 239.98 MHz ( period = 4.167 ns )                    ; num_A1[2]~reg0  ; SRCL[4]~reg0   ; key        ; key      ; None                        ; None                      ; 3.902 ns                ;
+; N/A                                     ; 240.27 MHz ( period = 4.162 ns )                    ; cnt[0]          ; num_A2[0]~reg0 ; key        ; key      ; None                        ; None                      ; 3.931 ns                ;
+; N/A                                     ; 240.27 MHz ( period = 4.162 ns )                    ; cnt[0]          ; num_A2[1]~reg0 ; key        ; key      ; None                        ; None                      ; 3.931 ns                ;
+; N/A                                     ; 240.27 MHz ( period = 4.162 ns )                    ; cnt[0]          ; num_A2[2]~reg0 ; key        ; key      ; None                        ; None                      ; 3.931 ns                ;
+; N/A                                     ; 240.27 MHz ( period = 4.162 ns )                    ; cnt[0]          ; num_A2[3]~reg0 ; key        ; key      ; None                        ; None                      ; 3.931 ns                ;
+; N/A                                     ; 241.84 MHz ( period = 4.135 ns )                    ; cnt[1]          ; num_B1[0]~reg0 ; key        ; key      ; None                        ; None                      ; 3.885 ns                ;
+; N/A                                     ; 242.31 MHz ( period = 4.127 ns )                    ; state.secondnum ; cnt[0]         ; key        ; key      ; None                        ; None                      ; 3.861 ns                ;
+; N/A                                     ; 242.31 MHz ( period = 4.127 ns )                    ; state.secondnum ; cnt[1]         ; key        ; key      ; None                        ; None                      ; 3.861 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                 ;                ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+-----------------+----------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                                 ;
++-----------------------------------------+-----------------------------------------------------+------------+-----------+-----------------+----------+
+; Slack                                   ; Required tsu                                        ; Actual tsu ; From      ; To              ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+-----------+-----------------+----------+
+; N/A                                     ; None                                                ; 10.502 ns  ; symbol[2] ; num_A0[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 10.502 ns  ; symbol[2] ; num_A1[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 10.502 ns  ; symbol[2] ; num_A0[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 10.502 ns  ; symbol[2] ; num_A1[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 10.176 ns  ; symbol[2] ; num_A1[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 10.176 ns  ; symbol[2] ; num_A1[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 10.155 ns  ; symbol[2] ; num_A0[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 10.155 ns  ; symbol[2] ; num_A0[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.878 ns   ; symbol[2] ; num_A2[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.878 ns   ; symbol[2] ; num_A2[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.878 ns   ; symbol[2] ; num_A2[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.878 ns   ; symbol[2] ; num_A2[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.809 ns   ; symbol[2] ; ALU_OP[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.809 ns   ; symbol[2] ; ALU_OP[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.809 ns   ; symbol[2] ; ALU_OP[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.809 ns   ; symbol[2] ; ALU_OP[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.809 ns   ; symbol[2] ; ALU_OP[4]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.739 ns   ; symbol[2] ; cnt[0]          ; key      ;
+; N/A                                     ; None                                                ; 9.739 ns   ; symbol[2] ; cnt[1]          ; key      ;
+; N/A                                     ; None                                                ; 9.702 ns   ; symbol[2] ; SRCH[0]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 9.702 ns   ; symbol[2] ; SRCH[1]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 9.702 ns   ; symbol[2] ; SRCH[2]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 9.702 ns   ; symbol[2] ; SRCH[3]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 9.702 ns   ; symbol[2] ; SRCL[1]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 9.702 ns   ; symbol[2] ; SRCL[2]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 9.702 ns   ; symbol[2] ; SRCL[3]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 9.702 ns   ; symbol[2] ; SRCL[4]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 9.702 ns   ; symbol[2] ; SRCL[5]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 9.702 ns   ; symbol[2] ; SRCL[6]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 9.702 ns   ; symbol[2] ; SRCL[7]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 9.586 ns   ; symbol[2] ; num_B0[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.586 ns   ; symbol[2] ; num_B0[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.586 ns   ; symbol[2] ; num_B0[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.586 ns   ; symbol[2] ; num_B0[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.581 ns   ; symbol[1] ; num_A0[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.581 ns   ; symbol[1] ; num_A1[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.581 ns   ; symbol[1] ; num_A0[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.581 ns   ; symbol[1] ; num_A1[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.514 ns   ; symbol[3] ; num_A0[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.514 ns   ; symbol[3] ; num_A1[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.514 ns   ; symbol[3] ; num_A0[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.514 ns   ; symbol[3] ; num_A1[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.469 ns   ; symbol[0] ; num_A0[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.469 ns   ; symbol[0] ; num_A1[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.469 ns   ; symbol[0] ; num_A0[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.469 ns   ; symbol[0] ; num_A1[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.344 ns   ; symbol[2] ; SRCL[0]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 9.344 ns   ; symbol[2] ; DSTL[0]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 9.255 ns   ; symbol[1] ; num_A1[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.255 ns   ; symbol[1] ; num_A1[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.234 ns   ; symbol[1] ; num_A0[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.234 ns   ; symbol[1] ; num_A0[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.188 ns   ; symbol[3] ; num_A1[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.188 ns   ; symbol[3] ; num_A1[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.167 ns   ; symbol[3] ; num_A0[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.167 ns   ; symbol[3] ; num_A0[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.143 ns   ; symbol[0] ; num_A1[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.143 ns   ; symbol[0] ; num_A1[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.122 ns   ; symbol[0] ; num_A0[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 9.122 ns   ; symbol[0] ; num_A0[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.969 ns   ; symbol[2] ; num_B1[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.957 ns   ; symbol[1] ; num_A2[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.957 ns   ; symbol[1] ; num_A2[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.957 ns   ; symbol[1] ; num_A2[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.957 ns   ; symbol[1] ; num_A2[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.950 ns   ; symbol[2] ; DSTH[0]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.950 ns   ; symbol[2] ; DSTH[1]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.950 ns   ; symbol[2] ; DSTH[2]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.950 ns   ; symbol[2] ; DSTH[3]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.950 ns   ; symbol[2] ; DSTL[1]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.950 ns   ; symbol[2] ; DSTL[2]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.950 ns   ; symbol[2] ; DSTL[3]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.950 ns   ; symbol[2] ; DSTL[4]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.950 ns   ; symbol[2] ; DSTL[5]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.950 ns   ; symbol[2] ; DSTL[6]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.950 ns   ; symbol[2] ; DSTL[7]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.896 ns   ; symbol[1] ; ALU_OP[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.896 ns   ; symbol[1] ; ALU_OP[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.896 ns   ; symbol[1] ; ALU_OP[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.896 ns   ; symbol[1] ; ALU_OP[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.896 ns   ; symbol[1] ; ALU_OP[4]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.890 ns   ; symbol[3] ; num_A2[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.890 ns   ; symbol[3] ; num_A2[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.890 ns   ; symbol[3] ; num_A2[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.890 ns   ; symbol[3] ; num_A2[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.845 ns   ; symbol[0] ; num_A2[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.845 ns   ; symbol[0] ; num_A2[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.845 ns   ; symbol[0] ; num_A2[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.845 ns   ; symbol[0] ; num_A2[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.818 ns   ; symbol[1] ; cnt[0]          ; key      ;
+; N/A                                     ; None                                                ; 8.818 ns   ; symbol[1] ; cnt[1]          ; key      ;
+; N/A                                     ; None                                                ; 8.785 ns   ; symbol[0] ; ALU_OP[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.785 ns   ; symbol[0] ; ALU_OP[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.785 ns   ; symbol[0] ; ALU_OP[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.785 ns   ; symbol[0] ; ALU_OP[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.785 ns   ; symbol[0] ; ALU_OP[4]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.751 ns   ; symbol[3] ; cnt[0]          ; key      ;
+; N/A                                     ; None                                                ; 8.751 ns   ; symbol[3] ; cnt[1]          ; key      ;
+; N/A                                     ; None                                                ; 8.729 ns   ; symbol[1] ; SRCH[0]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.729 ns   ; symbol[1] ; SRCH[1]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.729 ns   ; symbol[1] ; SRCH[2]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.729 ns   ; symbol[1] ; SRCH[3]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.729 ns   ; symbol[1] ; SRCL[1]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.729 ns   ; symbol[1] ; SRCL[2]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.729 ns   ; symbol[1] ; SRCL[3]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.729 ns   ; symbol[1] ; SRCL[4]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.729 ns   ; symbol[1] ; SRCL[5]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.729 ns   ; symbol[1] ; SRCL[6]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.729 ns   ; symbol[1] ; SRCL[7]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.711 ns   ; symbol[3] ; ALU_OP[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.711 ns   ; symbol[3] ; ALU_OP[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.711 ns   ; symbol[3] ; ALU_OP[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.711 ns   ; symbol[3] ; ALU_OP[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.711 ns   ; symbol[3] ; ALU_OP[4]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.709 ns   ; symbol[3] ; SRCH[0]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.709 ns   ; symbol[3] ; SRCH[1]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.709 ns   ; symbol[3] ; SRCH[2]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.709 ns   ; symbol[3] ; SRCH[3]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.709 ns   ; symbol[3] ; SRCL[1]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.709 ns   ; symbol[3] ; SRCL[2]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.709 ns   ; symbol[3] ; SRCL[3]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.709 ns   ; symbol[3] ; SRCL[4]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.709 ns   ; symbol[3] ; SRCL[5]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.709 ns   ; symbol[3] ; SRCL[6]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.709 ns   ; symbol[3] ; SRCL[7]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.706 ns   ; symbol[0] ; cnt[0]          ; key      ;
+; N/A                                     ; None                                                ; 8.706 ns   ; symbol[0] ; cnt[1]          ; key      ;
+; N/A                                     ; None                                                ; 8.670 ns   ; symbol[0] ; SRCH[0]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.670 ns   ; symbol[0] ; SRCH[1]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.670 ns   ; symbol[0] ; SRCH[2]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.670 ns   ; symbol[0] ; SRCH[3]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.670 ns   ; symbol[0] ; SRCL[1]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.670 ns   ; symbol[0] ; SRCL[2]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.670 ns   ; symbol[0] ; SRCL[3]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.670 ns   ; symbol[0] ; SRCL[4]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.670 ns   ; symbol[0] ; SRCL[5]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.670 ns   ; symbol[0] ; SRCL[6]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.670 ns   ; symbol[0] ; SRCL[7]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.665 ns   ; symbol[1] ; num_B0[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.665 ns   ; symbol[1] ; num_B0[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.665 ns   ; symbol[1] ; num_B0[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.665 ns   ; symbol[1] ; num_B0[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.646 ns   ; symbol[2] ; num_B1[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.598 ns   ; symbol[3] ; num_B0[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.598 ns   ; symbol[3] ; num_B0[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.598 ns   ; symbol[3] ; num_B0[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.598 ns   ; symbol[3] ; num_B0[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.553 ns   ; symbol[0] ; num_B0[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.553 ns   ; symbol[0] ; num_B0[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.553 ns   ; symbol[0] ; num_B0[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.553 ns   ; symbol[0] ; num_B0[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.552 ns   ; symbol[2] ; num_B2[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.550 ns   ; symbol[2] ; num_B2[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.538 ns   ; symbol[2] ; num_B2[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.468 ns   ; symbol[2] ; num_B1[0]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.407 ns   ; symbol[2] ; finish~reg0     ; key      ;
+; N/A                                     ; None                                                ; 8.371 ns   ; symbol[1] ; SRCL[0]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.371 ns   ; symbol[1] ; DSTL[0]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.359 ns   ; symbol[2] ; num_B2[3]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.351 ns   ; symbol[3] ; SRCL[0]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.351 ns   ; symbol[3] ; DSTL[0]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.351 ns   ; symbol[2] ; state.firstnum  ; key      ;
+; N/A                                     ; None                                                ; 8.312 ns   ; symbol[0] ; SRCL[0]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.312 ns   ; symbol[0] ; DSTL[0]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 8.305 ns   ; reset     ; num_B2[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.261 ns   ; symbol[2] ; state.idle      ; key      ;
+; N/A                                     ; None                                                ; 8.239 ns   ; symbol[2] ; num_B1[1]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 8.209 ns   ; symbol[2] ; state.secondnum ; key      ;
+; N/A                                     ; None                                                ; 8.138 ns   ; symbol[2] ; state.oper      ; key      ;
+; N/A                                     ; None                                                ; 8.048 ns   ; symbol[1] ; num_B1[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 7.981 ns   ; symbol[3] ; num_B1[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 7.977 ns   ; symbol[1] ; DSTH[0]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.977 ns   ; symbol[1] ; DSTH[1]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.977 ns   ; symbol[1] ; DSTH[2]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.977 ns   ; symbol[1] ; DSTH[3]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.977 ns   ; symbol[1] ; DSTL[1]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.977 ns   ; symbol[1] ; DSTL[2]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.977 ns   ; symbol[1] ; DSTL[3]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.977 ns   ; symbol[1] ; DSTL[4]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.977 ns   ; symbol[1] ; DSTL[5]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.977 ns   ; symbol[1] ; DSTL[6]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.977 ns   ; symbol[1] ; DSTL[7]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.957 ns   ; symbol[3] ; DSTH[0]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.957 ns   ; symbol[3] ; DSTH[1]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.957 ns   ; symbol[3] ; DSTH[2]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.957 ns   ; symbol[3] ; DSTH[3]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.957 ns   ; symbol[3] ; DSTL[1]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.957 ns   ; symbol[3] ; DSTL[2]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.957 ns   ; symbol[3] ; DSTL[3]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.957 ns   ; symbol[3] ; DSTL[4]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.957 ns   ; symbol[3] ; DSTL[5]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.957 ns   ; symbol[3] ; DSTL[6]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.957 ns   ; symbol[3] ; DSTL[7]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.936 ns   ; symbol[0] ; num_B1[2]~reg0  ; key      ;
+; N/A                                     ; None                                                ; 7.918 ns   ; symbol[0] ; DSTH[0]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.918 ns   ; symbol[0] ; DSTH[1]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.918 ns   ; symbol[0] ; DSTH[2]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.918 ns   ; symbol[0] ; DSTH[3]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.918 ns   ; symbol[0] ; DSTL[1]~reg0    ; key      ;
+; N/A                                     ; None                                                ; 7.918 ns   ; symbol[0] ; DSTL[2]~reg0    ; key      ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;           ;                 ;          ;
++-----------------------------------------+-----------------------------------------------------+------------+-----------+-----------------+----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                                ;
++-----------------------------------------+-----------------------------------------------------+------------+----------------+---------+------------+
+; Slack                                   ; Required tco                                        ; Actual tco ; From           ; To      ; From Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+----------------+---------+------------+
+; N/A                                     ; None                                                ; 14.761 ns  ; num_B1[2]~reg0 ; DST[11] ; key        ;
+; N/A                                     ; None                                                ; 14.637 ns  ; num_B1[3]~reg0 ; DST[11] ; key        ;
+; N/A                                     ; None                                                ; 14.596 ns  ; num_A1[0]~reg0 ; SRC[10] ; key        ;
+; N/A                                     ; None                                                ; 14.580 ns  ; num_B1[0]~reg0 ; DST[11] ; key        ;
+; N/A                                     ; None                                                ; 14.468 ns  ; num_A1[1]~reg0 ; SRC[10] ; key        ;
+; N/A                                     ; None                                                ; 14.383 ns  ; num_B1[2]~reg0 ; DST[10] ; key        ;
+; N/A                                     ; None                                                ; 14.291 ns  ; num_B1[1]~reg0 ; DST[11] ; key        ;
+; N/A                                     ; None                                                ; 14.288 ns  ; num_A1[3]~reg0 ; SRC[10] ; key        ;
+; N/A                                     ; None                                                ; 14.259 ns  ; num_B1[3]~reg0 ; DST[10] ; key        ;
+; N/A                                     ; None                                                ; 14.236 ns  ; num_A1[2]~reg0 ; SRC[10] ; key        ;
+; N/A                                     ; None                                                ; 14.202 ns  ; num_B1[0]~reg0 ; DST[10] ; key        ;
+; N/A                                     ; None                                                ; 14.162 ns  ; num_A2[0]~reg0 ; SRC[10] ; key        ;
+; N/A                                     ; None                                                ; 14.117 ns  ; num_A1[0]~reg0 ; SRC[11] ; key        ;
+; N/A                                     ; None                                                ; 14.101 ns  ; num_A2[3]~reg0 ; SRC[10] ; key        ;
+; N/A                                     ; None                                                ; 14.053 ns  ; num_B2[1]~reg0 ; DST[11] ; key        ;
+; N/A                                     ; None                                                ; 14.001 ns  ; num_B2[3]~reg0 ; DST[11] ; key        ;
+; N/A                                     ; None                                                ; 13.991 ns  ; num_A2[2]~reg0 ; SRC[10] ; key        ;
+; N/A                                     ; None                                                ; 13.989 ns  ; num_A1[1]~reg0 ; SRC[11] ; key        ;
+; N/A                                     ; None                                                ; 13.938 ns  ; num_B2[2]~reg0 ; DST[11] ; key        ;
+; N/A                                     ; None                                                ; 13.932 ns  ; num_A2[1]~reg0 ; SRC[10] ; key        ;
+; N/A                                     ; None                                                ; 13.921 ns  ; num_B1[1]~reg0 ; DST[10] ; key        ;
+; N/A                                     ; None                                                ; 13.886 ns  ; num_B2[0]~reg0 ; DST[11] ; key        ;
+; N/A                                     ; None                                                ; 13.884 ns  ; num_B1[1]~reg0 ; DST[7]  ; key        ;
+; N/A                                     ; None                                                ; 13.881 ns  ; num_A1[0]~reg0 ; SRC[8]  ; key        ;
+; N/A                                     ; None                                                ; 13.809 ns  ; num_A1[3]~reg0 ; SRC[11] ; key        ;
+; N/A                                     ; None                                                ; 13.757 ns  ; num_A1[2]~reg0 ; SRC[11] ; key        ;
+; N/A                                     ; None                                                ; 13.756 ns  ; num_A1[0]~reg0 ; SRC[9]  ; key        ;
+; N/A                                     ; None                                                ; 13.753 ns  ; num_A1[1]~reg0 ; SRC[8]  ; key        ;
+; N/A                                     ; None                                                ; 13.714 ns  ; num_B1[3]~reg0 ; DST[7]  ; key        ;
+; N/A                                     ; None                                                ; 13.683 ns  ; num_A2[0]~reg0 ; SRC[11] ; key        ;
+; N/A                                     ; None                                                ; 13.683 ns  ; num_B2[1]~reg0 ; DST[10] ; key        ;
+; N/A                                     ; None                                                ; 13.628 ns  ; num_A1[1]~reg0 ; SRC[9]  ; key        ;
+; N/A                                     ; None                                                ; 13.623 ns  ; num_B2[3]~reg0 ; DST[10] ; key        ;
+; N/A                                     ; None                                                ; 13.622 ns  ; num_A2[3]~reg0 ; SRC[11] ; key        ;
+; N/A                                     ; None                                                ; 13.573 ns  ; num_A1[3]~reg0 ; SRC[8]  ; key        ;
+; N/A                                     ; None                                                ; 13.560 ns  ; num_B2[2]~reg0 ; DST[10] ; key        ;
+; N/A                                     ; None                                                ; 13.559 ns  ; num_B1[2]~reg0 ; DST[7]  ; key        ;
+; N/A                                     ; None                                                ; 13.527 ns  ; num_B2[1]~reg0 ; DST[7]  ; key        ;
+; N/A                                     ; None                                                ; 13.521 ns  ; num_A1[2]~reg0 ; SRC[8]  ; key        ;
+; N/A                                     ; None                                                ; 13.516 ns  ; num_B2[0]~reg0 ; DST[10] ; key        ;
+; N/A                                     ; None                                                ; 13.512 ns  ; num_A2[2]~reg0 ; SRC[11] ; key        ;
+; N/A                                     ; None                                                ; 13.502 ns  ; num_B1[0]~reg0 ; DST[7]  ; key        ;
+; N/A                                     ; None                                                ; 13.479 ns  ; num_B2[0]~reg0 ; DST[7]  ; key        ;
+; N/A                                     ; None                                                ; 13.468 ns  ; num_A1[0]~reg0 ; SRC[6]  ; key        ;
+; N/A                                     ; None                                                ; 13.453 ns  ; num_A2[1]~reg0 ; SRC[11] ; key        ;
+; N/A                                     ; None                                                ; 13.448 ns  ; num_A1[3]~reg0 ; SRC[9]  ; key        ;
+; N/A                                     ; None                                                ; 13.446 ns  ; num_A2[0]~reg0 ; SRC[8]  ; key        ;
+; N/A                                     ; None                                                ; 13.396 ns  ; num_A1[2]~reg0 ; SRC[9]  ; key        ;
+; N/A                                     ; None                                                ; 13.376 ns  ; num_A2[3]~reg0 ; SRC[8]  ; key        ;
+; N/A                                     ; None                                                ; 13.340 ns  ; num_A1[1]~reg0 ; SRC[6]  ; key        ;
+; N/A                                     ; None                                                ; 13.321 ns  ; num_A2[0]~reg0 ; SRC[9]  ; key        ;
+; N/A                                     ; None                                                ; 13.298 ns  ; num_B2[3]~reg0 ; DST[7]  ; key        ;
+; N/A                                     ; None                                                ; 13.251 ns  ; num_A2[3]~reg0 ; SRC[9]  ; key        ;
+; N/A                                     ; None                                                ; 13.173 ns  ; num_B1[2]~reg0 ; DST[9]  ; key        ;
+; N/A                                     ; None                                                ; 13.160 ns  ; num_A1[3]~reg0 ; SRC[6]  ; key        ;
+; N/A                                     ; None                                                ; 13.147 ns  ; num_B2[2]~reg0 ; DST[7]  ; key        ;
+; N/A                                     ; None                                                ; 13.108 ns  ; num_A1[2]~reg0 ; SRC[6]  ; key        ;
+; N/A                                     ; None                                                ; 13.061 ns  ; num_A2[2]~reg0 ; SRC[9]  ; key        ;
+; N/A                                     ; None                                                ; 13.049 ns  ; num_B1[3]~reg0 ; DST[9]  ; key        ;
+; N/A                                     ; None                                                ; 13.002 ns  ; num_A2[1]~reg0 ; SRC[9]  ; key        ;
+; N/A                                     ; None                                                ; 12.992 ns  ; num_B1[0]~reg0 ; DST[9]  ; key        ;
+; N/A                                     ; None                                                ; 12.936 ns  ; num_A2[1]~reg0 ; SRC[8]  ; key        ;
+; N/A                                     ; None                                                ; 12.865 ns  ; num_A2[2]~reg0 ; SRC[8]  ; key        ;
+; N/A                                     ; None                                                ; 12.711 ns  ; num_B1[1]~reg0 ; DST[9]  ; key        ;
+; N/A                                     ; None                                                ; 12.640 ns  ; num_A2[0]~reg0 ; SRC[6]  ; key        ;
+; N/A                                     ; None                                                ; 12.623 ns  ; num_B1[3]~reg0 ; DST[8]  ; key        ;
+; N/A                                     ; None                                                ; 12.610 ns  ; num_B1[2]~reg0 ; DST[8]  ; key        ;
+; N/A                                     ; None                                                ; 12.556 ns  ; num_B2[0]~reg0 ; DST[2]  ; key        ;
+; N/A                                     ; None                                                ; 12.541 ns  ; num_B1[1]~reg0 ; DST[8]  ; key        ;
+; N/A                                     ; None                                                ; 12.514 ns  ; num_B0[1]~reg0 ; DST[11] ; key        ;
+; N/A                                     ; None                                                ; 12.489 ns  ; num_B1[1]~reg0 ; DST[2]  ; key        ;
+; N/A                                     ; None                                                ; 12.473 ns  ; num_B2[1]~reg0 ; DST[9]  ; key        ;
+; N/A                                     ; None                                                ; 12.436 ns  ; num_A1[0]~reg0 ; SRC[7]  ; key        ;
+; N/A                                     ; None                                                ; 12.429 ns  ; num_B1[0]~reg0 ; DST[8]  ; key        ;
+; N/A                                     ; None                                                ; 12.421 ns  ; num_B1[1]~reg0 ; DST[6]  ; key        ;
+; N/A                                     ; None                                                ; 12.413 ns  ; num_B2[3]~reg0 ; DST[9]  ; key        ;
+; N/A                                     ; None                                                ; 12.350 ns  ; num_B2[2]~reg0 ; DST[9]  ; key        ;
+; N/A                                     ; None                                                ; 12.308 ns  ; num_A1[1]~reg0 ; SRC[7]  ; key        ;
+; N/A                                     ; None                                                ; 12.306 ns  ; num_B2[0]~reg0 ; DST[9]  ; key        ;
+; N/A                                     ; None                                                ; 12.303 ns  ; num_B2[1]~reg0 ; DST[8]  ; key        ;
+; N/A                                     ; None                                                ; 12.301 ns  ; num_A2[1]~reg0 ; SRC[6]  ; key        ;
+; N/A                                     ; None                                                ; 12.251 ns  ; num_B1[3]~reg0 ; DST[6]  ; key        ;
+; N/A                                     ; None                                                ; 12.245 ns  ; num_A2[3]~reg0 ; SRC[6]  ; key        ;
+; N/A                                     ; None                                                ; 12.241 ns  ; num_B2[1]~reg0 ; DST[5]  ; key        ;
+; N/A                                     ; None                                                ; 12.214 ns  ; num_B0[1]~reg0 ; DST[10] ; key        ;
+; N/A                                     ; None                                                ; 12.206 ns  ; num_B1[1]~reg0 ; DST[5]  ; key        ;
+; N/A                                     ; None                                                ; 12.196 ns  ; num_B2[0]~reg0 ; DST[5]  ; key        ;
+; N/A                                     ; None                                                ; 12.177 ns  ; num_B0[1]~reg0 ; DST[7]  ; key        ;
+; N/A                                     ; None                                                ; 12.136 ns  ; num_B2[0]~reg0 ; DST[8]  ; key        ;
+; N/A                                     ; None                                                ; 12.128 ns  ; num_A1[3]~reg0 ; SRC[7]  ; key        ;
+; N/A                                     ; None                                                ; 12.076 ns  ; num_A1[2]~reg0 ; SRC[7]  ; key        ;
+; N/A                                     ; None                                                ; 12.076 ns  ; num_B2[1]~reg0 ; DST[6]  ; key        ;
+; N/A                                     ; None                                                ; 12.057 ns  ; num_B1[0]~reg0 ; DST[5]  ; key        ;
+; N/A                                     ; None                                                ; 12.049 ns  ; num_A2[2]~reg0 ; SRC[6]  ; key        ;
+; N/A                                     ; None                                                ; 12.039 ns  ; num_B1[0]~reg0 ; DST[6]  ; key        ;
+; N/A                                     ; None                                                ; 12.036 ns  ; num_B1[3]~reg0 ; DST[5]  ; key        ;
+; N/A                                     ; None                                                ; 12.031 ns  ; num_B2[0]~reg0 ; DST[6]  ; key        ;
+; N/A                                     ; None                                                ; 12.019 ns  ; num_B2[0]~reg0 ; DST[3]  ; key        ;
+; N/A                                     ; None                                                ; 12.013 ns  ; num_A1[0]~reg0 ; SRC[5]  ; key        ;
+; N/A                                     ; None                                                ; 12.001 ns  ; num_A2[0]~reg0 ; SRC[7]  ; key        ;
+; N/A                                     ; None                                                ; 11.964 ns  ; num_B1[2]~reg0 ; DST[6]  ; key        ;
+; N/A                                     ; None                                                ; 11.957 ns  ; num_A0[2]~reg0 ; SRC[10] ; key        ;
+; N/A                                     ; None                                                ; 11.955 ns  ; num_B2[3]~reg0 ; DST[8]  ; key        ;
+; N/A                                     ; None                                                ; 11.952 ns  ; num_B1[1]~reg0 ; DST[3]  ; key        ;
+; N/A                                     ; None                                                ; 11.885 ns  ; num_A1[1]~reg0 ; SRC[5]  ; key        ;
+; N/A                                     ; None                                                ; 11.868 ns  ; num_A1[1]~reg0 ; SRC[3]  ; key        ;
+; N/A                                     ; None                                                ; 11.861 ns  ; num_B1[2]~reg0 ; DST[5]  ; key        ;
+; N/A                                     ; None                                                ; 11.839 ns  ; num_B0[3]~reg0 ; DST[11] ; key        ;
+; N/A                                     ; None                                                ; 11.804 ns  ; num_B2[2]~reg0 ; DST[8]  ; key        ;
+; N/A                                     ; None                                                ; 11.800 ns  ; num_B0[1]~reg0 ; DST[2]  ; key        ;
+; N/A                                     ; None                                                ; 11.705 ns  ; num_A1[3]~reg0 ; SRC[5]  ; key        ;
+; N/A                                     ; None                                                ; 11.701 ns  ; num_B2[0]~reg0 ; DST[4]  ; key        ;
+; N/A                                     ; None                                                ; 11.694 ns  ; num_A1[0]~reg0 ; SRC[3]  ; key        ;
+; N/A                                     ; None                                                ; 11.684 ns  ; num_B2[2]~reg0 ; DST[6]  ; key        ;
+; N/A                                     ; None                                                ; 11.660 ns  ; num_B0[2]~reg0 ; DST[11] ; key        ;
+; N/A                                     ; None                                                ; 11.653 ns  ; num_A1[2]~reg0 ; SRC[5]  ; key        ;
+; N/A                                     ; None                                                ; 11.635 ns  ; num_B1[1]~reg0 ; DST[4]  ; key        ;
+; N/A                                     ; None                                                ; 11.606 ns  ; num_A2[3]~reg0 ; SRC[7]  ; key        ;
+; N/A                                     ; None                                                ; 11.539 ns  ; num_B0[3]~reg0 ; DST[10] ; key        ;
+; N/A                                     ; None                                                ; 11.522 ns  ; num_B2[1]~reg0 ; DST[3]  ; key        ;
+; N/A                                     ; None                                                ; 11.504 ns  ; num_B2[1]~reg0 ; DST[4]  ; key        ;
+; N/A                                     ; None                                                ; 11.502 ns  ; num_B0[3]~reg0 ; DST[7]  ; key        ;
+; N/A                                     ; None                                                ; 11.500 ns  ; num_B2[3]~reg0 ; DST[6]  ; key        ;
+; N/A                                     ; None                                                ; 11.478 ns  ; num_A0[2]~reg0 ; SRC[11] ; key        ;
+; N/A                                     ; None                                                ; 11.470 ns  ; num_B2[2]~reg0 ; DST[5]  ; key        ;
+; N/A                                     ; None                                                ; 11.452 ns  ; num_A2[0]~reg0 ; SRC[3]  ; key        ;
+; N/A                                     ; None                                                ; 11.444 ns  ; num_A1[0]~reg0 ; SRC[4]  ; key        ;
+; N/A                                     ; None                                                ; 11.432 ns  ; num_A1[1]~reg0 ; SRC[2]  ; key        ;
+; N/A                                     ; None                                                ; 11.398 ns  ; num_A1[1]~reg0 ; SRC[4]  ; key        ;
+; N/A                                     ; None                                                ; 11.386 ns  ; num_A0[1]~reg0 ; SRC[10] ; key        ;
+; N/A                                     ; None                                                ; 11.385 ns  ; num_A0[2]~reg0 ; SRC[8]  ; key        ;
+; N/A                                     ; None                                                ; 11.360 ns  ; num_B0[2]~reg0 ; DST[10] ; key        ;
+; N/A                                     ; None                                                ; 11.345 ns  ; num_B1[0]~reg0 ; DST[3]  ; key        ;
+; N/A                                     ; None                                                ; 11.327 ns  ; num_B1[0]~reg0 ; DST[4]  ; key        ;
+; N/A                                     ; None                                                ; 11.323 ns  ; num_B0[2]~reg0 ; DST[7]  ; key        ;
+; N/A                                     ; None                                                ; 11.297 ns  ; num_A1[2]~reg0 ; SRC[3]  ; key        ;
+; N/A                                     ; None                                                ; 11.269 ns  ; num_A2[1]~reg0 ; SRC[7]  ; key        ;
+; N/A                                     ; None                                                ; 11.260 ns  ; num_A0[2]~reg0 ; SRC[9]  ; key        ;
+; N/A                                     ; None                                                ; 11.215 ns  ; num_A0[3]~reg0 ; SRC[10] ; key        ;
+; N/A                                     ; None                                                ; 11.213 ns  ; num_B2[3]~reg0 ; DST[5]  ; key        ;
+; N/A                                     ; None                                                ; 11.159 ns  ; num_A2[0]~reg0 ; SRC[5]  ; key        ;
+; N/A                                     ; None                                                ; 11.149 ns  ; num_B1[2]~reg0 ; DST[3]  ; key        ;
+; N/A                                     ; None                                                ; 11.148 ns  ; num_B1[3]~reg0 ; DST[4]  ; key        ;
+; N/A                                     ; None                                                ; 11.136 ns  ; num_A1[3]~reg0 ; SRC[4]  ; key        ;
+; N/A                                     ; None                                                ; 11.131 ns  ; num_B1[2]~reg0 ; DST[4]  ; key        ;
+; N/A                                     ; None                                                ; 11.084 ns  ; num_A1[2]~reg0 ; SRC[4]  ; key        ;
+; N/A                                     ; None                                                ; 11.076 ns  ; num_A2[1]~reg0 ; SRC[5]  ; key        ;
+; N/A                                     ; None                                                ; 11.052 ns  ; num_B1[0]~reg0 ; DST[2]  ; key        ;
+; N/A                                     ; None                                                ; 11.027 ns  ; num_A2[2]~reg0 ; SRC[7]  ; key        ;
+; N/A                                     ; None                                                ; 11.016 ns  ; num_A2[0]~reg0 ; SRC[2]  ; key        ;
+; N/A                                     ; None                                                ; 11.004 ns  ; num_B0[1]~reg0 ; DST[9]  ; key        ;
+; N/A                                     ; None                                                ; 10.983 ns  ; num_A2[0]~reg0 ; SRC[4]  ; key        ;
+; N/A                                     ; None                                                ; 10.972 ns  ; num_A0[2]~reg0 ; SRC[6]  ; key        ;
+; N/A                                     ; None                                                ; 10.966 ns  ; num_A2[1]~reg0 ; SRC[3]  ; key        ;
+; N/A                                     ; None                                                ; 10.938 ns  ; num_B0[1]~reg0 ; DST[5]  ; key        ;
+; N/A                                     ; None                                                ; 10.907 ns  ; num_A0[1]~reg0 ; SRC[11] ; key        ;
+; N/A                                     ; None                                                ; 10.862 ns  ; num_B0[1]~reg0 ; DST[3]  ; key        ;
+; N/A                                     ; None                                                ; 10.834 ns  ; num_B0[1]~reg0 ; DST[8]  ; key        ;
+; N/A                                     ; None                                                ; 10.814 ns  ; num_A0[1]~reg0 ; SRC[8]  ; key        ;
+; N/A                                     ; None                                                ; 10.773 ns  ; num_B0[1]~reg0 ; DST[6]  ; key        ;
+; N/A                                     ; None                                                ; 10.736 ns  ; num_A0[3]~reg0 ; SRC[11] ; key        ;
+; N/A                                     ; None                                                ; 10.735 ns  ; num_B0[1]~reg0 ; DST[1]  ; key        ;
+; N/A                                     ; None                                                ; 10.689 ns  ; num_A0[1]~reg0 ; SRC[9]  ; key        ;
+; N/A                                     ; None                                                ; 10.643 ns  ; num_A0[3]~reg0 ; SRC[8]  ; key        ;
+; N/A                                     ; None                                                ; 10.627 ns  ; num_A2[3]~reg0 ; SRC[5]  ; key        ;
+; N/A                                     ; None                                                ; 10.593 ns  ; num_A2[2]~reg0 ; SRC[5]  ; key        ;
+; N/A                                     ; None                                                ; 10.582 ns  ; num_B2[2]~reg0 ; DST[4]  ; key        ;
+; N/A                                     ; None                                                ; 10.552 ns  ; num_B0[2]~reg0 ; DST[2]  ; key        ;
+; N/A                                     ; None                                                ; 10.540 ns  ; num_A1[0]~reg0 ; SRC[2]  ; key        ;
+; N/A                                     ; None                                                ; 10.518 ns  ; num_A0[3]~reg0 ; SRC[9]  ; key        ;
+; N/A                                     ; None                                                ; 10.507 ns  ; num_A2[1]~reg0 ; SRC[4]  ; key        ;
+; N/A                                     ; None                                                ; 10.443 ns  ; num_B0[1]~reg0 ; DST[4]  ; key        ;
+; N/A                                     ; None                                                ; 10.440 ns  ; num_A0[2]~reg0 ; SRC[3]  ; key        ;
+; N/A                                     ; None                                                ; 10.401 ns  ; num_A0[1]~reg0 ; SRC[6]  ; key        ;
+; N/A                                     ; None                                                ; 10.329 ns  ; num_B0[3]~reg0 ; DST[9]  ; key        ;
+; N/A                                     ; None                                                ; 10.263 ns  ; num_B0[3]~reg0 ; DST[5]  ; key        ;
+; N/A                                     ; None                                                ; 10.230 ns  ; num_A0[3]~reg0 ; SRC[6]  ; key        ;
+; N/A                                     ; None                                                ; 10.204 ns  ; num_A1[0]~reg0 ; SRC[1]  ; key        ;
+; N/A                                     ; None                                                ; 10.159 ns  ; num_B0[3]~reg0 ; DST[8]  ; key        ;
+; N/A                                     ; None                                                ; 10.150 ns  ; num_B0[2]~reg0 ; DST[9]  ; key        ;
+; N/A                                     ; None                                                ; 10.098 ns  ; num_B0[3]~reg0 ; DST[6]  ; key        ;
+; N/A                                     ; None                                                ; 10.084 ns  ; num_B0[2]~reg0 ; DST[5]  ; key        ;
+; N/A                                     ; None                                                ; 10.024 ns  ; num_A2[2]~reg0 ; SRC[4]  ; key        ;
+; N/A                                     ; None                                                ; 10.008 ns  ; num_B0[2]~reg0 ; DST[3]  ; key        ;
+; N/A                                     ; None                                                ; 9.997 ns   ; num_A0[2]~reg0 ; SRC[2]  ; key        ;
+; N/A                                     ; None                                                ; 9.988 ns   ; num_B1[0]~reg0 ; DST[1]  ; key        ;
+; N/A                                     ; None                                                ; 9.980 ns   ; num_B0[2]~reg0 ; DST[8]  ; key        ;
+; N/A                                     ; None                                                ; 9.940 ns   ; num_A0[2]~reg0 ; SRC[7]  ; key        ;
+; N/A                                     ; None                                                ; 9.919 ns   ; num_B0[2]~reg0 ; DST[6]  ; key        ;
+; N/A                                     ; None                                                ; 9.869 ns   ; num_A0[1]~reg0 ; SRC[3]  ; key        ;
+; N/A                                     ; None                                                ; 9.827 ns   ; num_A0[1]~reg0 ; SRC[2]  ; key        ;
+; N/A                                     ; None                                                ; 9.789 ns   ; num_B0[3]~reg0 ; DST[3]  ; key        ;
+; N/A                                     ; None                                                ; 9.768 ns   ; num_B0[3]~reg0 ; DST[4]  ; key        ;
+; N/A                                     ; None                                                ; 9.747 ns   ; num_A0[2]~reg0 ; SRC[5]  ; key        ;
+; N/A                                     ; None                                                ; 9.589 ns   ; num_B0[2]~reg0 ; DST[4]  ; key        ;
+; N/A                                     ; None                                                ; 9.582 ns   ; num_A0[2]~reg0 ; SRC[4]  ; key        ;
+; N/A                                     ; None                                                ; 9.490 ns   ; num_A0[1]~reg0 ; SRC[1]  ; key        ;
+; N/A                                     ; None                                                ; 9.369 ns   ; num_A0[1]~reg0 ; SRC[7]  ; key        ;
+; N/A                                     ; None                                                ; 9.306 ns   ; num_A0[3]~reg0 ; SRC[3]  ; key        ;
+; N/A                                     ; None                                                ; 9.198 ns   ; num_A0[3]~reg0 ; SRC[7]  ; key        ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;                ;         ;            ;
++-----------------------------------------+-----------------------------------------------------+------------+----------------+---------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                                  ;
++-----------------------------------------+-----------------------------------------------------+-----------+-----------+------------------+----------+
+; Minimum Slack                           ; Required th                                         ; Actual th ; From      ; To               ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+-----------+-----------+------------------+----------+
+; N/A                                     ; None                                                ; -4.154 ns ; symbol[2] ; ALU_OP[4]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.156 ns ; symbol[2] ; ALU_OP[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.159 ns ; symbol[2] ; ALU_OP[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.160 ns ; symbol[2] ; ALU_OP[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.160 ns ; symbol[2] ; ALU_OP[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.242 ns ; symbol[0] ; ALU_OP[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.245 ns ; symbol[0] ; ALU_OP[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.245 ns ; symbol[0] ; ALU_OP[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.245 ns ; symbol[0] ; ALU_OP[4]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.247 ns ; symbol[0] ; ALU_OP[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.449 ns ; num[0]    ; num_A0[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.511 ns ; num[2]    ; num_B0[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.521 ns ; num[2]    ; num_A0[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.546 ns ; reset     ; state.secondnum  ; key      ;
+; N/A                                     ; None                                                ; -4.557 ns ; symbol[1] ; ALU_OP[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.596 ns ; reset     ; num_A1[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.596 ns ; reset     ; num_A1[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.636 ns ; symbol[1] ; ALU_OP[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.651 ns ; num[1]    ; num_A0[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.759 ns ; reset     ; num_A1[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.761 ns ; reset     ; num_A1[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.801 ns ; num[1]    ; num_B0[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.812 ns ; num[3]    ; num_B0[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.904 ns ; num[0]    ; num_B0[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.964 ns ; reset     ; num_B0[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.965 ns ; reset     ; num_B0[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.966 ns ; reset     ; num_B0[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.967 ns ; reset     ; num_B0[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -4.976 ns ; reset     ; state.oper       ; key      ;
+; N/A                                     ; None                                                ; -5.008 ns ; reset     ; num_A2[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -5.172 ns ; num[3]    ; num_A0[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -5.389 ns ; reset     ; num_A2[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -5.396 ns ; reset     ; num_A2[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -5.404 ns ; symbol[3] ; state.oper       ; key      ;
+; N/A                                     ; None                                                ; -5.430 ns ; reset     ; num_A2[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -5.802 ns ; reset     ; state.idle       ; key      ;
+; N/A                                     ; None                                                ; -5.807 ns ; reset     ; num_display~reg0 ; key      ;
+; N/A                                     ; None                                                ; -6.248 ns ; symbol[0] ; cnt[0]           ; key      ;
+; N/A                                     ; None                                                ; -6.291 ns ; symbol[3] ; cnt[0]           ; key      ;
+; N/A                                     ; None                                                ; -6.307 ns ; symbol[0] ; num_display~reg0 ; key      ;
+; N/A                                     ; None                                                ; -6.308 ns ; symbol[0] ; state.oper       ; key      ;
+; N/A                                     ; None                                                ; -6.310 ns ; symbol[0] ; finish~reg0      ; key      ;
+; N/A                                     ; None                                                ; -6.352 ns ; symbol[3] ; num_display~reg0 ; key      ;
+; N/A                                     ; None                                                ; -6.355 ns ; symbol[3] ; finish~reg0      ; key      ;
+; N/A                                     ; None                                                ; -6.360 ns ; symbol[1] ; cnt[0]           ; key      ;
+; N/A                                     ; None                                                ; -6.368 ns ; symbol[0] ; state.secondnum  ; key      ;
+; N/A                                     ; None                                                ; -6.413 ns ; symbol[3] ; state.secondnum  ; key      ;
+; N/A                                     ; None                                                ; -6.419 ns ; symbol[1] ; num_display~reg0 ; key      ;
+; N/A                                     ; None                                                ; -6.420 ns ; symbol[1] ; state.oper       ; key      ;
+; N/A                                     ; None                                                ; -6.422 ns ; symbol[1] ; finish~reg0      ; key      ;
+; N/A                                     ; None                                                ; -6.476 ns ; reset     ; finish~reg0      ; key      ;
+; N/A                                     ; None                                                ; -6.480 ns ; symbol[1] ; state.secondnum  ; key      ;
+; N/A                                     ; None                                                ; -6.495 ns ; reset     ; num_B1[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -6.651 ns ; symbol[0] ; cnt[1]           ; key      ;
+; N/A                                     ; None                                                ; -6.679 ns ; reset     ; state.firstnum   ; key      ;
+; N/A                                     ; None                                                ; -6.696 ns ; symbol[3] ; cnt[1]           ; key      ;
+; N/A                                     ; None                                                ; -6.702 ns ; symbol[3] ; state.firstnum   ; key      ;
+; N/A                                     ; None                                                ; -6.763 ns ; symbol[1] ; cnt[1]           ; key      ;
+; N/A                                     ; None                                                ; -6.776 ns ; symbol[0] ; state.firstnum   ; key      ;
+; N/A                                     ; None                                                ; -6.781 ns ; reset     ; DSTH[0]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -6.781 ns ; reset     ; DSTH[1]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -6.781 ns ; reset     ; DSTH[2]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -6.781 ns ; reset     ; DSTH[3]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -6.781 ns ; reset     ; DSTL[1]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -6.781 ns ; reset     ; DSTL[2]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -6.781 ns ; reset     ; DSTL[3]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -6.781 ns ; reset     ; DSTL[4]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -6.781 ns ; reset     ; DSTL[5]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -6.781 ns ; reset     ; DSTL[6]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -6.781 ns ; reset     ; DSTL[7]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -6.794 ns ; reset     ; num_A0[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -6.794 ns ; reset     ; num_A0[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -6.877 ns ; symbol[0] ; state.idle       ; key      ;
+; N/A                                     ; None                                                ; -6.887 ns ; symbol[1] ; state.firstnum   ; key      ;
+; N/A                                     ; None                                                ; -6.907 ns ; reset     ; num_B1[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -6.916 ns ; symbol[3] ; state.idle       ; key      ;
+; N/A                                     ; None                                                ; -6.936 ns ; symbol[1] ; state.idle       ; key      ;
+; N/A                                     ; None                                                ; -6.940 ns ; symbol[0] ; num_B1[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -6.985 ns ; symbol[3] ; num_B1[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.052 ns ; symbol[1] ; num_B1[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.060 ns ; symbol[0] ; num_B2[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.105 ns ; symbol[3] ; num_B2[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.141 ns ; reset     ; num_A0[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.141 ns ; reset     ; num_A0[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.169 ns ; symbol[0] ; num_B1[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.170 ns ; reset     ; ALU_OP[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.170 ns ; reset     ; ALU_OP[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.170 ns ; reset     ; ALU_OP[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.170 ns ; reset     ; ALU_OP[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.170 ns ; reset     ; ALU_OP[4]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.172 ns ; symbol[1] ; num_B2[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.175 ns ; reset     ; SRCL[0]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.175 ns ; reset     ; DSTL[0]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.214 ns ; symbol[3] ; num_B1[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.239 ns ; symbol[0] ; num_B2[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.251 ns ; symbol[0] ; num_B2[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.253 ns ; symbol[0] ; num_B2[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.281 ns ; symbol[2] ; cnt[0]           ; key      ;
+; N/A                                     ; None                                                ; -7.281 ns ; symbol[1] ; num_B1[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.284 ns ; symbol[3] ; num_B2[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.296 ns ; symbol[3] ; num_B2[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.298 ns ; symbol[3] ; num_B2[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.340 ns ; symbol[2] ; num_display~reg0 ; key      ;
+; N/A                                     ; None                                                ; -7.341 ns ; symbol[2] ; state.oper       ; key      ;
+; N/A                                     ; None                                                ; -7.343 ns ; symbol[2] ; finish~reg0      ; key      ;
+; N/A                                     ; None                                                ; -7.347 ns ; symbol[0] ; num_B1[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.351 ns ; symbol[1] ; num_B2[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.363 ns ; symbol[1] ; num_B2[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.365 ns ; symbol[1] ; num_B2[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.392 ns ; symbol[3] ; num_B1[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.401 ns ; symbol[2] ; state.secondnum  ; key      ;
+; N/A                                     ; None                                                ; -7.459 ns ; symbol[1] ; num_B1[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.495 ns ; reset     ; cnt[0]           ; key      ;
+; N/A                                     ; None                                                ; -7.495 ns ; reset     ; cnt[1]           ; key      ;
+; N/A                                     ; None                                                ; -7.533 ns ; reset     ; SRCH[0]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.533 ns ; reset     ; SRCH[1]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.533 ns ; reset     ; SRCH[2]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.533 ns ; reset     ; SRCH[3]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.533 ns ; reset     ; SRCL[1]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.533 ns ; reset     ; SRCL[2]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.533 ns ; reset     ; SRCL[3]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.533 ns ; reset     ; SRCL[4]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.533 ns ; reset     ; SRCL[5]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.533 ns ; reset     ; SRCL[6]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.533 ns ; reset     ; SRCL[7]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.574 ns ; reset     ; num_B2[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.577 ns ; reset     ; num_B2[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.580 ns ; reset     ; num_B1[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.599 ns ; reset     ; num_B2[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.623 ns ; reset     ; num_B1[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.652 ns ; symbol[0] ; DSTH[0]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.652 ns ; symbol[0] ; DSTH[1]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.652 ns ; symbol[0] ; DSTH[2]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.652 ns ; symbol[0] ; DSTH[3]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.652 ns ; symbol[0] ; DSTL[1]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.652 ns ; symbol[0] ; DSTL[2]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.652 ns ; symbol[0] ; DSTL[3]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.652 ns ; symbol[0] ; DSTL[4]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.652 ns ; symbol[0] ; DSTL[5]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.652 ns ; symbol[0] ; DSTL[6]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.652 ns ; symbol[0] ; DSTL[7]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.670 ns ; symbol[0] ; num_B1[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.684 ns ; symbol[2] ; cnt[1]           ; key      ;
+; N/A                                     ; None                                                ; -7.691 ns ; symbol[3] ; DSTH[0]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.691 ns ; symbol[3] ; DSTH[1]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.691 ns ; symbol[3] ; DSTH[2]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.691 ns ; symbol[3] ; DSTH[3]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.691 ns ; symbol[3] ; DSTL[1]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.691 ns ; symbol[3] ; DSTL[2]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.691 ns ; symbol[3] ; DSTL[3]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.691 ns ; symbol[3] ; DSTL[4]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.691 ns ; symbol[3] ; DSTL[5]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.691 ns ; symbol[3] ; DSTL[6]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.691 ns ; symbol[3] ; DSTL[7]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.711 ns ; symbol[1] ; DSTH[0]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.711 ns ; symbol[1] ; DSTH[1]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.711 ns ; symbol[1] ; DSTH[2]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.711 ns ; symbol[1] ; DSTH[3]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.711 ns ; symbol[1] ; DSTL[1]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.711 ns ; symbol[1] ; DSTL[2]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.711 ns ; symbol[1] ; DSTL[3]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.711 ns ; symbol[1] ; DSTL[4]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.711 ns ; symbol[1] ; DSTL[5]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.711 ns ; symbol[1] ; DSTL[6]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.711 ns ; symbol[1] ; DSTL[7]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -7.715 ns ; symbol[3] ; num_B1[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.782 ns ; symbol[1] ; num_B1[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.800 ns ; symbol[2] ; state.firstnum   ; key      ;
+; N/A                                     ; None                                                ; -7.844 ns ; symbol[0] ; num_A0[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.846 ns ; symbol[0] ; num_A0[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.889 ns ; symbol[3] ; num_A0[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.891 ns ; symbol[3] ; num_A0[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.909 ns ; symbol[2] ; state.idle       ; key      ;
+; N/A                                     ; None                                                ; -7.956 ns ; symbol[1] ; num_A0[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.958 ns ; symbol[1] ; num_A0[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -7.973 ns ; symbol[2] ; num_B1[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -8.026 ns ; symbol[0] ; num_A0[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -8.026 ns ; symbol[0] ; num_A0[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -8.039 ns ; reset     ; num_B2[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -8.046 ns ; symbol[0] ; SRCL[0]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -8.046 ns ; symbol[0] ; DSTL[0]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -8.071 ns ; symbol[3] ; num_A0[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -8.071 ns ; symbol[3] ; num_A0[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -8.085 ns ; symbol[3] ; SRCL[0]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -8.085 ns ; symbol[3] ; DSTL[0]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -8.093 ns ; symbol[2] ; num_B2[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -8.105 ns ; symbol[1] ; SRCL[0]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -8.105 ns ; symbol[1] ; DSTL[0]~reg0     ; key      ;
+; N/A                                     ; None                                                ; -8.138 ns ; symbol[1] ; num_A0[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -8.138 ns ; symbol[1] ; num_A0[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -8.202 ns ; symbol[2] ; num_B1[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -8.203 ns ; symbol[0] ; num_B0[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -8.203 ns ; symbol[0] ; num_B0[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -8.203 ns ; symbol[0] ; num_B0[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -8.203 ns ; symbol[0] ; num_B0[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -8.248 ns ; symbol[3] ; num_B0[1]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -8.248 ns ; symbol[3] ; num_B0[0]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -8.248 ns ; symbol[3] ; num_B0[2]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -8.248 ns ; symbol[3] ; num_B0[3]~reg0   ; key      ;
+; N/A                                     ; None                                                ; -8.272 ns ; symbol[2] ; num_B2[1]~reg0   ; key      ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;           ;           ;                  ;          ;
++-----------------------------------------+-----------------------------------------------------+-----------+-----------+------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Sat Sep 03 10:48:04 2011
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off key_fsm -c key_fsm --timing_analysis_only
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "key" is an undefined clock
+Info: Clock "key" has Internal fmax of 161.79 MHz between source register "num_B1[2]~reg0" and destination register "DSTH[3]~reg0" (period= 6.181 ns)
+    Info: + Longest register to register delay is 5.918 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X21_Y5_N23; Fanout = 10; REG Node = 'num_B1[2]~reg0'
+        Info: 2: + IC(1.192 ns) + CELL(0.370 ns) = 1.562 ns; Loc. = LCCOMB_X21_Y6_N12; Fanout = 2; COMB Node = 'Add3~4'
+        Info: 3: + IC(1.075 ns) + CELL(0.596 ns) = 3.233 ns; Loc. = LCCOMB_X21_Y5_N10; Fanout = 2; COMB Node = 'Add4~11'
+        Info: 4: + IC(0.000 ns) + CELL(0.086 ns) = 3.319 ns; Loc. = LCCOMB_X21_Y5_N12; Fanout = 2; COMB Node = 'Add4~13'
+        Info: 5: + IC(0.000 ns) + CELL(0.190 ns) = 3.509 ns; Loc. = LCCOMB_X21_Y5_N14; Fanout = 2; COMB Node = 'Add4~15'
+        Info: 6: + IC(0.000 ns) + CELL(0.506 ns) = 4.015 ns; Loc. = LCCOMB_X21_Y5_N16; Fanout = 2; COMB Node = 'Add4~16'
+        Info: 7: + IC(0.693 ns) + CELL(0.596 ns) = 5.304 ns; Loc. = LCCOMB_X22_Y5_N28; Fanout = 1; COMB Node = 'Add5~19'
+        Info: 8: + IC(0.000 ns) + CELL(0.506 ns) = 5.810 ns; Loc. = LCCOMB_X22_Y5_N30; Fanout = 2; COMB Node = 'Add5~20'
+        Info: 9: + IC(0.000 ns) + CELL(0.108 ns) = 5.918 ns; Loc. = LCFF_X22_Y5_N31; Fanout = 1; REG Node = 'DSTH[3]~reg0'
+        Info: Total cell delay = 2.958 ns ( 49.98 % )
+        Info: Total interconnect delay = 2.960 ns ( 50.02 % )
+    Info: - Smallest clock skew is 0.001 ns
+        Info: + Shortest clock path from clock "key" to destination register is 2.784 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.140 ns) = 1.140 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'key'
+            Info: 2: + IC(0.143 ns) + CELL(0.000 ns) = 1.283 ns; Loc. = CLKCTRL_G2; Fanout = 61; COMB Node = 'key~clkctrl'
+            Info: 3: + IC(0.835 ns) + CELL(0.666 ns) = 2.784 ns; Loc. = LCFF_X22_Y5_N31; Fanout = 1; REG Node = 'DSTH[3]~reg0'
+            Info: Total cell delay = 1.806 ns ( 64.87 % )
+            Info: Total interconnect delay = 0.978 ns ( 35.13 % )
+        Info: - Longest clock path from clock "key" to source register is 2.783 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.140 ns) = 1.140 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'key'
+            Info: 2: + IC(0.143 ns) + CELL(0.000 ns) = 1.283 ns; Loc. = CLKCTRL_G2; Fanout = 61; COMB Node = 'key~clkctrl'
+            Info: 3: + IC(0.834 ns) + CELL(0.666 ns) = 2.783 ns; Loc. = LCFF_X21_Y5_N23; Fanout = 10; REG Node = 'num_B1[2]~reg0'
+            Info: Total cell delay = 1.806 ns ( 64.89 % )
+            Info: Total interconnect delay = 0.977 ns ( 35.11 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Micro setup delay of destination is -0.040 ns
+Info: tsu for register "num_A0[1]~reg0" (data pin = "symbol[2]", clock pin = "key") is 10.502 ns
+    Info: + Longest pin to register delay is 13.342 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.004 ns) = 1.004 ns; Loc. = PIN_163; Fanout = 10; PIN Node = 'symbol[2]'
+        Info: 2: + IC(6.979 ns) + CELL(0.624 ns) = 8.607 ns; Loc. = LCCOMB_X20_Y6_N18; Fanout = 19; COMB Node = 'Equal5~0'
+        Info: 3: + IC(0.380 ns) + CELL(0.624 ns) = 9.611 ns; Loc. = LCCOMB_X20_Y6_N4; Fanout = 5; COMB Node = 'cnt[0]~32'
+        Info: 4: + IC(1.527 ns) + CELL(0.370 ns) = 11.508 ns; Loc. = LCCOMB_X21_Y11_N22; Fanout = 12; COMB Node = 'num_A0[1]~22'
+        Info: 5: + IC(0.979 ns) + CELL(0.855 ns) = 13.342 ns; Loc. = LCFF_X19_Y11_N1; Fanout = 4; REG Node = 'num_A0[1]~reg0'
+        Info: Total cell delay = 3.477 ns ( 26.06 % )
+        Info: Total interconnect delay = 9.865 ns ( 73.94 % )
+    Info: + Micro setup delay of destination is -0.040 ns
+    Info: - Shortest clock path from clock "key" to destination register is 2.800 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.140 ns) = 1.140 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'key'
+        Info: 2: + IC(0.143 ns) + CELL(0.000 ns) = 1.283 ns; Loc. = CLKCTRL_G2; Fanout = 61; COMB Node = 'key~clkctrl'
+        Info: 3: + IC(0.851 ns) + CELL(0.666 ns) = 2.800 ns; Loc. = LCFF_X19_Y11_N1; Fanout = 4; REG Node = 'num_A0[1]~reg0'
+        Info: Total cell delay = 1.806 ns ( 64.50 % )
+        Info: Total interconnect delay = 0.994 ns ( 35.50 % )
+Info: tco from clock "key" to destination pin "DST[11]" through register "num_B1[2]~reg0" is 14.761 ns
+    Info: + Longest clock path from clock "key" to source register is 2.783 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.140 ns) = 1.140 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'key'
+        Info: 2: + IC(0.143 ns) + CELL(0.000 ns) = 1.283 ns; Loc. = CLKCTRL_G2; Fanout = 61; COMB Node = 'key~clkctrl'
+        Info: 3: + IC(0.834 ns) + CELL(0.666 ns) = 2.783 ns; Loc. = LCFF_X21_Y5_N23; Fanout = 10; REG Node = 'num_B1[2]~reg0'
+        Info: Total cell delay = 1.806 ns ( 64.89 % )
+        Info: Total interconnect delay = 0.977 ns ( 35.11 % )
+    Info: + Micro clock to output delay of source is 0.304 ns
+    Info: + Longest register to pin delay is 11.674 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X21_Y5_N23; Fanout = 10; REG Node = 'num_B1[2]~reg0'
+        Info: 2: + IC(1.192 ns) + CELL(0.370 ns) = 1.562 ns; Loc. = LCCOMB_X21_Y6_N12; Fanout = 2; COMB Node = 'Add3~4'
+        Info: 3: + IC(1.075 ns) + CELL(0.596 ns) = 3.233 ns; Loc. = LCCOMB_X21_Y5_N10; Fanout = 2; COMB Node = 'Add4~11'
+        Info: 4: + IC(0.000 ns) + CELL(0.086 ns) = 3.319 ns; Loc. = LCCOMB_X21_Y5_N12; Fanout = 2; COMB Node = 'Add4~13'
+        Info: 5: + IC(0.000 ns) + CELL(0.190 ns) = 3.509 ns; Loc. = LCCOMB_X21_Y5_N14; Fanout = 2; COMB Node = 'Add4~15'
+        Info: 6: + IC(0.000 ns) + CELL(0.506 ns) = 4.015 ns; Loc. = LCCOMB_X21_Y5_N16; Fanout = 2; COMB Node = 'Add4~16'
+        Info: 7: + IC(0.693 ns) + CELL(0.596 ns) = 5.304 ns; Loc. = LCCOMB_X22_Y5_N28; Fanout = 1; COMB Node = 'Add5~19'
+        Info: 8: + IC(0.000 ns) + CELL(0.506 ns) = 5.810 ns; Loc. = LCCOMB_X22_Y5_N30; Fanout = 2; COMB Node = 'Add5~20'
+        Info: 9: + IC(2.768 ns) + CELL(3.096 ns) = 11.674 ns; Loc. = PIN_30; Fanout = 0; PIN Node = 'DST[11]'
+        Info: Total cell delay = 5.946 ns ( 50.93 % )
+        Info: Total interconnect delay = 5.728 ns ( 49.07 % )
+Info: th for register "ALU_OP[4]~reg0" (data pin = "symbol[2]", clock pin = "key") is -4.154 ns
+    Info: + Longest clock path from clock "key" to destination register is 2.805 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.140 ns) = 1.140 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'key'
+        Info: 2: + IC(0.143 ns) + CELL(0.000 ns) = 1.283 ns; Loc. = CLKCTRL_G2; Fanout = 61; COMB Node = 'key~clkctrl'
+        Info: 3: + IC(0.856 ns) + CELL(0.666 ns) = 2.805 ns; Loc. = LCFF_X24_Y11_N17; Fanout = 1; REG Node = 'ALU_OP[4]~reg0'
+        Info: Total cell delay = 1.806 ns ( 64.39 % )
+        Info: Total interconnect delay = 0.999 ns ( 35.61 % )
+    Info: + Micro hold delay of destination is 0.306 ns
+    Info: - Shortest pin to register delay is 7.265 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.004 ns) = 1.004 ns; Loc. = PIN_163; Fanout = 10; PIN Node = 'symbol[2]'
+        Info: 2: + IC(5.783 ns) + CELL(0.370 ns) = 7.157 ns; Loc. = LCCOMB_X24_Y11_N16; Fanout = 1; COMB Node = 'Selector35~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.108 ns) = 7.265 ns; Loc. = LCFF_X24_Y11_N17; Fanout = 1; REG Node = 'ALU_OP[4]~reg0'
+        Info: Total cell delay = 1.482 ns ( 20.40 % )
+        Info: Total interconnect delay = 5.783 ns ( 79.60 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 164 megabytes
+    Info: Processing ended: Sat Sep 03 10:48:05 2011
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

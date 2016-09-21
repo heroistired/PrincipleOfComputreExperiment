@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="systemA">
+		<CBX_INST_ENTRY INSTANCE_NAME="|systemA|RAM3:inst9|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_gra1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|systemA|lpm_mux1:inst12|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_smc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|systemA|lpm_mux2:inst20|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_mmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|systemA|lpm_rom_256_16:inst2|lpm_rom0:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_9081.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|systemA|reg4_8:inst3|lpm_mux4:inst13|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_vmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|systemA|lpm_mux1:inst11|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_smc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|systemA|reg4_8:inst3|lpm_decode1:inst4|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_n6f.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|systemA|reg4_8:inst3|lpm_mux4:inst14|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_vmc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,22 @@
+|Divider1
+clk => num[16].CLK
+clk => num[15].CLK
+clk => num[14].CLK
+clk => num[13].CLK
+clk => num[12].CLK
+clk => num[11].CLK
+clk => num[10].CLK
+clk => num[9].CLK
+clk => num[8].CLK
+clk => num[7].CLK
+clk => num[6].CLK
+clk => num[5].CLK
+clk => num[4].CLK
+clk => num[3].CLK
+clk => num[2].CLK
+clk => num[1].CLK
+clk => num[0].CLK
+clk => clkout~reg0.CLK
+clkout <= clkout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

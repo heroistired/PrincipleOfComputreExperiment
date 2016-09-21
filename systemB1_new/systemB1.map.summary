@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Oct 20 01:04:24 2011
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : systemB1
+Top-level Entity Name : systemB1
+Family : Cyclone II
+Total logic elements : 1,021
+    Total combinational functions : 992
+    Dedicated logic registers : 77
+Total registers : 77
+Total pins : 128
+Total virtual pins : 0
+Total memory bits : 4,096
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

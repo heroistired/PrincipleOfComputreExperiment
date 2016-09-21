@@ -1,0 +1,17 @@
+|Shake
+clk => count_low[2].CLK
+clk => count_low[1].CLK
+clk => count_low[0].CLK
+clk => count_high[2].CLK
+clk => count_high[1].CLK
+clk => count_high[0].CLK
+clk => PB_reg.CLK
+PB_UP => count_high~2.OUTPUTSELECT
+PB_UP => count_high~1.OUTPUTSELECT
+PB_UP => count_high~0.OUTPUTSELECT
+PB_UP => count_low~2.OUTPUTSELECT
+PB_UP => count_low~1.OUTPUTSELECT
+PB_UP => count_low~0.OUTPUTSELECT
+PB_Out <= PB_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+

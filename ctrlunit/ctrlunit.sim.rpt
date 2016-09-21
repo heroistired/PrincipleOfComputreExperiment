@@ -1,0 +1,348 @@
+Simulator report for ctrlunit
+Fri Sep 30 00:35:55 2011
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 187 nodes    ;
+; Simulation Coverage         ;     100.00 % ;
+; Total Number of Transitions ; 1224         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;     100.00 % ;
+; Total nodes checked                                 ; 187          ;
+; Total output ports checked                          ; 187          ;
+; Total output ports with complete 1/0-value coverage ; 187          ;
+; Total output ports with no 1/0-value coverage       ; 0            ;
+; Total output ports with no 1-value coverage         ; 0            ;
+; Total output ports with no 0-value coverage         ; 0            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                            ;
++--------------------------+--------------------------+------------------+
+; Node Name                ; Output Port Name         ; Output Port Type ;
++--------------------------+--------------------------+------------------+
+; |ctrlunit|WrFlag~0       ; |ctrlunit|WrFlag~0       ; out              ;
+; |ctrlunit|WrFlag~1       ; |ctrlunit|WrFlag~1       ; out              ;
+; |ctrlunit|WrFlag~2       ; |ctrlunit|WrFlag~2       ; out              ;
+; |ctrlunit|WrFlag~3       ; |ctrlunit|WrFlag~3       ; out              ;
+; |ctrlunit|WrFlag~4       ; |ctrlunit|WrFlag~4       ; out              ;
+; |ctrlunit|WrFlag~5       ; |ctrlunit|WrFlag~5       ; out              ;
+; |ctrlunit|WrFlag~6       ; |ctrlunit|WrFlag~6       ; out              ;
+; |ctrlunit|WrFlag~7       ; |ctrlunit|WrFlag~7       ; out              ;
+; |ctrlunit|WrFlag~8       ; |ctrlunit|WrFlag~8       ; out              ;
+; |ctrlunit|WrFlag~9       ; |ctrlunit|WrFlag~9       ; out              ;
+; |ctrlunit|WrFlag$latch   ; |ctrlunit|WrFlag$latch   ; out              ;
+; |ctrlunit|jump~0         ; |ctrlunit|jump~0         ; out0             ;
+; |ctrlunit|branch~0       ; |ctrlunit|branch~0       ; out0             ;
+; |ctrlunit|branch$latch   ; |ctrlunit|branch$latch   ; out              ;
+; |ctrlunit|jump~1         ; |ctrlunit|jump~1         ; out0             ;
+; |ctrlunit|branch~1       ; |ctrlunit|branch~1       ; out0             ;
+; |ctrlunit|comb~0         ; |ctrlunit|comb~0         ; out0             ;
+; |ctrlunit|jump~2         ; |ctrlunit|jump~2         ; out0             ;
+; |ctrlunit|branch~2       ; |ctrlunit|branch~2       ; out0             ;
+; |ctrlunit|ALUC[0]~0      ; |ctrlunit|ALUC[0]~0      ; out              ;
+; |ctrlunit|ALUSRCB~0      ; |ctrlunit|ALUSRCB~0      ; out              ;
+; |ctrlunit|WriteMem~0     ; |ctrlunit|WriteMem~0     ; out              ;
+; |ctrlunit|WriteReg~0     ; |ctrlunit|WriteReg~0     ; out              ;
+; |ctrlunit|RegDes$latch   ; |ctrlunit|RegDes$latch   ; out              ;
+; |ctrlunit|jump~3         ; |ctrlunit|jump~3         ; out0             ;
+; |ctrlunit|branch~3       ; |ctrlunit|branch~3       ; out0             ;
+; |ctrlunit|ALUC[0]~1      ; |ctrlunit|ALUC[0]~1      ; out              ;
+; |ctrlunit|ALUSRCB~1      ; |ctrlunit|ALUSRCB~1      ; out              ;
+; |ctrlunit|WriteMem~1     ; |ctrlunit|WriteMem~1     ; out              ;
+; |ctrlunit|WriteReg~1     ; |ctrlunit|WriteReg~1     ; out              ;
+; |ctrlunit|MemToReg~0     ; |ctrlunit|MemToReg~0     ; out              ;
+; |ctrlunit|comb~1         ; |ctrlunit|comb~1         ; out0             ;
+; |ctrlunit|MemToReg$latch ; |ctrlunit|MemToReg$latch ; out              ;
+; |ctrlunit|jump~4         ; |ctrlunit|jump~4         ; out0             ;
+; |ctrlunit|branch~4       ; |ctrlunit|branch~4       ; out0             ;
+; |ctrlunit|ALUC[0]~2      ; |ctrlunit|ALUC[0]~2      ; out              ;
+; |ctrlunit|ALUSRCB~2      ; |ctrlunit|ALUSRCB~2      ; out              ;
+; |ctrlunit|WriteMem~2     ; |ctrlunit|WriteMem~2     ; out              ;
+; |ctrlunit|WriteReg~2     ; |ctrlunit|WriteReg~2     ; out              ;
+; |ctrlunit|MemToReg~1     ; |ctrlunit|MemToReg~1     ; out              ;
+; |ctrlunit|comb~2         ; |ctrlunit|comb~2         ; out0             ;
+; |ctrlunit|jump~5         ; |ctrlunit|jump~5         ; out0             ;
+; |ctrlunit|branch~5       ; |ctrlunit|branch~5       ; out0             ;
+; |ctrlunit|ALUC[1]~3      ; |ctrlunit|ALUC[1]~3      ; out              ;
+; |ctrlunit|ALUC[0]~4      ; |ctrlunit|ALUC[0]~4      ; out              ;
+; |ctrlunit|ALUSRCB~3      ; |ctrlunit|ALUSRCB~3      ; out              ;
+; |ctrlunit|WriteMem~3     ; |ctrlunit|WriteMem~3     ; out              ;
+; |ctrlunit|WriteReg~3     ; |ctrlunit|WriteReg~3     ; out              ;
+; |ctrlunit|MemToReg~2     ; |ctrlunit|MemToReg~2     ; out              ;
+; |ctrlunit|WriteReg$latch ; |ctrlunit|WriteReg$latch ; out              ;
+; |ctrlunit|jump~6         ; |ctrlunit|jump~6         ; out0             ;
+; |ctrlunit|branch~6       ; |ctrlunit|branch~6       ; out0             ;
+; |ctrlunit|ALUC[1]~5      ; |ctrlunit|ALUC[1]~5      ; out              ;
+; |ctrlunit|ALUC[0]~6      ; |ctrlunit|ALUC[0]~6      ; out              ;
+; |ctrlunit|ALUSRCB~4      ; |ctrlunit|ALUSRCB~4      ; out              ;
+; |ctrlunit|WriteMem~4     ; |ctrlunit|WriteMem~4     ; out              ;
+; |ctrlunit|WriteReg~4     ; |ctrlunit|WriteReg~4     ; out              ;
+; |ctrlunit|MemToReg~3     ; |ctrlunit|MemToReg~3     ; out              ;
+; |ctrlunit|comb~3         ; |ctrlunit|comb~3         ; out0             ;
+; |ctrlunit|WriteMem$latch ; |ctrlunit|WriteMem$latch ; out              ;
+; |ctrlunit|jump~7         ; |ctrlunit|jump~7         ; out0             ;
+; |ctrlunit|jump~8         ; |ctrlunit|jump~8         ; out              ;
+; |ctrlunit|branch~7       ; |ctrlunit|branch~7       ; out0             ;
+; |ctrlunit|ALUC[2]~7      ; |ctrlunit|ALUC[2]~7      ; out              ;
+; |ctrlunit|ALUC[1]~8      ; |ctrlunit|ALUC[1]~8      ; out              ;
+; |ctrlunit|ALUC[0]~9      ; |ctrlunit|ALUC[0]~9      ; out              ;
+; |ctrlunit|ALUSRCB~5      ; |ctrlunit|ALUSRCB~5      ; out              ;
+; |ctrlunit|WriteMem~5     ; |ctrlunit|WriteMem~5     ; out              ;
+; |ctrlunit|WriteReg~5     ; |ctrlunit|WriteReg~5     ; out              ;
+; |ctrlunit|MemToReg~4     ; |ctrlunit|MemToReg~4     ; out              ;
+; |ctrlunit|comb~4         ; |ctrlunit|comb~4         ; out0             ;
+; |ctrlunit|jump~9         ; |ctrlunit|jump~9         ; out0             ;
+; |ctrlunit|jump~10        ; |ctrlunit|jump~10        ; out              ;
+; |ctrlunit|branch~8       ; |ctrlunit|branch~8       ; out0             ;
+; |ctrlunit|ALUC[2]~10     ; |ctrlunit|ALUC[2]~10     ; out              ;
+; |ctrlunit|ALUC[1]~11     ; |ctrlunit|ALUC[1]~11     ; out              ;
+; |ctrlunit|ALUC[0]~12     ; |ctrlunit|ALUC[0]~12     ; out              ;
+; |ctrlunit|ALUSRCB~6      ; |ctrlunit|ALUSRCB~6      ; out              ;
+; |ctrlunit|WriteMem~6     ; |ctrlunit|WriteMem~6     ; out              ;
+; |ctrlunit|WriteReg~6     ; |ctrlunit|WriteReg~6     ; out              ;
+; |ctrlunit|MemToReg~5     ; |ctrlunit|MemToReg~5     ; out              ;
+; |ctrlunit|RegDes~0       ; |ctrlunit|RegDes~0       ; out              ;
+; |ctrlunit|ALUSRCB$latch  ; |ctrlunit|ALUSRCB$latch  ; out              ;
+; |ctrlunit|jump~11        ; |ctrlunit|jump~11        ; out0             ;
+; |ctrlunit|jump~12        ; |ctrlunit|jump~12        ; out              ;
+; |ctrlunit|branch~9       ; |ctrlunit|branch~9       ; out0             ;
+; |ctrlunit|ALUC[2]~13     ; |ctrlunit|ALUC[2]~13     ; out              ;
+; |ctrlunit|ALUC[1]~14     ; |ctrlunit|ALUC[1]~14     ; out              ;
+; |ctrlunit|ALUC[0]~15     ; |ctrlunit|ALUC[0]~15     ; out              ;
+; |ctrlunit|ALUSRCB~7      ; |ctrlunit|ALUSRCB~7      ; out              ;
+; |ctrlunit|WriteMem~7     ; |ctrlunit|WriteMem~7     ; out              ;
+; |ctrlunit|WriteReg~7     ; |ctrlunit|WriteReg~7     ; out              ;
+; |ctrlunit|MemToReg~6     ; |ctrlunit|MemToReg~6     ; out              ;
+; |ctrlunit|RegDes~1       ; |ctrlunit|RegDes~1       ; out              ;
+; |ctrlunit|comb~5         ; |ctrlunit|comb~5         ; out0             ;
+; |ctrlunit|ALUC[0]$latch  ; |ctrlunit|ALUC[0]$latch  ; out              ;
+; |ctrlunit|jump~13        ; |ctrlunit|jump~13        ; out0             ;
+; |ctrlunit|jump~14        ; |ctrlunit|jump~14        ; out              ;
+; |ctrlunit|branch~10      ; |ctrlunit|branch~10      ; out0             ;
+; |ctrlunit|ALUC[2]~16     ; |ctrlunit|ALUC[2]~16     ; out              ;
+; |ctrlunit|ALUC[1]~17     ; |ctrlunit|ALUC[1]~17     ; out              ;
+; |ctrlunit|ALUC[0]~18     ; |ctrlunit|ALUC[0]~18     ; out              ;
+; |ctrlunit|ALUSRCB~8      ; |ctrlunit|ALUSRCB~8      ; out              ;
+; |ctrlunit|WriteMem~8     ; |ctrlunit|WriteMem~8     ; out              ;
+; |ctrlunit|WriteReg~8     ; |ctrlunit|WriteReg~8     ; out              ;
+; |ctrlunit|MemToReg~7     ; |ctrlunit|MemToReg~7     ; out              ;
+; |ctrlunit|RegDes~2       ; |ctrlunit|RegDes~2       ; out              ;
+; |ctrlunit|comb~6         ; |ctrlunit|comb~6         ; out0             ;
+; |ctrlunit|jump~15        ; |ctrlunit|jump~15        ; out0             ;
+; |ctrlunit|jump~16        ; |ctrlunit|jump~16        ; out              ;
+; |ctrlunit|branch~11      ; |ctrlunit|branch~11      ; out0             ;
+; |ctrlunit|ALUC[2]~19     ; |ctrlunit|ALUC[2]~19     ; out              ;
+; |ctrlunit|ALUC[1]~20     ; |ctrlunit|ALUC[1]~20     ; out              ;
+; |ctrlunit|ALUC[0]~21     ; |ctrlunit|ALUC[0]~21     ; out              ;
+; |ctrlunit|ALUSRCB~9      ; |ctrlunit|ALUSRCB~9      ; out              ;
+; |ctrlunit|WriteMem~9     ; |ctrlunit|WriteMem~9     ; out              ;
+; |ctrlunit|WriteReg~9     ; |ctrlunit|WriteReg~9     ; out              ;
+; |ctrlunit|MemToReg~8     ; |ctrlunit|MemToReg~8     ; out              ;
+; |ctrlunit|RegDes~3       ; |ctrlunit|RegDes~3       ; out              ;
+; |ctrlunit|ALUC[1]$latch  ; |ctrlunit|ALUC[1]$latch  ; out              ;
+; |ctrlunit|jump~17        ; |ctrlunit|jump~17        ; out0             ;
+; |ctrlunit|jump~18        ; |ctrlunit|jump~18        ; out              ;
+; |ctrlunit|comb~7         ; |ctrlunit|comb~7         ; out0             ;
+; |ctrlunit|ALUC[2]~22     ; |ctrlunit|ALUC[2]~22     ; out              ;
+; |ctrlunit|ALUC[1]~23     ; |ctrlunit|ALUC[1]~23     ; out              ;
+; |ctrlunit|ALUC[0]~24     ; |ctrlunit|ALUC[0]~24     ; out              ;
+; |ctrlunit|ALUSRCB~10     ; |ctrlunit|ALUSRCB~10     ; out              ;
+; |ctrlunit|WriteMem~10    ; |ctrlunit|WriteMem~10    ; out              ;
+; |ctrlunit|WriteReg~10    ; |ctrlunit|WriteReg~10    ; out              ;
+; |ctrlunit|MemToReg~9     ; |ctrlunit|MemToReg~9     ; out              ;
+; |ctrlunit|RegDes~4       ; |ctrlunit|RegDes~4       ; out              ;
+; |ctrlunit|comb~8         ; |ctrlunit|comb~8         ; out0             ;
+; |ctrlunit|ALUC[2]$latch  ; |ctrlunit|ALUC[2]$latch  ; out              ;
+; |ctrlunit|jump~19        ; |ctrlunit|jump~19        ; out0             ;
+; |ctrlunit|jump~20        ; |ctrlunit|jump~20        ; out              ;
+; |ctrlunit|comb~9         ; |ctrlunit|comb~9         ; out0             ;
+; |ctrlunit|branch~12      ; |ctrlunit|branch~12      ; out              ;
+; |ctrlunit|ALUC[2]~25     ; |ctrlunit|ALUC[2]~25     ; out              ;
+; |ctrlunit|ALUC[1]~26     ; |ctrlunit|ALUC[1]~26     ; out              ;
+; |ctrlunit|ALUC[0]~27     ; |ctrlunit|ALUC[0]~27     ; out              ;
+; |ctrlunit|ALUSRCB~11     ; |ctrlunit|ALUSRCB~11     ; out              ;
+; |ctrlunit|WriteMem~11    ; |ctrlunit|WriteMem~11    ; out              ;
+; |ctrlunit|WriteReg~11    ; |ctrlunit|WriteReg~11    ; out              ;
+; |ctrlunit|MemToReg~10    ; |ctrlunit|MemToReg~10    ; out              ;
+; |ctrlunit|RegDes~5       ; |ctrlunit|RegDes~5       ; out              ;
+; |ctrlunit|comb~10        ; |ctrlunit|comb~10        ; out0             ;
+; |ctrlunit|comb~11        ; |ctrlunit|comb~11        ; out0             ;
+; |ctrlunit|comb~12        ; |ctrlunit|comb~12        ; out0             ;
+; |ctrlunit|comb~13        ; |ctrlunit|comb~13        ; out0             ;
+; |ctrlunit|comb~14        ; |ctrlunit|comb~14        ; out0             ;
+; |ctrlunit|comb~15        ; |ctrlunit|comb~15        ; out0             ;
+; |ctrlunit|comb~16        ; |ctrlunit|comb~16        ; out0             ;
+; |ctrlunit|comb~17        ; |ctrlunit|comb~17        ; out0             ;
+; |ctrlunit|comb~18        ; |ctrlunit|comb~18        ; out0             ;
+; |ctrlunit|comb~19        ; |ctrlunit|comb~19        ; out0             ;
+; |ctrlunit|jump$latch     ; |ctrlunit|jump$latch     ; out              ;
+; |ctrlunit|OP[0]          ; |ctrlunit|OP[0]          ; out              ;
+; |ctrlunit|OP[1]          ; |ctrlunit|OP[1]          ; out              ;
+; |ctrlunit|OP[2]          ; |ctrlunit|OP[2]          ; out              ;
+; |ctrlunit|OP[3]          ; |ctrlunit|OP[3]          ; out              ;
+; |ctrlunit|zero           ; |ctrlunit|zero           ; out              ;
+; |ctrlunit|jump           ; |ctrlunit|jump           ; pin_out          ;
+; |ctrlunit|branch         ; |ctrlunit|branch         ; pin_out          ;
+; |ctrlunit|ALUC[0]        ; |ctrlunit|ALUC[0]        ; pin_out          ;
+; |ctrlunit|ALUC[1]        ; |ctrlunit|ALUC[1]        ; pin_out          ;
+; |ctrlunit|ALUC[2]        ; |ctrlunit|ALUC[2]        ; pin_out          ;
+; |ctrlunit|ALUSRCB        ; |ctrlunit|ALUSRCB        ; pin_out          ;
+; |ctrlunit|WriteMem       ; |ctrlunit|WriteMem       ; pin_out          ;
+; |ctrlunit|WriteReg       ; |ctrlunit|WriteReg       ; pin_out          ;
+; |ctrlunit|MemToReg       ; |ctrlunit|MemToReg       ; pin_out          ;
+; |ctrlunit|RegDes         ; |ctrlunit|RegDes         ; pin_out          ;
+; |ctrlunit|WrFlag         ; |ctrlunit|WrFlag         ; pin_out          ;
+; |ctrlunit|Equal0~0       ; |ctrlunit|Equal0~0       ; out0             ;
+; |ctrlunit|Equal1~0       ; |ctrlunit|Equal1~0       ; out0             ;
+; |ctrlunit|Equal2~0       ; |ctrlunit|Equal2~0       ; out0             ;
+; |ctrlunit|Equal3~0       ; |ctrlunit|Equal3~0       ; out0             ;
+; |ctrlunit|Equal4~0       ; |ctrlunit|Equal4~0       ; out0             ;
+; |ctrlunit|Equal5~0       ; |ctrlunit|Equal5~0       ; out0             ;
+; |ctrlunit|Equal6~0       ; |ctrlunit|Equal6~0       ; out0             ;
+; |ctrlunit|Equal7~0       ; |ctrlunit|Equal7~0       ; out0             ;
+; |ctrlunit|Equal8~0       ; |ctrlunit|Equal8~0       ; out0             ;
+; |ctrlunit|Equal9~0       ; |ctrlunit|Equal9~0       ; out0             ;
+; |ctrlunit|Equal10~0      ; |ctrlunit|Equal10~0      ; out0             ;
+; |ctrlunit|Equal11~0      ; |ctrlunit|Equal11~0      ; out0             ;
+; |ctrlunit|Equal12~0      ; |ctrlunit|Equal12~0      ; out0             ;
+; |ctrlunit|Equal13~0      ; |ctrlunit|Equal13~0      ; out0             ;
+; |ctrlunit|Equal14~0      ; |ctrlunit|Equal14~0      ; out0             ;
++--------------------------+--------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------+
+; Missing 1-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------+
+; Missing 0-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Fri Sep 30 00:35:54 2011
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off ctrlunit -c ctrlunit
+Info: Using vector source file "E:/Studies/Junior/EDA/Task 2/ctrlunit/ctrlunit.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of ctrlunit.vwf called ctrlunit.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is     100.00 %
+Info: Number of transitions in simulation is 1224
+Info: Vector file ctrlunit.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 142 megabytes
+    Info: Processing ended: Fri Sep 30 00:35:56 2011
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

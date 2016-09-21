@@ -1,0 +1,125 @@
+|key_input
+key <= Shake:inst3.PB_Out
+CLK => Shake:inst3.clk
+CLK => Keyboard_Identify:inst1.clk
+CLK => Keyboard_Scan:inst2.clk
+stop <= Keyboard_Identify:inst1.stop
+V1 => Keyboard_Identify:inst1.H[0]
+V2 => Keyboard_Identify:inst1.H[1]
+V3 => Keyboard_Identify:inst1.H[2]
+V4 => Keyboard_Identify:inst1.H[3]
+H1 <= H[0].DB_MAX_OUTPUT_PORT_TYPE
+H2 <= H[1].DB_MAX_OUTPUT_PORT_TYPE
+H3 <= H[2].DB_MAX_OUTPUT_PORT_TYPE
+H4 <= H[3].DB_MAX_OUTPUT_PORT_TYPE
+num[0] <= Keyboard_Identify:inst1.out[0]
+num[1] <= Keyboard_Identify:inst1.out[1]
+num[2] <= Keyboard_Identify:inst1.out[2]
+num[3] <= Keyboard_Identify:inst1.out[3]
+symbol[0] <= Keyboard_Identify:inst1.symbol[0]
+symbol[1] <= Keyboard_Identify:inst1.symbol[1]
+symbol[2] <= Keyboard_Identify:inst1.symbol[2]
+symbol[3] <= Keyboard_Identify:inst1.symbol[3]
+
+
+|key_input|Shake:inst3
+clk => count_low[2].CLK
+clk => count_low[1].CLK
+clk => count_low[0].CLK
+clk => count_high[2].CLK
+clk => count_high[1].CLK
+clk => count_high[0].CLK
+clk => PB_reg.CLK
+PB_UP => count_high~2.OUTPUTSELECT
+PB_UP => count_high~1.OUTPUTSELECT
+PB_UP => count_high~0.OUTPUTSELECT
+PB_UP => count_low~2.OUTPUTSELECT
+PB_UP => count_low~1.OUTPUTSELECT
+PB_UP => count_low~0.OUTPUTSELECT
+PB_Out <= PB_reg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|key_input|Keyboard_Identify:inst1
+clk => state.CLK
+clk => out[3]~reg0.CLK
+clk => out[2]~reg0.CLK
+clk => out[1]~reg0.CLK
+clk => out[0]~reg0.CLK
+clk => symbol[3]~reg0.CLK
+clk => symbol[2]~reg0.CLK
+clk => symbol[1]~reg0.CLK
+clk => symbol[0]~reg0.CLK
+H[0] => symbol~55.OUTPUTSELECT
+H[0] => symbol~54.OUTPUTSELECT
+H[0] => symbol~53.OUTPUTSELECT
+H[0] => symbol~52.OUTPUTSELECT
+H[0] => out~54.OUTPUTSELECT
+H[0] => out~53.OUTPUTSELECT
+H[0] => out~52.OUTPUTSELECT
+H[0] => out~51.OUTPUTSELECT
+H[0] => stop~2.IN1
+H[1] => symbol~51.OUTPUTSELECT
+H[1] => symbol~50.OUTPUTSELECT
+H[1] => symbol~49.OUTPUTSELECT
+H[1] => symbol~48.OUTPUTSELECT
+H[1] => out~50.OUTPUTSELECT
+H[1] => out~49.OUTPUTSELECT
+H[1] => out~48.OUTPUTSELECT
+H[1] => out~47.OUTPUTSELECT
+H[1] => stop~1.IN1
+H[2] => symbol~47.OUTPUTSELECT
+H[2] => symbol~46.OUTPUTSELECT
+H[2] => symbol~45.OUTPUTSELECT
+H[2] => symbol~44.OUTPUTSELECT
+H[2] => out~46.OUTPUTSELECT
+H[2] => out~45.OUTPUTSELECT
+H[2] => out~44.OUTPUTSELECT
+H[2] => out~43.OUTPUTSELECT
+H[2] => stop~0.IN1
+H[3] => symbol~43.OUTPUTSELECT
+H[3] => symbol~42.OUTPUTSELECT
+H[3] => symbol~41.OUTPUTSELECT
+H[3] => symbol~40.OUTPUTSELECT
+H[3] => out~42.OUTPUTSELECT
+H[3] => out~41.OUTPUTSELECT
+H[3] => out~40.OUTPUTSELECT
+H[3] => out~39.OUTPUTSELECT
+H[3] => stop~0.IN0
+V[0] => Equal0.IN0
+V[0] => Equal1.IN1
+V[0] => Equal2.IN1
+V[0] => Equal3.IN1
+V[1] => Equal0.IN1
+V[1] => Equal1.IN0
+V[1] => Equal2.IN2
+V[1] => Equal3.IN2
+V[2] => Equal0.IN2
+V[2] => Equal1.IN2
+V[2] => Equal2.IN0
+V[2] => Equal3.IN3
+V[3] => Equal0.IN3
+V[3] => Equal1.IN3
+V[3] => Equal2.IN3
+V[3] => Equal3.IN0
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+stop <= stop~2.DB_MAX_OUTPUT_PORT_TYPE
+symbol[0] <= symbol[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+symbol[1] <= symbol[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+symbol[2] <= symbol[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+symbol[3] <= symbol[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|key_input|Keyboard_Scan:inst2
+in => Selector3.IN3
+in => Selector2.IN3
+in => Selector1.IN3
+in => Selector0.IN3
+in => Selector3.IN1
+in => Selector2.IN1
+in => Selector1.IN1
+in => Selector0.IN1
+
+

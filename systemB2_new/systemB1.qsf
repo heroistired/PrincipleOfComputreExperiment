@@ -1,0 +1,106 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.0 Build 132 02/25/2009 SJ Full Version
+# Date created = 15:04:16  October 18, 2011
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		systemB1_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C5Q208C8
+set_global_assignment -name TOP_LEVEL_ENTITY systemB1
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:04:16  OCTOBER 18, 2011"
+set_global_assignment -name LAST_QUARTUS_VERSION 9.0
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_location_assignment PIN_164 -to A
+set_location_assignment PIN_162 -to B
+set_location_assignment PIN_151 -to C
+set_location_assignment PIN_160 -to D
+set_location_assignment PIN_161 -to E
+set_location_assignment PIN_163 -to F
+set_location_assignment PIN_150 -to G
+set_location_assignment PIN_152 -to H
+set_location_assignment PIN_132 -to CLK
+set_location_assignment PIN_144 -to LD1
+set_location_assignment PIN_48 -to RST
+set_location_assignment PIN_149 -to SD1
+set_location_assignment PIN_147 -to SD2
+set_location_assignment PIN_146 -to SD3
+set_location_assignment PIN_145 -to SD4
+set_global_assignment -name VHDL_FILE divider10.vhd
+set_global_assignment -name VHDL_FILE divider105.vhd
+set_global_assignment -name VERILOG_FILE ../Divider1/Divider1.v
+set_global_assignment -name AHDL_FILE ../systemA/lpm_ff1.tdf
+set_global_assignment -name VERILOG_FILE ../reg_IO/reg_IO.v
+set_global_assignment -name BDF_FILE ../lpm_rom_256_16/lpm_rom_256_16.bdf
+set_global_assignment -name AHDL_FILE ../lpm_rom_256_16/lpm_rom0.tdf
+set_global_assignment -name AHDL_FILE lpm_mux0.tdf
+set_global_assignment -name VERILOG_FILE ../Divider/Divider.v
+set_global_assignment -name BDF_FILE ../seg/seg.bdf
+set_global_assignment -name VERILOG_FILE ../Translator/Translator.v
+set_global_assignment -name VERILOG_FILE ../Display/Display.v
+set_global_assignment -name VERILOG_FILE ../Decoder/Decoder.v
+set_global_assignment -name AHDL_FILE ../reg4_8/lpm_decode1.tdf
+set_global_assignment -name AHDL_FILE ../reg4_8/lpm_ff0.tdf
+set_global_assignment -name BDF_FILE ../reg4_8/reg4_8.bdf
+set_global_assignment -name BDF_FILE ../IO_PORT/IO_PORT.bdf
+set_global_assignment -name AHDL_FILE ../IO_PORT/lpm_bustri0.tdf
+set_global_assignment -name AHDL_FILE ../IO_PORT/lpm_decode0.tdf
+set_global_assignment -name VERILOG_FILE ../instrconunit/instrconunit.v
+set_global_assignment -name VERILOG_FILE ../Flag/Flag.v
+set_global_assignment -name VERILOG_FILE ../ctrlunit/ctrlunit.v
+set_global_assignment -name VERILOG_FILE ../ALU/ALU.v
+set_global_assignment -name BDF_FILE systemB1.bdf
+set_global_assignment -name QIP_FILE lpm_mux0.qip
+set_global_assignment -name QIP_FILE lpm_mux1.qip
+set_global_assignment -name QIP_FILE lpm_ff0.qip
+set_global_assignment -name QIP_FILE lpm_decode0.qip
+set_global_assignment -name QIP_FILE lpm_mux2.qip
+set_global_assignment -name QIP_FILE lpm_mux3.qip
+set_global_assignment -name VECTOR_WAVEFORM_FILE systemB1.vwf
+set_global_assignment -name HEX_FILE systemB1.hex
+set_global_assignment -name QIP_FILE ../Decoder/lpm_mux0.qip
+set_global_assignment -name QIP_FILE lpm_mux4.qip
+set_global_assignment -name QIP_FILE lpm_mux5.qip
+set_global_assignment -name QIP_FILE lpm_rom0.qip
+set_global_assignment -name QIP_FILE ../systemA/lpm_ff0.qip
+set_global_assignment -name QIP_FILE ../systemA/lpm_ff1.qip

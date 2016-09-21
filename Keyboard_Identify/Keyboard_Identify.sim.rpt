@@ -1,0 +1,332 @@
+Simulator report for Keyboard_Identify
+Tue Aug 30 10:21:16 2011
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 108 nodes    ;
+; Simulation Coverage         ;      25.00 % ;
+; Total Number of Transitions ; 106          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      25.00 % ;
+; Total nodes checked                                 ; 108          ;
+; Total output ports checked                          ; 108          ;
+; Total output ports with complete 1/0-value coverage ; 27           ;
+; Total output ports with no 1/0-value coverage       ; 63           ;
+; Total output ports with no 1-value coverage         ; 63           ;
+; Total output ports with no 0-value coverage         ; 81           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                        ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |Keyboard_Identify|out~18      ; |Keyboard_Identify|out~18      ; out              ;
+; |Keyboard_Identify|out~19      ; |Keyboard_Identify|out~19      ; out              ;
+; |Keyboard_Identify|out~22      ; |Keyboard_Identify|out~22      ; out              ;
+; |Keyboard_Identify|out~23      ; |Keyboard_Identify|out~23      ; out              ;
+; |Keyboard_Identify|out~26      ; |Keyboard_Identify|out~26      ; out              ;
+; |Keyboard_Identify|out~27      ; |Keyboard_Identify|out~27      ; out              ;
+; |Keyboard_Identify|out~28      ; |Keyboard_Identify|out~28      ; out              ;
+; |Keyboard_Identify|out~30      ; |Keyboard_Identify|out~30      ; out              ;
+; |Keyboard_Identify|out~31      ; |Keyboard_Identify|out~31      ; out              ;
+; |Keyboard_Identify|out~32      ; |Keyboard_Identify|out~32      ; out              ;
+; |Keyboard_Identify|symbol~11   ; |Keyboard_Identify|symbol~11   ; out              ;
+; |Keyboard_Identify|symbol~15   ; |Keyboard_Identify|symbol~15   ; out              ;
+; |Keyboard_Identify|stop~0      ; |Keyboard_Identify|stop~0      ; out0             ;
+; |Keyboard_Identify|stop~1      ; |Keyboard_Identify|stop~1      ; out0             ;
+; |Keyboard_Identify|stop~2      ; |Keyboard_Identify|stop~2      ; out0             ;
+; |Keyboard_Identify|symbol[3]~4 ; |Keyboard_Identify|symbol[3]~4 ; out0             ;
+; |Keyboard_Identify|symbol[3]~5 ; |Keyboard_Identify|symbol[3]~5 ; out0             ;
+; |Keyboard_Identify|out[3]~6    ; |Keyboard_Identify|out[3]~6    ; out0             ;
+; |Keyboard_Identify|out[3]~8    ; |Keyboard_Identify|out[3]~8    ; out0             ;
+; |Keyboard_Identify|H[0]        ; |Keyboard_Identify|H[0]        ; out              ;
+; |Keyboard_Identify|H[2]        ; |Keyboard_Identify|H[2]        ; out              ;
+; |Keyboard_Identify|H[3]        ; |Keyboard_Identify|H[3]        ; out              ;
+; |Keyboard_Identify|V[1]        ; |Keyboard_Identify|V[1]        ; out              ;
+; |Keyboard_Identify|V[3]        ; |Keyboard_Identify|V[3]        ; out              ;
+; |Keyboard_Identify|stop        ; |Keyboard_Identify|stop        ; pin_out          ;
+; |Keyboard_Identify|Equal0~0    ; |Keyboard_Identify|Equal0~0    ; out0             ;
+; |Keyboard_Identify|Equal2~0    ; |Keyboard_Identify|Equal2~0    ; out0             ;
++--------------------------------+--------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                 ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |Keyboard_Identify|out~10         ; |Keyboard_Identify|out~10         ; out              ;
+; |Keyboard_Identify|out~12         ; |Keyboard_Identify|out~12         ; out              ;
+; |Keyboard_Identify|out~14         ; |Keyboard_Identify|out~14         ; out              ;
+; |Keyboard_Identify|out~16         ; |Keyboard_Identify|out~16         ; out              ;
+; |Keyboard_Identify|out~20         ; |Keyboard_Identify|out~20         ; out              ;
+; |Keyboard_Identify|out~21         ; |Keyboard_Identify|out~21         ; out              ;
+; |Keyboard_Identify|out~24         ; |Keyboard_Identify|out~24         ; out              ;
+; |Keyboard_Identify|out~25         ; |Keyboard_Identify|out~25         ; out              ;
+; |Keyboard_Identify|out~29         ; |Keyboard_Identify|out~29         ; out              ;
+; |Keyboard_Identify|out~33         ; |Keyboard_Identify|out~33         ; out              ;
+; |Keyboard_Identify|symbol[0]~0    ; |Keyboard_Identify|symbol[0]~0    ; out              ;
+; |Keyboard_Identify|symbol~6       ; |Keyboard_Identify|symbol~6       ; out              ;
+; |Keyboard_Identify|symbol~7       ; |Keyboard_Identify|symbol~7       ; out              ;
+; |Keyboard_Identify|symbol~8       ; |Keyboard_Identify|symbol~8       ; out              ;
+; |Keyboard_Identify|symbol~10      ; |Keyboard_Identify|symbol~10      ; out              ;
+; |Keyboard_Identify|out~34         ; |Keyboard_Identify|out~34         ; out              ;
+; |Keyboard_Identify|out~35         ; |Keyboard_Identify|out~35         ; out              ;
+; |Keyboard_Identify|symbol~12      ; |Keyboard_Identify|symbol~12      ; out              ;
+; |Keyboard_Identify|symbol~14      ; |Keyboard_Identify|symbol~14      ; out              ;
+; |Keyboard_Identify|symbol[0]~reg0 ; |Keyboard_Identify|symbol[0]~reg0 ; regout           ;
+; |Keyboard_Identify|symbol~16      ; |Keyboard_Identify|symbol~16      ; out              ;
+; |Keyboard_Identify|symbol~18      ; |Keyboard_Identify|symbol~18      ; out              ;
+; |Keyboard_Identify|symbol~19      ; |Keyboard_Identify|symbol~19      ; out              ;
+; |Keyboard_Identify|symbol~20      ; |Keyboard_Identify|symbol~20      ; out              ;
+; |Keyboard_Identify|symbol~22      ; |Keyboard_Identify|symbol~22      ; out              ;
+; |Keyboard_Identify|symbol~23      ; |Keyboard_Identify|symbol~23      ; out              ;
+; |Keyboard_Identify|out~36         ; |Keyboard_Identify|out~36         ; out              ;
+; |Keyboard_Identify|out~38         ; |Keyboard_Identify|out~38         ; out              ;
+; |Keyboard_Identify|out~39         ; |Keyboard_Identify|out~39         ; out              ;
+; |Keyboard_Identify|symbol~24      ; |Keyboard_Identify|symbol~24      ; out              ;
+; |Keyboard_Identify|symbol~26      ; |Keyboard_Identify|symbol~26      ; out              ;
+; |Keyboard_Identify|symbol~27      ; |Keyboard_Identify|symbol~27      ; out              ;
+; |Keyboard_Identify|out~40         ; |Keyboard_Identify|out~40         ; out              ;
+; |Keyboard_Identify|out~41         ; |Keyboard_Identify|out~41         ; out              ;
+; |Keyboard_Identify|out~42         ; |Keyboard_Identify|out~42         ; out              ;
+; |Keyboard_Identify|out~43         ; |Keyboard_Identify|out~43         ; out              ;
+; |Keyboard_Identify|symbol~28      ; |Keyboard_Identify|symbol~28      ; out              ;
+; |Keyboard_Identify|symbol~30      ; |Keyboard_Identify|symbol~30      ; out              ;
+; |Keyboard_Identify|symbol~31      ; |Keyboard_Identify|symbol~31      ; out              ;
+; |Keyboard_Identify|out[3]~reg0    ; |Keyboard_Identify|out[3]~reg0    ; regout           ;
+; |Keyboard_Identify|out[1]~reg0    ; |Keyboard_Identify|out[1]~reg0    ; regout           ;
+; |Keyboard_Identify|out[0]~reg0    ; |Keyboard_Identify|out[0]~reg0    ; regout           ;
+; |Keyboard_Identify|symbol[3]~reg0 ; |Keyboard_Identify|symbol[3]~reg0 ; regout           ;
+; |Keyboard_Identify|symbol[1]~reg0 ; |Keyboard_Identify|symbol[1]~reg0 ; regout           ;
+; |Keyboard_Identify|symbol[3]~1    ; |Keyboard_Identify|symbol[3]~1    ; out              ;
+; |Keyboard_Identify|symbol[1]~3    ; |Keyboard_Identify|symbol[1]~3    ; out              ;
+; |Keyboard_Identify|out[0]~0       ; |Keyboard_Identify|out[0]~0       ; out              ;
+; |Keyboard_Identify|out[0]~1       ; |Keyboard_Identify|out[0]~1       ; out              ;
+; |Keyboard_Identify|out[1]~2       ; |Keyboard_Identify|out[1]~2       ; out              ;
+; |Keyboard_Identify|out[1]~3       ; |Keyboard_Identify|out[1]~3       ; out              ;
+; |Keyboard_Identify|out[3]~7       ; |Keyboard_Identify|out[3]~7       ; out              ;
+; |Keyboard_Identify|out[3]~9       ; |Keyboard_Identify|out[3]~9       ; out              ;
+; |Keyboard_Identify|H[1]           ; |Keyboard_Identify|H[1]           ; out              ;
+; |Keyboard_Identify|V[0]           ; |Keyboard_Identify|V[0]           ; out              ;
+; |Keyboard_Identify|V[2]           ; |Keyboard_Identify|V[2]           ; out              ;
+; |Keyboard_Identify|out[0]         ; |Keyboard_Identify|out[0]         ; pin_out          ;
+; |Keyboard_Identify|out[1]         ; |Keyboard_Identify|out[1]         ; pin_out          ;
+; |Keyboard_Identify|out[3]         ; |Keyboard_Identify|out[3]         ; pin_out          ;
+; |Keyboard_Identify|symbol[0]      ; |Keyboard_Identify|symbol[0]      ; pin_out          ;
+; |Keyboard_Identify|symbol[1]      ; |Keyboard_Identify|symbol[1]      ; pin_out          ;
+; |Keyboard_Identify|symbol[3]      ; |Keyboard_Identify|symbol[3]      ; pin_out          ;
+; |Keyboard_Identify|Equal1~0       ; |Keyboard_Identify|Equal1~0       ; out0             ;
+; |Keyboard_Identify|Equal3~0       ; |Keyboard_Identify|Equal3~0       ; out0             ;
++-----------------------------------+-----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                 ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |Keyboard_Identify|out~10         ; |Keyboard_Identify|out~10         ; out              ;
+; |Keyboard_Identify|out~11         ; |Keyboard_Identify|out~11         ; out              ;
+; |Keyboard_Identify|out~12         ; |Keyboard_Identify|out~12         ; out              ;
+; |Keyboard_Identify|out~13         ; |Keyboard_Identify|out~13         ; out              ;
+; |Keyboard_Identify|out~14         ; |Keyboard_Identify|out~14         ; out              ;
+; |Keyboard_Identify|out~15         ; |Keyboard_Identify|out~15         ; out              ;
+; |Keyboard_Identify|out~16         ; |Keyboard_Identify|out~16         ; out              ;
+; |Keyboard_Identify|out~17         ; |Keyboard_Identify|out~17         ; out              ;
+; |Keyboard_Identify|out~20         ; |Keyboard_Identify|out~20         ; out              ;
+; |Keyboard_Identify|out~21         ; |Keyboard_Identify|out~21         ; out              ;
+; |Keyboard_Identify|out~24         ; |Keyboard_Identify|out~24         ; out              ;
+; |Keyboard_Identify|out~25         ; |Keyboard_Identify|out~25         ; out              ;
+; |Keyboard_Identify|out~29         ; |Keyboard_Identify|out~29         ; out              ;
+; |Keyboard_Identify|out~33         ; |Keyboard_Identify|out~33         ; out              ;
+; |Keyboard_Identify|symbol[0]~0    ; |Keyboard_Identify|symbol[0]~0    ; out              ;
+; |Keyboard_Identify|symbol~6       ; |Keyboard_Identify|symbol~6       ; out              ;
+; |Keyboard_Identify|symbol~7       ; |Keyboard_Identify|symbol~7       ; out              ;
+; |Keyboard_Identify|symbol~8       ; |Keyboard_Identify|symbol~8       ; out              ;
+; |Keyboard_Identify|symbol~9       ; |Keyboard_Identify|symbol~9       ; out              ;
+; |Keyboard_Identify|symbol~10      ; |Keyboard_Identify|symbol~10      ; out              ;
+; |Keyboard_Identify|out~34         ; |Keyboard_Identify|out~34         ; out              ;
+; |Keyboard_Identify|out~35         ; |Keyboard_Identify|out~35         ; out              ;
+; |Keyboard_Identify|symbol~12      ; |Keyboard_Identify|symbol~12      ; out              ;
+; |Keyboard_Identify|symbol~13      ; |Keyboard_Identify|symbol~13      ; out              ;
+; |Keyboard_Identify|symbol~14      ; |Keyboard_Identify|symbol~14      ; out              ;
+; |Keyboard_Identify|symbol[0]~reg0 ; |Keyboard_Identify|symbol[0]~reg0 ; regout           ;
+; |Keyboard_Identify|symbol~16      ; |Keyboard_Identify|symbol~16      ; out              ;
+; |Keyboard_Identify|symbol~17      ; |Keyboard_Identify|symbol~17      ; out              ;
+; |Keyboard_Identify|symbol~18      ; |Keyboard_Identify|symbol~18      ; out              ;
+; |Keyboard_Identify|symbol~19      ; |Keyboard_Identify|symbol~19      ; out              ;
+; |Keyboard_Identify|symbol~20      ; |Keyboard_Identify|symbol~20      ; out              ;
+; |Keyboard_Identify|symbol~21      ; |Keyboard_Identify|symbol~21      ; out              ;
+; |Keyboard_Identify|symbol~22      ; |Keyboard_Identify|symbol~22      ; out              ;
+; |Keyboard_Identify|symbol~23      ; |Keyboard_Identify|symbol~23      ; out              ;
+; |Keyboard_Identify|out~36         ; |Keyboard_Identify|out~36         ; out              ;
+; |Keyboard_Identify|out~37         ; |Keyboard_Identify|out~37         ; out              ;
+; |Keyboard_Identify|out~38         ; |Keyboard_Identify|out~38         ; out              ;
+; |Keyboard_Identify|out~39         ; |Keyboard_Identify|out~39         ; out              ;
+; |Keyboard_Identify|symbol~24      ; |Keyboard_Identify|symbol~24      ; out              ;
+; |Keyboard_Identify|symbol~25      ; |Keyboard_Identify|symbol~25      ; out              ;
+; |Keyboard_Identify|symbol~26      ; |Keyboard_Identify|symbol~26      ; out              ;
+; |Keyboard_Identify|symbol~27      ; |Keyboard_Identify|symbol~27      ; out              ;
+; |Keyboard_Identify|out~40         ; |Keyboard_Identify|out~40         ; out              ;
+; |Keyboard_Identify|out~41         ; |Keyboard_Identify|out~41         ; out              ;
+; |Keyboard_Identify|out~42         ; |Keyboard_Identify|out~42         ; out              ;
+; |Keyboard_Identify|out~43         ; |Keyboard_Identify|out~43         ; out              ;
+; |Keyboard_Identify|symbol~28      ; |Keyboard_Identify|symbol~28      ; out              ;
+; |Keyboard_Identify|symbol~29      ; |Keyboard_Identify|symbol~29      ; out              ;
+; |Keyboard_Identify|symbol~30      ; |Keyboard_Identify|symbol~30      ; out              ;
+; |Keyboard_Identify|symbol~31      ; |Keyboard_Identify|symbol~31      ; out              ;
+; |Keyboard_Identify|out[3]~reg0    ; |Keyboard_Identify|out[3]~reg0    ; regout           ;
+; |Keyboard_Identify|out[2]~reg0    ; |Keyboard_Identify|out[2]~reg0    ; regout           ;
+; |Keyboard_Identify|out[1]~reg0    ; |Keyboard_Identify|out[1]~reg0    ; regout           ;
+; |Keyboard_Identify|out[0]~reg0    ; |Keyboard_Identify|out[0]~reg0    ; regout           ;
+; |Keyboard_Identify|symbol[3]~reg0 ; |Keyboard_Identify|symbol[3]~reg0 ; regout           ;
+; |Keyboard_Identify|symbol[2]~reg0 ; |Keyboard_Identify|symbol[2]~reg0 ; regout           ;
+; |Keyboard_Identify|symbol[1]~reg0 ; |Keyboard_Identify|symbol[1]~reg0 ; regout           ;
+; |Keyboard_Identify|symbol[3]~1    ; |Keyboard_Identify|symbol[3]~1    ; out              ;
+; |Keyboard_Identify|symbol[2]~2    ; |Keyboard_Identify|symbol[2]~2    ; out              ;
+; |Keyboard_Identify|symbol[1]~3    ; |Keyboard_Identify|symbol[1]~3    ; out              ;
+; |Keyboard_Identify|out[0]~0       ; |Keyboard_Identify|out[0]~0       ; out              ;
+; |Keyboard_Identify|out[0]~1       ; |Keyboard_Identify|out[0]~1       ; out              ;
+; |Keyboard_Identify|out[1]~2       ; |Keyboard_Identify|out[1]~2       ; out              ;
+; |Keyboard_Identify|out[1]~3       ; |Keyboard_Identify|out[1]~3       ; out              ;
+; |Keyboard_Identify|out[2]~4       ; |Keyboard_Identify|out[2]~4       ; out              ;
+; |Keyboard_Identify|out[2]~5       ; |Keyboard_Identify|out[2]~5       ; out              ;
+; |Keyboard_Identify|out[3]~7       ; |Keyboard_Identify|out[3]~7       ; out              ;
+; |Keyboard_Identify|out[3]~9       ; |Keyboard_Identify|out[3]~9       ; out              ;
+; |Keyboard_Identify|H[1]           ; |Keyboard_Identify|H[1]           ; out              ;
+; |Keyboard_Identify|V[0]           ; |Keyboard_Identify|V[0]           ; out              ;
+; |Keyboard_Identify|V[2]           ; |Keyboard_Identify|V[2]           ; out              ;
+; |Keyboard_Identify|out[0]         ; |Keyboard_Identify|out[0]         ; pin_out          ;
+; |Keyboard_Identify|out[1]         ; |Keyboard_Identify|out[1]         ; pin_out          ;
+; |Keyboard_Identify|out[2]         ; |Keyboard_Identify|out[2]         ; pin_out          ;
+; |Keyboard_Identify|out[3]         ; |Keyboard_Identify|out[3]         ; pin_out          ;
+; |Keyboard_Identify|symbol[0]      ; |Keyboard_Identify|symbol[0]      ; pin_out          ;
+; |Keyboard_Identify|symbol[1]      ; |Keyboard_Identify|symbol[1]      ; pin_out          ;
+; |Keyboard_Identify|symbol[2]      ; |Keyboard_Identify|symbol[2]      ; pin_out          ;
+; |Keyboard_Identify|symbol[3]      ; |Keyboard_Identify|symbol[3]      ; pin_out          ;
+; |Keyboard_Identify|Equal1~0       ; |Keyboard_Identify|Equal1~0       ; out0             ;
+; |Keyboard_Identify|Equal3~0       ; |Keyboard_Identify|Equal3~0       ; out0             ;
++-----------------------------------+-----------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Tue Aug 30 10:20:59 2011
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Keyboard_Identify -c Keyboard_Identify
+Info: Using vector source file "D:/Task 1/Keyboard_Identify/Keyboard_Identify.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning: Found clock-sensitive change during active clock edge at time 60.0 ns on register "|Keyboard_Identify|symbol[2]~reg0"
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      25.00 %
+Info: Number of transitions in simulation is 106
+Info: Quartus II Simulator was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 117 megabytes
+    Info: Processing ended: Tue Aug 30 10:21:16 2011
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Sep 03 08:26:37 2011
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : Keyboard_Identify
+Top-level Entity Name : Keyboard_Identify
+Family : Cyclone II
+Total logic elements : 54
+    Total combinational functions : 54
+    Dedicated logic registers : 9
+Total registers : 9
+Total pins : 18
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

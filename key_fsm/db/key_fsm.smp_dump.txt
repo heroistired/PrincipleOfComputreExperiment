@@ -1,0 +1,7 @@
+
+State Machine - |key_fsm|state
+Name state.secondnum state.oper state.firstnum state.idle 
+state.idle 0 0 0 0 
+state.firstnum 0 0 1 1 
+state.oper 0 1 0 1 
+state.secondnum 1 0 0 1 

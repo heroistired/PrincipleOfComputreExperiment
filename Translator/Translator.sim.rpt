@@ -1,0 +1,369 @@
+Simulator report for Translator
+Thu Sep 01 13:23:00 2011
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 107 nodes    ;
+; Simulation Coverage         ;       0.93 % ;
+; Total Number of Transitions ; 403          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       0.93 % ;
+; Total nodes checked                                 ; 107          ;
+; Total output ports checked                          ; 107          ;
+; Total output ports with complete 1/0-value coverage ; 1            ;
+; Total output ports with no 1/0-value coverage       ; 102          ;
+; Total output ports with no 1-value coverage         ; 102          ;
+; Total output ports with no 0-value coverage         ; 106          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------------+
+; Complete 1/0-Value Coverage                           ;
++-----------------+------------------+------------------+
+; Node Name       ; Output Port Name ; Output Port Type ;
++-----------------+------------------+------------------+
+; |Translator|clk ; |Translator|clk  ; out              ;
++-----------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                     ;
++-----------------------------+-----------------------------+------------------+
+; Node Name                   ; Output Port Name            ; Output Port Type ;
++-----------------------------+-----------------------------+------------------+
+; |Translator|display~0       ; |Translator|display~0       ; out              ;
+; |Translator|display~1       ; |Translator|display~1       ; out              ;
+; |Translator|display~2       ; |Translator|display~2       ; out              ;
+; |Translator|display~3       ; |Translator|display~3       ; out              ;
+; |Translator|display~4       ; |Translator|display~4       ; out              ;
+; |Translator|display~5       ; |Translator|display~5       ; out              ;
+; |Translator|display~6       ; |Translator|display~6       ; out              ;
+; |Translator|display~7       ; |Translator|display~7       ; out              ;
+; |Translator|display~8       ; |Translator|display~8       ; out              ;
+; |Translator|display~9       ; |Translator|display~9       ; out              ;
+; |Translator|display~10      ; |Translator|display~10      ; out              ;
+; |Translator|display~11      ; |Translator|display~11      ; out              ;
+; |Translator|display~12      ; |Translator|display~12      ; out              ;
+; |Translator|display~13      ; |Translator|display~13      ; out              ;
+; |Translator|display~14      ; |Translator|display~14      ; out              ;
+; |Translator|display~15      ; |Translator|display~15      ; out              ;
+; |Translator|display~16      ; |Translator|display~16      ; out              ;
+; |Translator|display~17      ; |Translator|display~17      ; out              ;
+; |Translator|display~18      ; |Translator|display~18      ; out              ;
+; |Translator|display~19      ; |Translator|display~19      ; out              ;
+; |Translator|display~20      ; |Translator|display~20      ; out              ;
+; |Translator|display~21      ; |Translator|display~21      ; out              ;
+; |Translator|display~22      ; |Translator|display~22      ; out              ;
+; |Translator|display~23      ; |Translator|display~23      ; out              ;
+; |Translator|display~24      ; |Translator|display~24      ; out              ;
+; |Translator|display~25      ; |Translator|display~25      ; out              ;
+; |Translator|display~26      ; |Translator|display~26      ; out              ;
+; |Translator|display~27      ; |Translator|display~27      ; out              ;
+; |Translator|display~28      ; |Translator|display~28      ; out              ;
+; |Translator|display~29      ; |Translator|display~29      ; out              ;
+; |Translator|display~30      ; |Translator|display~30      ; out              ;
+; |Translator|display~31      ; |Translator|display~31      ; out              ;
+; |Translator|display~32      ; |Translator|display~32      ; out              ;
+; |Translator|display~33      ; |Translator|display~33      ; out              ;
+; |Translator|display~34      ; |Translator|display~34      ; out              ;
+; |Translator|display~35      ; |Translator|display~35      ; out              ;
+; |Translator|display~36      ; |Translator|display~36      ; out              ;
+; |Translator|display~37      ; |Translator|display~37      ; out              ;
+; |Translator|display~38      ; |Translator|display~38      ; out              ;
+; |Translator|display~39      ; |Translator|display~39      ; out              ;
+; |Translator|display~40      ; |Translator|display~40      ; out              ;
+; |Translator|display~41      ; |Translator|display~41      ; out              ;
+; |Translator|display~42      ; |Translator|display~42      ; out              ;
+; |Translator|display~43      ; |Translator|display~43      ; out              ;
+; |Translator|display~44      ; |Translator|display~44      ; out              ;
+; |Translator|display~45      ; |Translator|display~45      ; out              ;
+; |Translator|display~46      ; |Translator|display~46      ; out              ;
+; |Translator|display~47      ; |Translator|display~47      ; out              ;
+; |Translator|display~48      ; |Translator|display~48      ; out              ;
+; |Translator|display~49      ; |Translator|display~49      ; out              ;
+; |Translator|display~50      ; |Translator|display~50      ; out              ;
+; |Translator|display~51      ; |Translator|display~51      ; out              ;
+; |Translator|display~52      ; |Translator|display~52      ; out              ;
+; |Translator|display~53      ; |Translator|display~53      ; out              ;
+; |Translator|display~54      ; |Translator|display~54      ; out              ;
+; |Translator|display~55      ; |Translator|display~55      ; out              ;
+; |Translator|display~56      ; |Translator|display~56      ; out              ;
+; |Translator|display~57      ; |Translator|display~57      ; out              ;
+; |Translator|display~58      ; |Translator|display~58      ; out              ;
+; |Translator|display~59      ; |Translator|display~59      ; out              ;
+; |Translator|display~60      ; |Translator|display~60      ; out              ;
+; |Translator|display~61      ; |Translator|display~61      ; out              ;
+; |Translator|display~62      ; |Translator|display~62      ; out              ;
+; |Translator|display~63      ; |Translator|display~63      ; out              ;
+; |Translator|display~64      ; |Translator|display~64      ; out              ;
+; |Translator|display~65      ; |Translator|display~65      ; out              ;
+; |Translator|display~66      ; |Translator|display~66      ; out              ;
+; |Translator|display~67      ; |Translator|display~67      ; out              ;
+; |Translator|display~68      ; |Translator|display~68      ; out              ;
+; |Translator|display~69      ; |Translator|display~69      ; out              ;
+; |Translator|display~70      ; |Translator|display~70      ; out              ;
+; |Translator|display~71      ; |Translator|display~71      ; out              ;
+; |Translator|display~72      ; |Translator|display~72      ; out              ;
+; |Translator|display~73      ; |Translator|display~73      ; out              ;
+; |Translator|display~74      ; |Translator|display~74      ; out              ;
+; |Translator|display~75      ; |Translator|display~75      ; out              ;
+; |Translator|display~76      ; |Translator|display~76      ; out              ;
+; |Translator|display[0]~reg0 ; |Translator|display[0]~reg0 ; regout           ;
+; |Translator|display[3]~reg0 ; |Translator|display[3]~reg0 ; regout           ;
+; |Translator|display[4]~reg0 ; |Translator|display[4]~reg0 ; regout           ;
+; |Translator|display[5]~reg0 ; |Translator|display[5]~reg0 ; regout           ;
+; |Translator|display[6]~reg0 ; |Translator|display[6]~reg0 ; regout           ;
+; |Translator|num[0]          ; |Translator|num[0]          ; out              ;
+; |Translator|num[1]          ; |Translator|num[1]          ; out              ;
+; |Translator|num[2]          ; |Translator|num[2]          ; out              ;
+; |Translator|num[3]          ; |Translator|num[3]          ; out              ;
+; |Translator|display[0]      ; |Translator|display[0]      ; pin_out          ;
+; |Translator|display[3]      ; |Translator|display[3]      ; pin_out          ;
+; |Translator|display[4]      ; |Translator|display[4]      ; pin_out          ;
+; |Translator|display[5]      ; |Translator|display[5]      ; pin_out          ;
+; |Translator|display[6]      ; |Translator|display[6]      ; pin_out          ;
+; |Translator|Equal0~0        ; |Translator|Equal0~0        ; out0             ;
+; |Translator|Equal1~0        ; |Translator|Equal1~0        ; out0             ;
+; |Translator|Equal2~0        ; |Translator|Equal2~0        ; out0             ;
+; |Translator|Equal3~0        ; |Translator|Equal3~0        ; out0             ;
+; |Translator|Equal4~0        ; |Translator|Equal4~0        ; out0             ;
+; |Translator|Equal5~0        ; |Translator|Equal5~0        ; out0             ;
+; |Translator|Equal6~0        ; |Translator|Equal6~0        ; out0             ;
+; |Translator|Equal7~0        ; |Translator|Equal7~0        ; out0             ;
+; |Translator|Equal8~0        ; |Translator|Equal8~0        ; out0             ;
+; |Translator|Equal9~0        ; |Translator|Equal9~0        ; out0             ;
+; |Translator|Equal10~0       ; |Translator|Equal10~0       ; out0             ;
++-----------------------------+-----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                     ;
++-----------------------------+-----------------------------+------------------+
+; Node Name                   ; Output Port Name            ; Output Port Type ;
++-----------------------------+-----------------------------+------------------+
+; |Translator|display[1]~reg0 ; |Translator|display[1]~reg0 ; regout           ;
+; |Translator|display~0       ; |Translator|display~0       ; out              ;
+; |Translator|display~1       ; |Translator|display~1       ; out              ;
+; |Translator|display~2       ; |Translator|display~2       ; out              ;
+; |Translator|display~3       ; |Translator|display~3       ; out              ;
+; |Translator|display~4       ; |Translator|display~4       ; out              ;
+; |Translator|display~5       ; |Translator|display~5       ; out              ;
+; |Translator|display~6       ; |Translator|display~6       ; out              ;
+; |Translator|display~7       ; |Translator|display~7       ; out              ;
+; |Translator|display~8       ; |Translator|display~8       ; out              ;
+; |Translator|display~9       ; |Translator|display~9       ; out              ;
+; |Translator|display~10      ; |Translator|display~10      ; out              ;
+; |Translator|display~11      ; |Translator|display~11      ; out              ;
+; |Translator|display~12      ; |Translator|display~12      ; out              ;
+; |Translator|display~13      ; |Translator|display~13      ; out              ;
+; |Translator|display~14      ; |Translator|display~14      ; out              ;
+; |Translator|display~15      ; |Translator|display~15      ; out              ;
+; |Translator|display~16      ; |Translator|display~16      ; out              ;
+; |Translator|display~17      ; |Translator|display~17      ; out              ;
+; |Translator|display~18      ; |Translator|display~18      ; out              ;
+; |Translator|display~19      ; |Translator|display~19      ; out              ;
+; |Translator|display~20      ; |Translator|display~20      ; out              ;
+; |Translator|display~21      ; |Translator|display~21      ; out              ;
+; |Translator|display~22      ; |Translator|display~22      ; out              ;
+; |Translator|display~23      ; |Translator|display~23      ; out              ;
+; |Translator|display~24      ; |Translator|display~24      ; out              ;
+; |Translator|display~25      ; |Translator|display~25      ; out              ;
+; |Translator|display~26      ; |Translator|display~26      ; out              ;
+; |Translator|display~27      ; |Translator|display~27      ; out              ;
+; |Translator|display~28      ; |Translator|display~28      ; out              ;
+; |Translator|display~29      ; |Translator|display~29      ; out              ;
+; |Translator|display~30      ; |Translator|display~30      ; out              ;
+; |Translator|display~31      ; |Translator|display~31      ; out              ;
+; |Translator|display~32      ; |Translator|display~32      ; out              ;
+; |Translator|display~33      ; |Translator|display~33      ; out              ;
+; |Translator|display~34      ; |Translator|display~34      ; out              ;
+; |Translator|display~35      ; |Translator|display~35      ; out              ;
+; |Translator|display~36      ; |Translator|display~36      ; out              ;
+; |Translator|display~37      ; |Translator|display~37      ; out              ;
+; |Translator|display~38      ; |Translator|display~38      ; out              ;
+; |Translator|display~39      ; |Translator|display~39      ; out              ;
+; |Translator|display~40      ; |Translator|display~40      ; out              ;
+; |Translator|display~41      ; |Translator|display~41      ; out              ;
+; |Translator|display~42      ; |Translator|display~42      ; out              ;
+; |Translator|display~43      ; |Translator|display~43      ; out              ;
+; |Translator|display~44      ; |Translator|display~44      ; out              ;
+; |Translator|display~45      ; |Translator|display~45      ; out              ;
+; |Translator|display~46      ; |Translator|display~46      ; out              ;
+; |Translator|display~47      ; |Translator|display~47      ; out              ;
+; |Translator|display~48      ; |Translator|display~48      ; out              ;
+; |Translator|display~49      ; |Translator|display~49      ; out              ;
+; |Translator|display~50      ; |Translator|display~50      ; out              ;
+; |Translator|display~51      ; |Translator|display~51      ; out              ;
+; |Translator|display~52      ; |Translator|display~52      ; out              ;
+; |Translator|display~53      ; |Translator|display~53      ; out              ;
+; |Translator|display~54      ; |Translator|display~54      ; out              ;
+; |Translator|display~55      ; |Translator|display~55      ; out              ;
+; |Translator|display~56      ; |Translator|display~56      ; out              ;
+; |Translator|display~57      ; |Translator|display~57      ; out              ;
+; |Translator|display~58      ; |Translator|display~58      ; out              ;
+; |Translator|display~59      ; |Translator|display~59      ; out              ;
+; |Translator|display~60      ; |Translator|display~60      ; out              ;
+; |Translator|display~61      ; |Translator|display~61      ; out              ;
+; |Translator|display~62      ; |Translator|display~62      ; out              ;
+; |Translator|display~63      ; |Translator|display~63      ; out              ;
+; |Translator|display~64      ; |Translator|display~64      ; out              ;
+; |Translator|display~65      ; |Translator|display~65      ; out              ;
+; |Translator|display~66      ; |Translator|display~66      ; out              ;
+; |Translator|display~67      ; |Translator|display~67      ; out              ;
+; |Translator|display~68      ; |Translator|display~68      ; out              ;
+; |Translator|display~69      ; |Translator|display~69      ; out              ;
+; |Translator|display~70      ; |Translator|display~70      ; out              ;
+; |Translator|display~71      ; |Translator|display~71      ; out              ;
+; |Translator|display~72      ; |Translator|display~72      ; out              ;
+; |Translator|display~73      ; |Translator|display~73      ; out              ;
+; |Translator|display~74      ; |Translator|display~74      ; out              ;
+; |Translator|display~75      ; |Translator|display~75      ; out              ;
+; |Translator|display~76      ; |Translator|display~76      ; out              ;
+; |Translator|display[0]~reg0 ; |Translator|display[0]~reg0 ; regout           ;
+; |Translator|display[2]~reg0 ; |Translator|display[2]~reg0 ; regout           ;
+; |Translator|display[3]~reg0 ; |Translator|display[3]~reg0 ; regout           ;
+; |Translator|display[4]~reg0 ; |Translator|display[4]~reg0 ; regout           ;
+; |Translator|display[5]~reg0 ; |Translator|display[5]~reg0 ; regout           ;
+; |Translator|display[6]~reg0 ; |Translator|display[6]~reg0 ; regout           ;
+; |Translator|num[0]          ; |Translator|num[0]          ; out              ;
+; |Translator|num[1]          ; |Translator|num[1]          ; out              ;
+; |Translator|num[2]          ; |Translator|num[2]          ; out              ;
+; |Translator|num[3]          ; |Translator|num[3]          ; out              ;
+; |Translator|display[0]      ; |Translator|display[0]      ; pin_out          ;
+; |Translator|display[1]      ; |Translator|display[1]      ; pin_out          ;
+; |Translator|display[2]      ; |Translator|display[2]      ; pin_out          ;
+; |Translator|display[3]      ; |Translator|display[3]      ; pin_out          ;
+; |Translator|display[4]      ; |Translator|display[4]      ; pin_out          ;
+; |Translator|display[5]      ; |Translator|display[5]      ; pin_out          ;
+; |Translator|display[6]      ; |Translator|display[6]      ; pin_out          ;
+; |Translator|Equal0~0        ; |Translator|Equal0~0        ; out0             ;
+; |Translator|Equal1~0        ; |Translator|Equal1~0        ; out0             ;
+; |Translator|Equal2~0        ; |Translator|Equal2~0        ; out0             ;
+; |Translator|Equal3~0        ; |Translator|Equal3~0        ; out0             ;
+; |Translator|Equal4~0        ; |Translator|Equal4~0        ; out0             ;
+; |Translator|Equal5~0        ; |Translator|Equal5~0        ; out0             ;
+; |Translator|Equal6~0        ; |Translator|Equal6~0        ; out0             ;
+; |Translator|Equal7~0        ; |Translator|Equal7~0        ; out0             ;
+; |Translator|Equal8~0        ; |Translator|Equal8~0        ; out0             ;
+; |Translator|Equal9~0        ; |Translator|Equal9~0        ; out0             ;
+; |Translator|Equal10~0       ; |Translator|Equal10~0       ; out0             ;
++-----------------------------+-----------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Thu Sep 01 13:22:59 2011
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Translator -c Translator
+Info: Using vector source file "E:/Studies/Sophomore/EDA/Summer/Task 1/Translator/Translator.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       0.93 %
+Info: Number of transitions in simulation is 403
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 141 megabytes
+    Info: Processing ended: Thu Sep 01 13:23:00 2011
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

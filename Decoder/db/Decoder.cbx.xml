@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Decoder">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Decoder|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_tfm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Decoder|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_hem.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Decoder|lpm_divide:Div2" CBX_FILE_NAME="lpm_divide_eem.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

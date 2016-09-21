@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Oct 19 15:43:28 2011
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : systemB1
+Top-level Entity Name : systemB1
+Family : Cyclone II
+Device : EP2C5Q208C8
+Timing Models : Final
+Total logic elements : 1,007 / 4,608 ( 22 % )
+    Total combinational functions : 1,004 / 4,608 ( 22 % )
+    Dedicated logic registers : 86 / 4,608 ( 2 % )
+Total registers : 86
+Total pins : 128 / 142 ( 90 % )
+Total virtual pins : 0
+Total memory bits : 4,096 / 119,808 ( 3 % )
+Embedded Multiplier 9-bit elements : 0 / 26 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

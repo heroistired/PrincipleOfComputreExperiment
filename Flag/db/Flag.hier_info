@@ -1,0 +1,35 @@
+|Flag
+Flagin[0] => Flagout~7.DATAB
+Flagin[1] => Flagout~6.DATAB
+Flagin[2] => Flagout~5.DATAB
+Flagin[3] => Flagout~4.DATAB
+Flagin[4] => Flagout~3.DATAB
+Flagin[5] => Flagout~2.DATAB
+Flagin[6] => Flagout~1.DATAB
+Flagin[7] => Flagout~0.DATAB
+CLK => Flagout[7]~reg0.CLK
+CLK => Flagout[6]~reg0.CLK
+CLK => Flagout[5]~reg0.CLK
+CLK => Flagout[4]~reg0.CLK
+CLK => Flagout[3]~reg0.CLK
+CLK => Flagout[2]~reg0.CLK
+CLK => Flagout[1]~reg0.CLK
+CLK => Flagout[0]~reg0.CLK
+Reset => Flagout~7.OUTPUTSELECT
+Reset => Flagout~6.OUTPUTSELECT
+Reset => Flagout~5.OUTPUTSELECT
+Reset => Flagout~4.OUTPUTSELECT
+Reset => Flagout~3.OUTPUTSELECT
+Reset => Flagout~2.OUTPUTSELECT
+Reset => Flagout~1.OUTPUTSELECT
+Reset => Flagout~0.OUTPUTSELECT
+Flagout[0] <= Flagout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Flagout[1] <= Flagout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Flagout[2] <= Flagout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Flagout[3] <= Flagout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Flagout[4] <= Flagout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Flagout[5] <= Flagout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Flagout[6] <= Flagout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Flagout[7] <= Flagout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

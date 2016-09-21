@@ -1,0 +1,31 @@
+module Flag(Flagin,CLK,Reset,wrflag,Flagout);
+input [7:0]Flagin;
+input CLK;
+input Reset;
+input wrflag;
+output reg [7:0]Flagout;
+
+reg [3:0]cnt;
+
+always @(posedge CLK)
+begin
+	if (Reset) begin
+		if (wrflag==1) begin
+			cnt = cnt + 1;
+		end
+		else begin
+			cnt = 0;
+		end
+		if (cnt==10) begin
+			cnt = 0;
+			Flagout = Flagin;
+		end
+		else begin
+			Flagout = Flagout;
+		end
+	end
+	else begin
+		Flagout = 0;
+	end
+end
+endmodule

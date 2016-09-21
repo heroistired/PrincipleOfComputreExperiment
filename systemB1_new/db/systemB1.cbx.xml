@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="systemB1">
+		<CBX_INST_ENTRY INSTANCE_NAME="|systemB1|IO_PORT:inst5|lpm_decode0:inst9|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_duf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|systemB1|IO_PORT:inst5|lpm_mux5:inst8|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_4nc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|systemB1|lpm_mux2:inst8|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_mmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|systemB1|lpm_mux3:inst9|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_smc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|systemB1|reg4_8:inst3|lpm_mux4:inst13|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_vmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|systemB1|lpm_rom_256_16:inst10|lpm_rom0:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_r181.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|systemB1|reg4_8:inst3|lpm_decode1:inst4|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_n6f.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|systemB1|reg4_8:inst3|lpm_mux4:inst14|lpm_mux:lpm_mux_component" CBX_FILE_NAME="mux_vmc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

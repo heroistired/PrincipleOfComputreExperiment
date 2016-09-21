@@ -1,0 +1,401 @@
+Simulator report for key_input
+Wed Oct 19 13:49:53 2011
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 207 nodes    ;
+; Simulation Coverage         ;      85.02 % ;
+; Total Number of Transitions ; 8003         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      85.02 % ;
+; Total nodes checked                                 ; 207          ;
+; Total output ports checked                          ; 207          ;
+; Total output ports with complete 1/0-value coverage ; 176          ;
+; Total output ports with no 1/0-value coverage       ; 31           ;
+; Total output ports with no 1-value coverage         ; 31           ;
+; Total output ports with no 0-value coverage         ; 31           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                    ;
++----------------------------------------------+----------------------------------------------+------------------+
+; Node Name                                    ; Output Port Name                             ; Output Port Type ;
++----------------------------------------------+----------------------------------------------+------------------+
+; |key_input|key                               ; |key_input|key                               ; pin_out          ;
+; |key_input|CLK                               ; |key_input|CLK                               ; out              ;
+; |key_input|stop                              ; |key_input|stop                              ; pin_out          ;
+; |key_input|V2                                ; |key_input|V2                                ; out              ;
+; |key_input|V3                                ; |key_input|V3                                ; out              ;
+; |key_input|H1                                ; |key_input|H1                                ; pin_out          ;
+; |key_input|H2                                ; |key_input|H2                                ; pin_out          ;
+; |key_input|H3                                ; |key_input|H3                                ; pin_out          ;
+; |key_input|H4                                ; |key_input|H4                                ; pin_out          ;
+; |key_input|num[2]                            ; |key_input|num[2]                            ; pin_out          ;
+; |key_input|num[1]                            ; |key_input|num[1]                            ; pin_out          ;
+; |key_input|num[0]                            ; |key_input|num[0]                            ; pin_out          ;
+; |key_input|symbol[3]                         ; |key_input|symbol[3]                         ; pin_out          ;
+; |key_input|symbol[2]                         ; |key_input|symbol[2]                         ; pin_out          ;
+; |key_input|symbol[1]                         ; |key_input|symbol[1]                         ; pin_out          ;
+; |key_input|symbol[0]                         ; |key_input|symbol[0]                         ; pin_out          ;
+; |key_input|Keyboard_Scan:inst2|state.S0      ; |key_input|Keyboard_Scan:inst2|state.S0      ; regout           ;
+; |key_input|Keyboard_Scan:inst2|state.S1      ; |key_input|Keyboard_Scan:inst2|state.S1      ; regout           ;
+; |key_input|Keyboard_Scan:inst2|state.S2      ; |key_input|Keyboard_Scan:inst2|state.S2      ; regout           ;
+; |key_input|Keyboard_Scan:inst2|state.S3      ; |key_input|Keyboard_Scan:inst2|state.S3      ; regout           ;
+; |key_input|Keyboard_Scan:inst2|state~4       ; |key_input|Keyboard_Scan:inst2|state~4       ; out0             ;
+; |key_input|Keyboard_Scan:inst2|out[0]        ; |key_input|Keyboard_Scan:inst2|out[0]        ; out0             ;
+; |key_input|Keyboard_Scan:inst2|out[1]        ; |key_input|Keyboard_Scan:inst2|out[1]        ; out0             ;
+; |key_input|Keyboard_Scan:inst2|out[2]        ; |key_input|Keyboard_Scan:inst2|out[2]        ; out0             ;
+; |key_input|Keyboard_Scan:inst2|out[3]        ; |key_input|Keyboard_Scan:inst2|out[3]        ; out0             ;
+; |key_input|Keyboard_Scan:inst2|state~8       ; |key_input|Keyboard_Scan:inst2|state~8       ; out0             ;
+; |key_input|Keyboard_Identify:inst1|stop~0    ; |key_input|Keyboard_Identify:inst1|stop~0    ; out0             ;
+; |key_input|Keyboard_Identify:inst1|stop~1    ; |key_input|Keyboard_Identify:inst1|stop~1    ; out0             ;
+; |key_input|Keyboard_Identify:inst1|stop      ; |key_input|Keyboard_Identify:inst1|stop      ; out0             ;
+; |key_input|Keyboard_Identify:inst1|out~1     ; |key_input|Keyboard_Identify:inst1|out~1     ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~2     ; |key_input|Keyboard_Identify:inst1|out~2     ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~3     ; |key_input|Keyboard_Identify:inst1|out~3     ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~0  ; |key_input|Keyboard_Identify:inst1|symbol~0  ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~1  ; |key_input|Keyboard_Identify:inst1|symbol~1  ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~2  ; |key_input|Keyboard_Identify:inst1|symbol~2  ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~3  ; |key_input|Keyboard_Identify:inst1|symbol~3  ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~4     ; |key_input|Keyboard_Identify:inst1|out~4     ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~5     ; |key_input|Keyboard_Identify:inst1|out~5     ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~6     ; |key_input|Keyboard_Identify:inst1|out~6     ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~7     ; |key_input|Keyboard_Identify:inst1|out~7     ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~8     ; |key_input|Keyboard_Identify:inst1|out~8     ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~4  ; |key_input|Keyboard_Identify:inst1|symbol~4  ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~9     ; |key_input|Keyboard_Identify:inst1|out~9     ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~10    ; |key_input|Keyboard_Identify:inst1|out~10    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~11    ; |key_input|Keyboard_Identify:inst1|out~11    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~12    ; |key_input|Keyboard_Identify:inst1|out~12    ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~5  ; |key_input|Keyboard_Identify:inst1|symbol~5  ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~6  ; |key_input|Keyboard_Identify:inst1|symbol~6  ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~13    ; |key_input|Keyboard_Identify:inst1|out~13    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~14    ; |key_input|Keyboard_Identify:inst1|out~14    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~15    ; |key_input|Keyboard_Identify:inst1|out~15    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~16    ; |key_input|Keyboard_Identify:inst1|out~16    ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~7  ; |key_input|Keyboard_Identify:inst1|symbol~7  ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~8  ; |key_input|Keyboard_Identify:inst1|symbol~8  ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~9  ; |key_input|Keyboard_Identify:inst1|symbol~9  ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~17    ; |key_input|Keyboard_Identify:inst1|out~17    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~18    ; |key_input|Keyboard_Identify:inst1|out~18    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~19    ; |key_input|Keyboard_Identify:inst1|out~19    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~20    ; |key_input|Keyboard_Identify:inst1|out~20    ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~10 ; |key_input|Keyboard_Identify:inst1|symbol~10 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~11 ; |key_input|Keyboard_Identify:inst1|symbol~11 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~12 ; |key_input|Keyboard_Identify:inst1|symbol~12 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~13 ; |key_input|Keyboard_Identify:inst1|symbol~13 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~14 ; |key_input|Keyboard_Identify:inst1|symbol~14 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~15 ; |key_input|Keyboard_Identify:inst1|symbol~15 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~16 ; |key_input|Keyboard_Identify:inst1|symbol~16 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~17 ; |key_input|Keyboard_Identify:inst1|symbol~17 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~18 ; |key_input|Keyboard_Identify:inst1|symbol~18 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~19 ; |key_input|Keyboard_Identify:inst1|symbol~19 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~20 ; |key_input|Keyboard_Identify:inst1|symbol~20 ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~21    ; |key_input|Keyboard_Identify:inst1|out~21    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~22    ; |key_input|Keyboard_Identify:inst1|out~22    ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~21 ; |key_input|Keyboard_Identify:inst1|symbol~21 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~22 ; |key_input|Keyboard_Identify:inst1|symbol~22 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~23 ; |key_input|Keyboard_Identify:inst1|symbol~23 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol[0] ; |key_input|Keyboard_Identify:inst1|symbol[0] ; regout           ;
+; |key_input|Keyboard_Identify:inst1|out~24    ; |key_input|Keyboard_Identify:inst1|out~24    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~25    ; |key_input|Keyboard_Identify:inst1|out~25    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~26    ; |key_input|Keyboard_Identify:inst1|out~26    ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~24 ; |key_input|Keyboard_Identify:inst1|symbol~24 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~25 ; |key_input|Keyboard_Identify:inst1|symbol~25 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~26 ; |key_input|Keyboard_Identify:inst1|symbol~26 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~27 ; |key_input|Keyboard_Identify:inst1|symbol~27 ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~28    ; |key_input|Keyboard_Identify:inst1|out~28    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~29    ; |key_input|Keyboard_Identify:inst1|out~29    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~30    ; |key_input|Keyboard_Identify:inst1|out~30    ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~28 ; |key_input|Keyboard_Identify:inst1|symbol~28 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~29 ; |key_input|Keyboard_Identify:inst1|symbol~29 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~30 ; |key_input|Keyboard_Identify:inst1|symbol~30 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~31 ; |key_input|Keyboard_Identify:inst1|symbol~31 ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~32    ; |key_input|Keyboard_Identify:inst1|out~32    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~33    ; |key_input|Keyboard_Identify:inst1|out~33    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~34    ; |key_input|Keyboard_Identify:inst1|out~34    ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~32 ; |key_input|Keyboard_Identify:inst1|symbol~32 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~33 ; |key_input|Keyboard_Identify:inst1|symbol~33 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~34 ; |key_input|Keyboard_Identify:inst1|symbol~34 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~35 ; |key_input|Keyboard_Identify:inst1|symbol~35 ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~36    ; |key_input|Keyboard_Identify:inst1|out~36    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~37    ; |key_input|Keyboard_Identify:inst1|out~37    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~38    ; |key_input|Keyboard_Identify:inst1|out~38    ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~36 ; |key_input|Keyboard_Identify:inst1|symbol~36 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~37 ; |key_input|Keyboard_Identify:inst1|symbol~37 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~38 ; |key_input|Keyboard_Identify:inst1|symbol~38 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~39 ; |key_input|Keyboard_Identify:inst1|symbol~39 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~46 ; |key_input|Keyboard_Identify:inst1|symbol~46 ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~48    ; |key_input|Keyboard_Identify:inst1|out~48    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~49    ; |key_input|Keyboard_Identify:inst1|out~49    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~50    ; |key_input|Keyboard_Identify:inst1|out~50    ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~48 ; |key_input|Keyboard_Identify:inst1|symbol~48 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~49 ; |key_input|Keyboard_Identify:inst1|symbol~49 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~50 ; |key_input|Keyboard_Identify:inst1|symbol~50 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~51 ; |key_input|Keyboard_Identify:inst1|symbol~51 ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~52    ; |key_input|Keyboard_Identify:inst1|out~52    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~53    ; |key_input|Keyboard_Identify:inst1|out~53    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~54    ; |key_input|Keyboard_Identify:inst1|out~54    ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~52 ; |key_input|Keyboard_Identify:inst1|symbol~52 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~53 ; |key_input|Keyboard_Identify:inst1|symbol~53 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~54 ; |key_input|Keyboard_Identify:inst1|symbol~54 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~55 ; |key_input|Keyboard_Identify:inst1|symbol~55 ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~56    ; |key_input|Keyboard_Identify:inst1|out~56    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~57    ; |key_input|Keyboard_Identify:inst1|out~57    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~58    ; |key_input|Keyboard_Identify:inst1|out~58    ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~56 ; |key_input|Keyboard_Identify:inst1|symbol~56 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~57 ; |key_input|Keyboard_Identify:inst1|symbol~57 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~58 ; |key_input|Keyboard_Identify:inst1|symbol~58 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~59 ; |key_input|Keyboard_Identify:inst1|symbol~59 ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~60    ; |key_input|Keyboard_Identify:inst1|out~60    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~61    ; |key_input|Keyboard_Identify:inst1|out~61    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~62    ; |key_input|Keyboard_Identify:inst1|out~62    ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~60 ; |key_input|Keyboard_Identify:inst1|symbol~60 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~61 ; |key_input|Keyboard_Identify:inst1|symbol~61 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~62 ; |key_input|Keyboard_Identify:inst1|symbol~62 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~63 ; |key_input|Keyboard_Identify:inst1|symbol~63 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol[1] ; |key_input|Keyboard_Identify:inst1|symbol[1] ; regout           ;
+; |key_input|Keyboard_Identify:inst1|symbol[2] ; |key_input|Keyboard_Identify:inst1|symbol[2] ; regout           ;
+; |key_input|Keyboard_Identify:inst1|symbol[3] ; |key_input|Keyboard_Identify:inst1|symbol[3] ; regout           ;
+; |key_input|Keyboard_Identify:inst1|out[0]    ; |key_input|Keyboard_Identify:inst1|out[0]    ; regout           ;
+; |key_input|Keyboard_Identify:inst1|out[1]    ; |key_input|Keyboard_Identify:inst1|out[1]    ; regout           ;
+; |key_input|Keyboard_Identify:inst1|out[2]    ; |key_input|Keyboard_Identify:inst1|out[2]    ; regout           ;
+; |key_input|Keyboard_Identify:inst1|state     ; |key_input|Keyboard_Identify:inst1|state     ; regout           ;
+; |key_input|Shake:inst3|count_high[1]         ; |key_input|Shake:inst3|count_high[1]         ; regout           ;
+; |key_input|Shake:inst3|count_low~0           ; |key_input|Shake:inst3|count_low~0           ; out              ;
+; |key_input|Shake:inst3|count_low~1           ; |key_input|Shake:inst3|count_low~1           ; out              ;
+; |key_input|Shake:inst3|count_low~2           ; |key_input|Shake:inst3|count_low~2           ; out              ;
+; |key_input|Shake:inst3|count_high~0          ; |key_input|Shake:inst3|count_high~0          ; out              ;
+; |key_input|Shake:inst3|count_high~1          ; |key_input|Shake:inst3|count_high~1          ; out              ;
+; |key_input|Shake:inst3|count_high~2          ; |key_input|Shake:inst3|count_high~2          ; out              ;
+; |key_input|Shake:inst3|count_low[0]          ; |key_input|Shake:inst3|count_low[0]          ; regout           ;
+; |key_input|Shake:inst3|PB_reg                ; |key_input|Shake:inst3|PB_reg                ; regout           ;
+; |key_input|Shake:inst3|PB_reg~0              ; |key_input|Shake:inst3|PB_reg~0              ; out              ;
+; |key_input|Shake:inst3|PB_reg~1              ; |key_input|Shake:inst3|PB_reg~1              ; out              ;
+; |key_input|Shake:inst3|count_high[0]         ; |key_input|Shake:inst3|count_high[0]         ; regout           ;
+; |key_input|Shake:inst3|count_high[2]         ; |key_input|Shake:inst3|count_high[2]         ; regout           ;
+; |key_input|Shake:inst3|count_low[1]          ; |key_input|Shake:inst3|count_low[1]          ; regout           ;
+; |key_input|Shake:inst3|count_low[2]          ; |key_input|Shake:inst3|count_low[2]          ; regout           ;
+; |key_input|Keyboard_Scan:inst2|Selector0~0   ; |key_input|Keyboard_Scan:inst2|Selector0~0   ; out0             ;
+; |key_input|Keyboard_Scan:inst2|Selector0~1   ; |key_input|Keyboard_Scan:inst2|Selector0~1   ; out0             ;
+; |key_input|Keyboard_Scan:inst2|Selector1~0   ; |key_input|Keyboard_Scan:inst2|Selector1~0   ; out0             ;
+; |key_input|Keyboard_Scan:inst2|Selector1~2   ; |key_input|Keyboard_Scan:inst2|Selector1~2   ; out0             ;
+; |key_input|Keyboard_Scan:inst2|Selector2~0   ; |key_input|Keyboard_Scan:inst2|Selector2~0   ; out0             ;
+; |key_input|Keyboard_Scan:inst2|Selector2~1   ; |key_input|Keyboard_Scan:inst2|Selector2~1   ; out0             ;
+; |key_input|Keyboard_Scan:inst2|Selector2~2   ; |key_input|Keyboard_Scan:inst2|Selector2~2   ; out0             ;
+; |key_input|Keyboard_Scan:inst2|Selector3~0   ; |key_input|Keyboard_Scan:inst2|Selector3~0   ; out0             ;
+; |key_input|Keyboard_Scan:inst2|Selector3~2   ; |key_input|Keyboard_Scan:inst2|Selector3~2   ; out0             ;
+; |key_input|Shake:inst3|Add0~0                ; |key_input|Shake:inst3|Add0~0                ; out0             ;
+; |key_input|Shake:inst3|Add0~1                ; |key_input|Shake:inst3|Add0~1                ; out0             ;
+; |key_input|Shake:inst3|Add0~2                ; |key_input|Shake:inst3|Add0~2                ; out0             ;
+; |key_input|Shake:inst3|Add1~0                ; |key_input|Shake:inst3|Add1~0                ; out0             ;
+; |key_input|Shake:inst3|Add1~1                ; |key_input|Shake:inst3|Add1~1                ; out0             ;
+; |key_input|Shake:inst3|Add1~2                ; |key_input|Shake:inst3|Add1~2                ; out0             ;
+; |key_input|Keyboard_Identify:inst1|Equal0~0  ; |key_input|Keyboard_Identify:inst1|Equal0~0  ; out0             ;
+; |key_input|Keyboard_Identify:inst1|Equal1~0  ; |key_input|Keyboard_Identify:inst1|Equal1~0  ; out0             ;
+; |key_input|Keyboard_Identify:inst1|Equal2~0  ; |key_input|Keyboard_Identify:inst1|Equal2~0  ; out0             ;
+; |key_input|Keyboard_Identify:inst1|Equal3~0  ; |key_input|Keyboard_Identify:inst1|Equal3~0  ; out0             ;
+; |key_input|Shake:inst3|Equal0~0              ; |key_input|Shake:inst3|Equal0~0              ; out0             ;
+; |key_input|Shake:inst3|Equal1~0              ; |key_input|Shake:inst3|Equal1~0              ; out0             ;
++----------------------------------------------+----------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                       ;
++----------------------------------------------+----------------------------------------------+------------------+
+; Node Name                                    ; Output Port Name                             ; Output Port Type ;
++----------------------------------------------+----------------------------------------------+------------------+
+; |key_input|V1                                ; |key_input|V1                                ; out              ;
+; |key_input|V4                                ; |key_input|V4                                ; out              ;
+; |key_input|num[3]                            ; |key_input|num[3]                            ; pin_out          ;
+; |key_input|Keyboard_Identify:inst1|out~0     ; |key_input|Keyboard_Identify:inst1|out~0     ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~23    ; |key_input|Keyboard_Identify:inst1|out~23    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~27    ; |key_input|Keyboard_Identify:inst1|out~27    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~31    ; |key_input|Keyboard_Identify:inst1|out~31    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~35    ; |key_input|Keyboard_Identify:inst1|out~35    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~39    ; |key_input|Keyboard_Identify:inst1|out~39    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~40    ; |key_input|Keyboard_Identify:inst1|out~40    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~41    ; |key_input|Keyboard_Identify:inst1|out~41    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~42    ; |key_input|Keyboard_Identify:inst1|out~42    ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~40 ; |key_input|Keyboard_Identify:inst1|symbol~40 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~41 ; |key_input|Keyboard_Identify:inst1|symbol~41 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~42 ; |key_input|Keyboard_Identify:inst1|symbol~42 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~43 ; |key_input|Keyboard_Identify:inst1|symbol~43 ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~43    ; |key_input|Keyboard_Identify:inst1|out~43    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~44    ; |key_input|Keyboard_Identify:inst1|out~44    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~45    ; |key_input|Keyboard_Identify:inst1|out~45    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~46    ; |key_input|Keyboard_Identify:inst1|out~46    ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~44 ; |key_input|Keyboard_Identify:inst1|symbol~44 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~45 ; |key_input|Keyboard_Identify:inst1|symbol~45 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~47 ; |key_input|Keyboard_Identify:inst1|symbol~47 ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~47    ; |key_input|Keyboard_Identify:inst1|out~47    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~51    ; |key_input|Keyboard_Identify:inst1|out~51    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~55    ; |key_input|Keyboard_Identify:inst1|out~55    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~59    ; |key_input|Keyboard_Identify:inst1|out~59    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out[3]    ; |key_input|Keyboard_Identify:inst1|out[3]    ; regout           ;
+; |key_input|Keyboard_Scan:inst2|Selector0~2   ; |key_input|Keyboard_Scan:inst2|Selector0~2   ; out0             ;
+; |key_input|Keyboard_Scan:inst2|Selector1~1   ; |key_input|Keyboard_Scan:inst2|Selector1~1   ; out0             ;
+; |key_input|Keyboard_Scan:inst2|Selector3~1   ; |key_input|Keyboard_Scan:inst2|Selector3~1   ; out0             ;
++----------------------------------------------+----------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                       ;
++----------------------------------------------+----------------------------------------------+------------------+
+; Node Name                                    ; Output Port Name                             ; Output Port Type ;
++----------------------------------------------+----------------------------------------------+------------------+
+; |key_input|V1                                ; |key_input|V1                                ; out              ;
+; |key_input|V4                                ; |key_input|V4                                ; out              ;
+; |key_input|num[3]                            ; |key_input|num[3]                            ; pin_out          ;
+; |key_input|Keyboard_Identify:inst1|out~0     ; |key_input|Keyboard_Identify:inst1|out~0     ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~23    ; |key_input|Keyboard_Identify:inst1|out~23    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~27    ; |key_input|Keyboard_Identify:inst1|out~27    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~31    ; |key_input|Keyboard_Identify:inst1|out~31    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~35    ; |key_input|Keyboard_Identify:inst1|out~35    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~39    ; |key_input|Keyboard_Identify:inst1|out~39    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~40    ; |key_input|Keyboard_Identify:inst1|out~40    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~41    ; |key_input|Keyboard_Identify:inst1|out~41    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~42    ; |key_input|Keyboard_Identify:inst1|out~42    ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~40 ; |key_input|Keyboard_Identify:inst1|symbol~40 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~41 ; |key_input|Keyboard_Identify:inst1|symbol~41 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~42 ; |key_input|Keyboard_Identify:inst1|symbol~42 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~43 ; |key_input|Keyboard_Identify:inst1|symbol~43 ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~43    ; |key_input|Keyboard_Identify:inst1|out~43    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~44    ; |key_input|Keyboard_Identify:inst1|out~44    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~45    ; |key_input|Keyboard_Identify:inst1|out~45    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~46    ; |key_input|Keyboard_Identify:inst1|out~46    ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~44 ; |key_input|Keyboard_Identify:inst1|symbol~44 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~45 ; |key_input|Keyboard_Identify:inst1|symbol~45 ; out              ;
+; |key_input|Keyboard_Identify:inst1|symbol~47 ; |key_input|Keyboard_Identify:inst1|symbol~47 ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~47    ; |key_input|Keyboard_Identify:inst1|out~47    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~51    ; |key_input|Keyboard_Identify:inst1|out~51    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~55    ; |key_input|Keyboard_Identify:inst1|out~55    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out~59    ; |key_input|Keyboard_Identify:inst1|out~59    ; out              ;
+; |key_input|Keyboard_Identify:inst1|out[3]    ; |key_input|Keyboard_Identify:inst1|out[3]    ; regout           ;
+; |key_input|Keyboard_Scan:inst2|Selector0~2   ; |key_input|Keyboard_Scan:inst2|Selector0~2   ; out0             ;
+; |key_input|Keyboard_Scan:inst2|Selector1~1   ; |key_input|Keyboard_Scan:inst2|Selector1~1   ; out0             ;
+; |key_input|Keyboard_Scan:inst2|Selector3~1   ; |key_input|Keyboard_Scan:inst2|Selector3~1   ; out0             ;
++----------------------------------------------+----------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Wed Oct 19 13:49:52 2011
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off key_input -c key_input
+Info: Using vector source file "E:/Studies/Junior/EDA/Simple CPU/key_input/key_input.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of key_input.vwf called key_input.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      85.02 %
+Info: Number of transitions in simulation is 8003
+Info: Vector file key_input.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 141 megabytes
+    Info: Processing ended: Wed Oct 19 13:49:54 2011
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

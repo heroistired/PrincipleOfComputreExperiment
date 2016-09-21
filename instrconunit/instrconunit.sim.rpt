@@ -1,0 +1,322 @@
+Simulator report for instrconunit
+Fri Sep 30 00:53:16 2011
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 121 nodes    ;
+; Simulation Coverage         ;      61.16 % ;
+; Total Number of Transitions ; 2477         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Functional ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      61.16 % ;
+; Total nodes checked                                 ; 121          ;
+; Total output ports checked                          ; 121          ;
+; Total output ports with complete 1/0-value coverage ; 74           ;
+; Total output ports with no 1/0-value coverage       ; 38           ;
+; Total output ports with no 1-value coverage         ; 38           ;
+; Total output ports with no 0-value coverage         ; 47           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                            ;
++--------------------------+--------------------------+------------------+
+; Node Name                ; Output Port Name         ; Output Port Type ;
++--------------------------+--------------------------+------------------+
+; |instrconunit|always0~0  ; |instrconunit|always0~0  ; out0             ;
+; |instrconunit|always0~1  ; |instrconunit|always0~1  ; out0             ;
+; |instrconunit|PC~2       ; |instrconunit|PC~2       ; out              ;
+; |instrconunit|PC~3       ; |instrconunit|PC~3       ; out              ;
+; |instrconunit|PC~4       ; |instrconunit|PC~4       ; out              ;
+; |instrconunit|PC~5       ; |instrconunit|PC~5       ; out              ;
+; |instrconunit|PC~6       ; |instrconunit|PC~6       ; out              ;
+; |instrconunit|PC~7       ; |instrconunit|PC~7       ; out              ;
+; |instrconunit|PC~10      ; |instrconunit|PC~10      ; out              ;
+; |instrconunit|PC~11      ; |instrconunit|PC~11      ; out              ;
+; |instrconunit|PC~12      ; |instrconunit|PC~12      ; out              ;
+; |instrconunit|PC~13      ; |instrconunit|PC~13      ; out              ;
+; |instrconunit|PC~14      ; |instrconunit|PC~14      ; out              ;
+; |instrconunit|PC~15      ; |instrconunit|PC~15      ; out              ;
+; |instrconunit|PC~18      ; |instrconunit|PC~18      ; out              ;
+; |instrconunit|PC~19      ; |instrconunit|PC~19      ; out              ;
+; |instrconunit|PC~20      ; |instrconunit|PC~20      ; out              ;
+; |instrconunit|PC~21      ; |instrconunit|PC~21      ; out              ;
+; |instrconunit|PC~22      ; |instrconunit|PC~22      ; out              ;
+; |instrconunit|PC~23      ; |instrconunit|PC~23      ; out              ;
+; |instrconunit|PC~26      ; |instrconunit|PC~26      ; out              ;
+; |instrconunit|PC~27      ; |instrconunit|PC~27      ; out              ;
+; |instrconunit|PC~28      ; |instrconunit|PC~28      ; out              ;
+; |instrconunit|PC~29      ; |instrconunit|PC~29      ; out              ;
+; |instrconunit|PC~30      ; |instrconunit|PC~30      ; out              ;
+; |instrconunit|PC~31      ; |instrconunit|PC~31      ; out              ;
+; |instrconunit|PC[0]~reg0 ; |instrconunit|PC[0]~reg0 ; regout           ;
+; |instrconunit|PC[1]~reg0 ; |instrconunit|PC[1]~reg0 ; regout           ;
+; |instrconunit|PC[2]~reg0 ; |instrconunit|PC[2]~reg0 ; regout           ;
+; |instrconunit|PC[3]~reg0 ; |instrconunit|PC[3]~reg0 ; regout           ;
+; |instrconunit|PC[4]~reg0 ; |instrconunit|PC[4]~reg0 ; regout           ;
+; |instrconunit|PC[5]~reg0 ; |instrconunit|PC[5]~reg0 ; regout           ;
+; |instrconunit|branch     ; |instrconunit|branch     ; out              ;
+; |instrconunit|jump       ; |instrconunit|jump       ; out              ;
+; |instrconunit|clk        ; |instrconunit|clk        ; out              ;
+; |instrconunit|reset      ; |instrconunit|reset      ; out              ;
+; |instrconunit|imm[3]     ; |instrconunit|imm[3]     ; out              ;
+; |instrconunit|imm[4]     ; |instrconunit|imm[4]     ; out              ;
+; |instrconunit|PC[0]      ; |instrconunit|PC[0]      ; pin_out          ;
+; |instrconunit|PC[1]      ; |instrconunit|PC[1]      ; pin_out          ;
+; |instrconunit|PC[2]      ; |instrconunit|PC[2]      ; pin_out          ;
+; |instrconunit|PC[3]      ; |instrconunit|PC[3]      ; pin_out          ;
+; |instrconunit|PC[4]      ; |instrconunit|PC[4]      ; pin_out          ;
+; |instrconunit|PC[5]      ; |instrconunit|PC[5]      ; pin_out          ;
+; |instrconunit|Add0~0     ; |instrconunit|Add0~0     ; out0             ;
+; |instrconunit|Add0~1     ; |instrconunit|Add0~1     ; out0             ;
+; |instrconunit|Add0~2     ; |instrconunit|Add0~2     ; out0             ;
+; |instrconunit|Add0~3     ; |instrconunit|Add0~3     ; out0             ;
+; |instrconunit|Add0~4     ; |instrconunit|Add0~4     ; out0             ;
+; |instrconunit|Add0~5     ; |instrconunit|Add0~5     ; out0             ;
+; |instrconunit|Add0~6     ; |instrconunit|Add0~6     ; out0             ;
+; |instrconunit|Add0~7     ; |instrconunit|Add0~7     ; out0             ;
+; |instrconunit|Add0~8     ; |instrconunit|Add0~8     ; out0             ;
+; |instrconunit|Add0~9     ; |instrconunit|Add0~9     ; out0             ;
+; |instrconunit|Add1~0     ; |instrconunit|Add1~0     ; out0             ;
+; |instrconunit|Add1~2     ; |instrconunit|Add1~2     ; out0             ;
+; |instrconunit|Add1~7     ; |instrconunit|Add1~7     ; out0             ;
+; |instrconunit|Add1~12    ; |instrconunit|Add1~12    ; out0             ;
+; |instrconunit|Add1~13    ; |instrconunit|Add1~13    ; out0             ;
+; |instrconunit|Add1~15    ; |instrconunit|Add1~15    ; out0             ;
+; |instrconunit|Add1~17    ; |instrconunit|Add1~17    ; out0             ;
+; |instrconunit|Add1~18    ; |instrconunit|Add1~18    ; out0             ;
+; |instrconunit|Add1~20    ; |instrconunit|Add1~20    ; out0             ;
+; |instrconunit|Add1~22    ; |instrconunit|Add1~22    ; out0             ;
+; |instrconunit|Add2~0     ; |instrconunit|Add2~0     ; out0             ;
+; |instrconunit|Add2~1     ; |instrconunit|Add2~1     ; out0             ;
+; |instrconunit|Add2~2     ; |instrconunit|Add2~2     ; out0             ;
+; |instrconunit|Add2~3     ; |instrconunit|Add2~3     ; out0             ;
+; |instrconunit|Add2~4     ; |instrconunit|Add2~4     ; out0             ;
+; |instrconunit|Add2~5     ; |instrconunit|Add2~5     ; out0             ;
+; |instrconunit|Add2~6     ; |instrconunit|Add2~6     ; out0             ;
+; |instrconunit|Add2~7     ; |instrconunit|Add2~7     ; out0             ;
+; |instrconunit|Add2~8     ; |instrconunit|Add2~8     ; out0             ;
+; |instrconunit|Add2~9     ; |instrconunit|Add2~9     ; out0             ;
++--------------------------+--------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                               ;
++--------------------------+--------------------------+------------------+
+; Node Name                ; Output Port Name         ; Output Port Type ;
++--------------------------+--------------------------+------------------+
+; |instrconunit|PC~0       ; |instrconunit|PC~0       ; out              ;
+; |instrconunit|PC~8       ; |instrconunit|PC~8       ; out              ;
+; |instrconunit|PC~16      ; |instrconunit|PC~16      ; out              ;
+; |instrconunit|PC~24      ; |instrconunit|PC~24      ; out              ;
+; |instrconunit|PC[7]~reg0 ; |instrconunit|PC[7]~reg0 ; regout           ;
+; |instrconunit|imm[0]     ; |instrconunit|imm[0]     ; out              ;
+; |instrconunit|imm[1]     ; |instrconunit|imm[1]     ; out              ;
+; |instrconunit|imm[2]     ; |instrconunit|imm[2]     ; out              ;
+; |instrconunit|imm[5]     ; |instrconunit|imm[5]     ; out              ;
+; |instrconunit|imm[6]     ; |instrconunit|imm[6]     ; out              ;
+; |instrconunit|imm[7]     ; |instrconunit|imm[7]     ; out              ;
+; |instrconunit|PC[7]      ; |instrconunit|PC[7]      ; pin_out          ;
+; |instrconunit|Add0~11    ; |instrconunit|Add0~11    ; out0             ;
+; |instrconunit|Add0~12    ; |instrconunit|Add0~12    ; out0             ;
+; |instrconunit|Add1~1     ; |instrconunit|Add1~1     ; out0             ;
+; |instrconunit|Add1~3     ; |instrconunit|Add1~3     ; out0             ;
+; |instrconunit|Add1~4     ; |instrconunit|Add1~4     ; out0             ;
+; |instrconunit|Add1~5     ; |instrconunit|Add1~5     ; out0             ;
+; |instrconunit|Add1~6     ; |instrconunit|Add1~6     ; out0             ;
+; |instrconunit|Add1~8     ; |instrconunit|Add1~8     ; out0             ;
+; |instrconunit|Add1~9     ; |instrconunit|Add1~9     ; out0             ;
+; |instrconunit|Add1~10    ; |instrconunit|Add1~10    ; out0             ;
+; |instrconunit|Add1~11    ; |instrconunit|Add1~11    ; out0             ;
+; |instrconunit|Add1~14    ; |instrconunit|Add1~14    ; out0             ;
+; |instrconunit|Add1~16    ; |instrconunit|Add1~16    ; out0             ;
+; |instrconunit|Add1~19    ; |instrconunit|Add1~19    ; out0             ;
+; |instrconunit|Add1~21    ; |instrconunit|Add1~21    ; out0             ;
+; |instrconunit|Add1~23    ; |instrconunit|Add1~23    ; out0             ;
+; |instrconunit|Add1~24    ; |instrconunit|Add1~24    ; out0             ;
+; |instrconunit|Add1~25    ; |instrconunit|Add1~25    ; out0             ;
+; |instrconunit|Add1~26    ; |instrconunit|Add1~26    ; out0             ;
+; |instrconunit|Add1~28    ; |instrconunit|Add1~28    ; out0             ;
+; |instrconunit|Add1~29    ; |instrconunit|Add1~29    ; out0             ;
+; |instrconunit|Add1~30    ; |instrconunit|Add1~30    ; out0             ;
+; |instrconunit|Add1~31    ; |instrconunit|Add1~31    ; out0             ;
+; |instrconunit|Add1~32    ; |instrconunit|Add1~32    ; out0             ;
+; |instrconunit|Add2~11    ; |instrconunit|Add2~11    ; out0             ;
+; |instrconunit|Add2~12    ; |instrconunit|Add2~12    ; out0             ;
++--------------------------+--------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                               ;
++--------------------------+--------------------------+------------------+
+; Node Name                ; Output Port Name         ; Output Port Type ;
++--------------------------+--------------------------+------------------+
+; |instrconunit|PC~0       ; |instrconunit|PC~0       ; out              ;
+; |instrconunit|PC~1       ; |instrconunit|PC~1       ; out              ;
+; |instrconunit|PC~8       ; |instrconunit|PC~8       ; out              ;
+; |instrconunit|PC~9       ; |instrconunit|PC~9       ; out              ;
+; |instrconunit|PC~16      ; |instrconunit|PC~16      ; out              ;
+; |instrconunit|PC~17      ; |instrconunit|PC~17      ; out              ;
+; |instrconunit|PC~24      ; |instrconunit|PC~24      ; out              ;
+; |instrconunit|PC~25      ; |instrconunit|PC~25      ; out              ;
+; |instrconunit|PC[6]~reg0 ; |instrconunit|PC[6]~reg0 ; regout           ;
+; |instrconunit|PC[7]~reg0 ; |instrconunit|PC[7]~reg0 ; regout           ;
+; |instrconunit|imm[0]     ; |instrconunit|imm[0]     ; out              ;
+; |instrconunit|imm[1]     ; |instrconunit|imm[1]     ; out              ;
+; |instrconunit|imm[2]     ; |instrconunit|imm[2]     ; out              ;
+; |instrconunit|imm[5]     ; |instrconunit|imm[5]     ; out              ;
+; |instrconunit|imm[6]     ; |instrconunit|imm[6]     ; out              ;
+; |instrconunit|imm[7]     ; |instrconunit|imm[7]     ; out              ;
+; |instrconunit|PC[6]      ; |instrconunit|PC[6]      ; pin_out          ;
+; |instrconunit|PC[7]      ; |instrconunit|PC[7]      ; pin_out          ;
+; |instrconunit|Add0~10    ; |instrconunit|Add0~10    ; out0             ;
+; |instrconunit|Add0~11    ; |instrconunit|Add0~11    ; out0             ;
+; |instrconunit|Add0~12    ; |instrconunit|Add0~12    ; out0             ;
+; |instrconunit|Add1~1     ; |instrconunit|Add1~1     ; out0             ;
+; |instrconunit|Add1~3     ; |instrconunit|Add1~3     ; out0             ;
+; |instrconunit|Add1~4     ; |instrconunit|Add1~4     ; out0             ;
+; |instrconunit|Add1~5     ; |instrconunit|Add1~5     ; out0             ;
+; |instrconunit|Add1~6     ; |instrconunit|Add1~6     ; out0             ;
+; |instrconunit|Add1~8     ; |instrconunit|Add1~8     ; out0             ;
+; |instrconunit|Add1~9     ; |instrconunit|Add1~9     ; out0             ;
+; |instrconunit|Add1~10    ; |instrconunit|Add1~10    ; out0             ;
+; |instrconunit|Add1~11    ; |instrconunit|Add1~11    ; out0             ;
+; |instrconunit|Add1~14    ; |instrconunit|Add1~14    ; out0             ;
+; |instrconunit|Add1~16    ; |instrconunit|Add1~16    ; out0             ;
+; |instrconunit|Add1~19    ; |instrconunit|Add1~19    ; out0             ;
+; |instrconunit|Add1~21    ; |instrconunit|Add1~21    ; out0             ;
+; |instrconunit|Add1~23    ; |instrconunit|Add1~23    ; out0             ;
+; |instrconunit|Add1~24    ; |instrconunit|Add1~24    ; out0             ;
+; |instrconunit|Add1~25    ; |instrconunit|Add1~25    ; out0             ;
+; |instrconunit|Add1~26    ; |instrconunit|Add1~26    ; out0             ;
+; |instrconunit|Add1~27    ; |instrconunit|Add1~27    ; out0             ;
+; |instrconunit|Add1~28    ; |instrconunit|Add1~28    ; out0             ;
+; |instrconunit|Add1~29    ; |instrconunit|Add1~29    ; out0             ;
+; |instrconunit|Add1~30    ; |instrconunit|Add1~30    ; out0             ;
+; |instrconunit|Add1~31    ; |instrconunit|Add1~31    ; out0             ;
+; |instrconunit|Add1~32    ; |instrconunit|Add1~32    ; out0             ;
+; |instrconunit|Add2~10    ; |instrconunit|Add2~10    ; out0             ;
+; |instrconunit|Add2~11    ; |instrconunit|Add2~11    ; out0             ;
+; |instrconunit|Add2~12    ; |instrconunit|Add2~12    ; out0             ;
++--------------------------+--------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Fri Sep 30 00:53:15 2011
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off instrconunit -c instrconunit
+Info: Using vector source file "E:/Studies/Junior/EDA/Task 2/instrconunit/instrconunit.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of instrconunit.vwf called instrconunit.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      61.16 %
+Info: Number of transitions in simulation is 2477
+Info: Vector file instrconunit.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 142 megabytes
+    Info: Processing ended: Fri Sep 30 00:53:16 2011
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

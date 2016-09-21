@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Sep 04 12:09:22 2011
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : key_fsm
+Top-level Entity Name : key_fsm
+Family : Cyclone II
+Total logic elements : 137
+    Total combinational functions : 135
+    Dedicated logic registers : 62
+Total registers : 62
+Total pins : 109
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

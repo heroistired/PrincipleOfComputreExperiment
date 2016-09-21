@@ -1,0 +1,11 @@
+|Keyboard_Scan
+in => Selector3.IN3
+in => Selector2.IN3
+in => Selector1.IN3
+in => Selector0.IN3
+in => Selector3.IN1
+in => Selector2.IN1
+in => Selector1.IN1
+in => Selector0.IN1
+
+
